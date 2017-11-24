@@ -1,7 +1,7 @@
 package jadx.core.dex.instructions;
 
-import jadx.core.dex.instructions.args.ArgType;
-import jadx.core.dex.nodes.InsnNode;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.*;
 
 public final class ConstClassNode extends InsnNode {
 

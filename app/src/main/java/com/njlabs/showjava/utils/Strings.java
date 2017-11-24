@@ -1,20 +1,9 @@
 package com.njlabs.showjava.utils;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.io.StringWriter;
-import java.io.Writer;
-import java.nio.charset.Charset;
-import java.security.InvalidParameterException;
-import java.security.MessageDigest;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Locale;
-import java.util.Map;
+import java.io.*;
+import java.nio.charset.*;
+import java.security.*;
+import java.util.*;
 
 /**
  * Created by Niranjan on 12-07-2014.

@@ -1,24 +1,14 @@
 package jadx.core.dex.nodes;
 
-import jadx.core.dex.attributes.nodes.LineAttrNode;
-import jadx.core.dex.instructions.InsnType;
-import jadx.core.dex.instructions.args.ArgType;
-import jadx.core.dex.instructions.args.InsnArg;
-import jadx.core.dex.instructions.args.InsnWrapArg;
-import jadx.core.dex.instructions.args.LiteralArg;
-import jadx.core.dex.instructions.args.NamedArg;
-import jadx.core.dex.instructions.args.RegisterArg;
-import jadx.core.dex.instructions.args.SSAVar;
-import jadx.core.utils.InsnUtils;
-import jadx.core.utils.Utils;
+import com.android.dx.io.instructions.*;
+import com.rits.cloning.*;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
-import com.android.dx.io.instructions.DecodedInstruction;
-import com.rits.cloning.Cloner;
+import jadx.core.dex.attributes.nodes.*;
+import jadx.core.dex.instructions.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.utils.*;
 
 public class InsnNode extends LineAttrNode {
 

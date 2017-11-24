@@ -1,11 +1,10 @@
 package com.njlabs.showjava.ui;
 
-import android.os.Bundle;
-import android.view.Menu;
-import android.widget.TextView;
+import android.os.*;
+import android.view.*;
+import android.widget.*;
 
-import com.njlabs.showjava.BuildConfig;
-import com.njlabs.showjava.R;
+import com.nao20010128nao.Neapolitan.*;
 
 public class About extends BaseActivity {
 

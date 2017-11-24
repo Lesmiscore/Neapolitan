@@ -1,7 +1,6 @@
 package jadx.core.dex.regions.loops;
 
-import jadx.core.dex.instructions.args.InsnArg;
-import jadx.core.dex.instructions.args.RegisterArg;
+import jadx.core.dex.instructions.args.*;
 
 public final class ForEachLoop extends LoopType {
 	private final RegisterArg varArg;

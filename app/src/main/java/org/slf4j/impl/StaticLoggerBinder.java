@@ -1,8 +1,7 @@
 package org.slf4j.impl;
 
-import org.slf4j.ILoggerFactory;
-import org.slf4j.LoggerFactory;
-import org.slf4j.spi.LoggerFactoryBinder;
+import org.slf4j.*;
+import org.slf4j.spi.*;
 
 /**
  * The binding of {@link LoggerFactory} class with an actual instance of

@@ -1,25 +1,9 @@
 package jadx.core.dex.attributes;
 
-import jadx.core.dex.attributes.annotations.AnnotationsList;
-import jadx.core.dex.attributes.annotations.MethodParameters;
-import jadx.core.dex.attributes.nodes.DeclareVariablesAttr;
-import jadx.core.dex.attributes.nodes.EdgeInsnAttr;
-import jadx.core.dex.attributes.nodes.EnumClassAttr;
-import jadx.core.dex.attributes.nodes.EnumMapAttr;
-import jadx.core.dex.attributes.nodes.FieldReplaceAttr;
-import jadx.core.dex.attributes.nodes.ForceReturnAttr;
-import jadx.core.dex.attributes.nodes.IgnoreEdgeAttr;
-import jadx.core.dex.attributes.nodes.JadxErrorAttr;
-import jadx.core.dex.attributes.nodes.JumpInfo;
-import jadx.core.dex.attributes.nodes.LoopInfo;
-import jadx.core.dex.attributes.nodes.LoopLabelAttr;
-import jadx.core.dex.attributes.nodes.MethodInlineAttr;
-import jadx.core.dex.attributes.nodes.PhiListAttr;
-import jadx.core.dex.attributes.nodes.SourceFileAttr;
-import jadx.core.dex.nodes.parser.FieldInitAttr;
-import jadx.core.dex.trycatch.CatchAttr;
-import jadx.core.dex.trycatch.ExcHandlerAttr;
-import jadx.core.dex.trycatch.SplitterBlockAttr;
+import jadx.core.dex.attributes.annotations.*;
+import jadx.core.dex.attributes.nodes.*;
+import jadx.core.dex.nodes.parser.*;
+import jadx.core.dex.trycatch.*;
 
 /**
  * Attribute types enumeration,

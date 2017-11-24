@@ -31,18 +31,16 @@
 
 package org.jf.dexlib2.dexbacked.reference;
 
-import com.google.common.collect.ImmutableList;
+import com.google.common.collect.*;
 
-import org.jf.dexlib2.base.reference.BaseMethodReference;
-import org.jf.dexlib2.dexbacked.DexBackedDexFile;
-import org.jf.dexlib2.dexbacked.raw.MethodIdItem;
-import org.jf.dexlib2.dexbacked.raw.ProtoIdItem;
-import org.jf.dexlib2.dexbacked.raw.TypeListItem;
-import org.jf.dexlib2.dexbacked.util.FixedSizeList;
+import org.jf.dexlib2.base.reference.*;
+import org.jf.dexlib2.dexbacked.*;
+import org.jf.dexlib2.dexbacked.raw.*;
+import org.jf.dexlib2.dexbacked.util.*;
 
-import java.util.List;
+import java.util.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class DexBackedMethodReference extends BaseMethodReference {
     @Nonnull

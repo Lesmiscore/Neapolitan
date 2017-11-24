@@ -1,47 +1,18 @@
 package jadx.core;
 
-import jadx.api.IJadxArgs;
-import jadx.core.dex.visitors.ClassModifier;
-import jadx.core.dex.visitors.CodeShrinker;
-import jadx.core.dex.visitors.ConstInlineVisitor;
-import jadx.core.dex.visitors.DebugInfoVisitor;
-import jadx.core.dex.visitors.DependencyCollector;
-import jadx.core.dex.visitors.DotGraphVisitor;
-import jadx.core.dex.visitors.EnumVisitor;
-import jadx.core.dex.visitors.ExtractFieldInit;
-import jadx.core.dex.visitors.FallbackModeVisitor;
-import jadx.core.dex.visitors.IDexTreeVisitor;
-import jadx.core.dex.visitors.MethodInlineVisitor;
-import jadx.core.dex.visitors.ModVisitor;
-import jadx.core.dex.visitors.PrepareForCodeGen;
-import jadx.core.dex.visitors.ReSugarCode;
-import jadx.core.dex.visitors.RenameVisitor;
-import jadx.core.dex.visitors.SimplifyVisitor;
-import jadx.core.dex.visitors.blocksmaker.BlockExceptionHandler;
-import jadx.core.dex.visitors.blocksmaker.BlockFinallyExtract;
-import jadx.core.dex.visitors.blocksmaker.BlockFinish;
-import jadx.core.dex.visitors.blocksmaker.BlockProcessor;
-import jadx.core.dex.visitors.blocksmaker.BlockSplitter;
-import jadx.core.dex.visitors.regions.CheckRegions;
-import jadx.core.dex.visitors.regions.IfRegionVisitor;
-import jadx.core.dex.visitors.regions.LoopRegionVisitor;
-import jadx.core.dex.visitors.regions.ProcessVariables;
-import jadx.core.dex.visitors.regions.RegionMakerVisitor;
-import jadx.core.dex.visitors.regions.ReturnVisitor;
-import jadx.core.dex.visitors.ssa.EliminatePhiNodes;
-import jadx.core.dex.visitors.ssa.SSATransform;
-import jadx.core.dex.visitors.typeinference.FinishTypeInference;
-import jadx.core.dex.visitors.typeinference.TypeInference;
+import org.slf4j.*;
 
-import java.io.File;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.List;
-import java.util.jar.Manifest;
+import java.io.*;
+import java.net.*;
+import java.util.*;
+import java.util.jar.*;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import jadx.api.*;
+import jadx.core.dex.visitors.*;
+import jadx.core.dex.visitors.blocksmaker.*;
+import jadx.core.dex.visitors.regions.*;
+import jadx.core.dex.visitors.ssa.*;
+import jadx.core.dex.visitors.typeinference.*;
 
 public class Jadx {
 	private static final Logger LOG = LoggerFactory.getLogger(Jadx.class);

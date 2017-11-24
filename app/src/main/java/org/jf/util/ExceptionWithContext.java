@@ -24,8 +24,7 @@
 
 package org.jf.util;
 
-import java.io.PrintStream;
-import java.io.PrintWriter;
+import java.io.*;
 
 /**
  * Exception which carries around structured context.

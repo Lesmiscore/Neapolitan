@@ -31,13 +31,12 @@
 
 package org.jf.dexlib2.writer;
 
-import org.jf.dexlib2.DebugItemType;
-import org.jf.util.ExceptionWithContext;
+import org.jf.dexlib2.*;
+import org.jf.util.*;
 
-import java.io.IOException;
+import java.io.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public class DebugWriter<StringKey extends CharSequence, TypeKey extends CharSequence> {
     private static final int LINE_BASE = -4;

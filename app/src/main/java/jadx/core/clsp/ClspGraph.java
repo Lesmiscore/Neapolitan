@@ -1,20 +1,12 @@
 package jadx.core.clsp;
 
-import jadx.core.dex.nodes.ClassNode;
-import jadx.core.utils.exceptions.DecodeException;
-import jadx.core.utils.exceptions.JadxRuntimeException;
+import org.slf4j.*;
 
-import java.io.IOException;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.WeakHashMap;
+import java.io.*;
+import java.util.*;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import jadx.core.dex.nodes.*;
+import jadx.core.utils.exceptions.*;
 
 /**
  * Classes hierarchy graph

@@ -31,7 +31,7 @@
 
 package org.jf.dexlib2.writer;
 
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public interface NullableOffsetSection<Key> extends OffsetSection<Key> {
     int getNullableItemOffset(@Nullable Key key);

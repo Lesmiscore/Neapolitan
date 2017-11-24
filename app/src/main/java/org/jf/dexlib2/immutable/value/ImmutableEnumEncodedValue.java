@@ -31,11 +31,11 @@
 
 package org.jf.dexlib2.immutable.value;
 
-import org.jf.dexlib2.base.value.BaseEnumEncodedValue;
-import org.jf.dexlib2.iface.reference.FieldReference;
-import org.jf.dexlib2.iface.value.EnumEncodedValue;
+import org.jf.dexlib2.base.value.*;
+import org.jf.dexlib2.iface.reference.*;
+import org.jf.dexlib2.iface.value.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class ImmutableEnumEncodedValue extends BaseEnumEncodedValue implements ImmutableEncodedValue {
     @Nonnull

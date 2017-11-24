@@ -1,13 +1,11 @@
 package jadx.core.dex.instructions;
 
-import jadx.core.dex.attributes.AFlag;
-import jadx.core.dex.instructions.args.ArgType;
-import jadx.core.dex.instructions.args.InsnArg;
-import jadx.core.dex.instructions.args.RegisterArg;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.utils.InsnUtils;
+import com.android.dx.io.instructions.*;
 
-import com.android.dx.io.instructions.DecodedInstruction;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.utils.*;
 
 public class ArithNode extends InsnNode {
 

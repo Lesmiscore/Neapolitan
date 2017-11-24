@@ -31,19 +31,15 @@
 
 package org.jf.dexlib2.dexbacked.raw;
 
-import org.jf.dexlib2.Opcodes;
-import org.jf.dexlib2.dexbacked.BaseDexBuffer;
-import org.jf.dexlib2.dexbacked.DexBackedDexFile;
-import org.jf.dexlib2.dexbacked.util.FixedSizeList;
-import org.jf.dexlib2.util.AnnotatedBytes;
+import org.jf.dexlib2.*;
+import org.jf.dexlib2.dexbacked.*;
+import org.jf.dexlib2.dexbacked.util.*;
+import org.jf.dexlib2.util.*;
 
-import java.io.IOException;
-import java.io.Writer;
-import java.util.Arrays;
-import java.util.List;
+import java.io.*;
+import java.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public class RawDexFile extends DexBackedDexFile {
     @Nonnull

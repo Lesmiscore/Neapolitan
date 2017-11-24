@@ -31,9 +31,9 @@
 
 package org.jf.dexlib2.iface;
 
-import java.util.Set;
+import java.util.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 /**
  * This class is a high level representation of a dex file - essentially a set of class definitions.

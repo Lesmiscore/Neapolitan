@@ -1,12 +1,10 @@
 package jadx.core.dex.attributes.nodes;
 
-import jadx.core.dex.attributes.AType;
-import jadx.core.dex.attributes.IAttribute;
-import jadx.core.dex.instructions.args.RegisterArg;
-import jadx.core.utils.Utils;
+import java.util.*;
 
-import java.util.LinkedList;
-import java.util.List;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.utils.*;
 
 /**
  * List of variables to be declared at region start.

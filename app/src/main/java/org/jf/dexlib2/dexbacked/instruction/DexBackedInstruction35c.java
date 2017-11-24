@@ -31,14 +31,14 @@
 
 package org.jf.dexlib2.dexbacked.instruction;
 
-import org.jf.dexlib2.Opcode;
-import org.jf.dexlib2.dexbacked.DexBackedDexFile;
-import org.jf.dexlib2.dexbacked.reference.DexBackedReference;
-import org.jf.dexlib2.iface.instruction.formats.Instruction35c;
-import org.jf.dexlib2.iface.reference.Reference;
-import org.jf.util.NibbleUtils;
+import org.jf.dexlib2.*;
+import org.jf.dexlib2.dexbacked.*;
+import org.jf.dexlib2.dexbacked.reference.*;
+import org.jf.dexlib2.iface.instruction.formats.*;
+import org.jf.dexlib2.iface.reference.*;
+import org.jf.util.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class DexBackedInstruction35c extends DexBackedInstruction implements Instruction35c {
     public DexBackedInstruction35c(@Nonnull DexBackedDexFile dexFile,

@@ -1,8 +1,8 @@
 package jadx.core.dex.attributes.annotations;
 
-import jadx.core.dex.instructions.args.ArgType;
+import java.util.*;
 
-import java.util.Map;
+import jadx.core.dex.instructions.args.*;
 
 public class Annotation {
 

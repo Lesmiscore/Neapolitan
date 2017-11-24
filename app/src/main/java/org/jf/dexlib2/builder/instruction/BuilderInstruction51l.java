@@ -31,13 +31,12 @@
 
 package org.jf.dexlib2.builder.instruction;
 
-import org.jf.dexlib2.Format;
-import org.jf.dexlib2.Opcode;
-import org.jf.dexlib2.builder.BuilderInstruction;
-import org.jf.dexlib2.iface.instruction.formats.Instruction51l;
-import org.jf.dexlib2.util.Preconditions;
+import org.jf.dexlib2.*;
+import org.jf.dexlib2.builder.*;
+import org.jf.dexlib2.iface.instruction.formats.*;
+import org.jf.dexlib2.util.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class BuilderInstruction51l extends BuilderInstruction implements Instruction51l {
     public static final Format FORMAT = Format.Format51l;

@@ -1,11 +1,9 @@
 package jadx.core.dex.attributes.nodes;
 
-import jadx.core.dex.attributes.AType;
-import jadx.core.dex.attributes.IAttribute;
-import jadx.core.dex.instructions.PhiInsn;
+import java.util.*;
 
-import java.util.LinkedList;
-import java.util.List;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.instructions.*;
 
 public class PhiListAttr implements IAttribute {
 

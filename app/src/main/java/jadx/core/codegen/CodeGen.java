@@ -1,9 +1,9 @@
 package jadx.core.codegen;
 
-import jadx.api.IJadxArgs;
-import jadx.core.dex.nodes.ClassNode;
-import jadx.core.dex.visitors.AbstractVisitor;
-import jadx.core.utils.exceptions.CodegenException;
+import jadx.api.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.dex.visitors.*;
+import jadx.core.utils.exceptions.*;
 
 public class CodeGen extends AbstractVisitor {
 

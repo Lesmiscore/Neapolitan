@@ -31,12 +31,11 @@
 
 package org.jf.dexlib2.writer.builder;
 
-import org.jf.dexlib2.base.reference.BaseFieldReference;
-import org.jf.dexlib2.iface.Field;
-import org.jf.dexlib2.writer.builder.BuilderEncodedValues.BuilderEncodedValue;
+import org.jf.dexlib2.base.reference.*;
+import org.jf.dexlib2.iface.*;
+import org.jf.dexlib2.writer.builder.BuilderEncodedValues.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public class BuilderField extends BaseFieldReference implements Field {
     @Nonnull

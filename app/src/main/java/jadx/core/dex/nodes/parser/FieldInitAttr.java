@@ -1,9 +1,7 @@
 package jadx.core.dex.nodes.parser;
 
-import jadx.core.dex.attributes.AType;
-import jadx.core.dex.attributes.IAttribute;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.dex.nodes.MethodNode;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.nodes.*;
 
 public class FieldInitAttr implements IAttribute {
 

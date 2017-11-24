@@ -31,7 +31,7 @@
 
 package org.jf.dexlib2.dexbacked.raw;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class ItemType {
     public static final int HEADER_ITEM = 0x0000;

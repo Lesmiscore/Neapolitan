@@ -1,14 +1,11 @@
 package jadx.core.xmlgen.entry;
 
-import jadx.core.xmlgen.ParserConstants;
+import org.slf4j.*;
 
-import java.text.NumberFormat;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.text.*;
+import java.util.*;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import jadx.core.xmlgen.*;
 
 public class ValuesParser extends ParserConstants {
 	private static final Logger LOG = LoggerFactory.getLogger(ValuesParser.class);

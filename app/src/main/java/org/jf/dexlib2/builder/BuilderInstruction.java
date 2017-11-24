@@ -31,13 +31,11 @@
 
 package org.jf.dexlib2.builder;
 
-import org.jf.dexlib2.Format;
-import org.jf.dexlib2.Opcode;
-import org.jf.dexlib2.iface.instruction.Instruction;
-import org.jf.dexlib2.util.Preconditions;
+import org.jf.dexlib2.*;
+import org.jf.dexlib2.iface.instruction.*;
+import org.jf.dexlib2.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public abstract class BuilderInstruction implements Instruction {
     @Nonnull

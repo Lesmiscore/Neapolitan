@@ -31,7 +31,7 @@
 
 package org.jf.dexlib2.iface.instruction;
 
-import org.jf.dexlib2.Opcode;
+import org.jf.dexlib2.*;
 
 /**
  * This class represents a generic instruction.

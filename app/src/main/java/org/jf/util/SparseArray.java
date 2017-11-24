@@ -31,9 +31,7 @@
 
 package org.jf.util;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 /**
  * SparseArrays map integers to Objects.  Unlike a normal array of Objects,

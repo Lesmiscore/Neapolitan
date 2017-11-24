@@ -31,9 +31,8 @@
 
 package org.jf.dexlib2.immutable.instruction;
 
-import org.jf.dexlib2.Format;
-import org.jf.dexlib2.Opcode;
-import org.jf.dexlib2.iface.instruction.formats.UnknownInstruction;
+import org.jf.dexlib2.*;
+import org.jf.dexlib2.iface.instruction.formats.*;
 
 public class ImmutableUnknownInstruction extends ImmutableInstruction implements UnknownInstruction {
     public static final Format FORMAT = Format.Format10x;

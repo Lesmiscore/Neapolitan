@@ -31,8 +31,7 @@
 
 package org.jf.dexlib2.iface.value;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 /**
  * This class represents an encoded double value.

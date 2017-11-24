@@ -31,11 +31,9 @@
 
 package org.jf.dexlib2.dexbacked.util;
 
-import java.util.AbstractSet;
-import java.util.Iterator;
-import java.util.NoSuchElementException;
+import java.util.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 /**
  * This provides a wrapper around AbstractSet to allow easy implementation when backed by a list that can be randomly

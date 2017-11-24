@@ -1,20 +1,12 @@
 package jadx.core.deobf;
 
-import jadx.core.dex.info.ClassInfo;
-import jadx.core.dex.info.FieldInfo;
-import jadx.core.dex.info.MethodInfo;
+import org.apache.commons.io.*;
+import org.slf4j.*;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.io.*;
+import java.util.*;
 
-import org.apache.commons.io.FileUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import jadx.core.dex.info.*;
 
 class DeobfPresets {
 	private static final Logger LOG = LoggerFactory.getLogger(DeobfPresets.class);

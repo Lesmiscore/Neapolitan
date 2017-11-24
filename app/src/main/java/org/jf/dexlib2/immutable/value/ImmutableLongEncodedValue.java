@@ -31,8 +31,8 @@
 
 package org.jf.dexlib2.immutable.value;
 
-import org.jf.dexlib2.base.value.BaseLongEncodedValue;
-import org.jf.dexlib2.iface.value.LongEncodedValue;
+import org.jf.dexlib2.base.value.*;
+import org.jf.dexlib2.iface.value.*;
 
 public class ImmutableLongEncodedValue extends BaseLongEncodedValue implements ImmutableEncodedValue {
     protected final long value;

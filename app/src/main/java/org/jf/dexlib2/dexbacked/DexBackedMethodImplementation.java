@@ -31,23 +31,19 @@
 
 package org.jf.dexlib2.dexbacked;
 
-import com.google.common.collect.ImmutableList;
+import com.google.common.collect.*;
 
-import org.jf.dexlib2.dexbacked.instruction.DexBackedInstruction;
-import org.jf.dexlib2.dexbacked.raw.CodeItem;
-import org.jf.dexlib2.dexbacked.util.DebugInfo;
-import org.jf.dexlib2.dexbacked.util.FixedSizeList;
-import org.jf.dexlib2.dexbacked.util.VariableSizeLookaheadIterator;
-import org.jf.dexlib2.iface.MethodImplementation;
-import org.jf.dexlib2.iface.debug.DebugItem;
-import org.jf.dexlib2.iface.instruction.Instruction;
-import org.jf.util.AlignmentUtils;
+import org.jf.dexlib2.dexbacked.instruction.*;
+import org.jf.dexlib2.dexbacked.raw.*;
+import org.jf.dexlib2.dexbacked.util.*;
+import org.jf.dexlib2.iface.*;
+import org.jf.dexlib2.iface.debug.*;
+import org.jf.dexlib2.iface.instruction.*;
+import org.jf.util.*;
 
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public class DexBackedMethodImplementation implements MethodImplementation {
     @Nonnull

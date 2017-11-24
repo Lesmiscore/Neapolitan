@@ -28,11 +28,8 @@
 
 package org.jf.smali;
 
-import org.antlr.runtime.CommonToken;
-import org.antlr.runtime.IntStream;
-import org.antlr.runtime.RecognitionException;
-import org.antlr.runtime.Token;
-import org.antlr.runtime.tree.CommonTree;
+import org.antlr.runtime.*;
+import org.antlr.runtime.tree.*;
 
 public class SemanticException extends RecognitionException {
     private String errorMessage;

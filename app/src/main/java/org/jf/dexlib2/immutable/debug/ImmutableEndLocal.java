@@ -31,11 +31,10 @@
 
 package org.jf.dexlib2.immutable.debug;
 
-import org.jf.dexlib2.DebugItemType;
-import org.jf.dexlib2.iface.debug.EndLocal;
+import org.jf.dexlib2.*;
+import org.jf.dexlib2.iface.debug.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public class ImmutableEndLocal extends ImmutableDebugItem implements EndLocal {
     protected final int register;

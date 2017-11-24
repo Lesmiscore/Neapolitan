@@ -1,17 +1,15 @@
 package com.njlabs.showjava.ui;
 
-import android.content.Context;
-import android.os.Bundle;
-import android.os.Environment;
-import android.support.v7.app.ActionBar;
-import android.view.MenuItem;
+import android.content.*;
+import android.os.*;
+import android.support.v7.app.*;
+import android.view.*;
 
-import com.nononsenseapps.filepicker.AbstractFilePickerActivity;
-import com.nononsenseapps.filepicker.AbstractFilePickerFragment;
+import com.nononsenseapps.filepicker.*;
 
-import java.io.File;
+import java.io.*;
 
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+import uk.co.chrisjenx.calligraphy.*;
 
 public class FilePicker extends AbstractFilePickerActivity<File> {
 

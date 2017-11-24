@@ -32,16 +32,15 @@
 package org.jf.dexlib2.base;
 
 import com.google.common.base.Objects;
-import com.google.common.primitives.Ints;
+import com.google.common.primitives.*;
 
-import org.jf.dexlib2.base.reference.BaseTypeReference;
-import org.jf.dexlib2.iface.ExceptionHandler;
-import org.jf.dexlib2.iface.reference.TypeReference;
+import org.jf.dexlib2.base.reference.*;
+import org.jf.dexlib2.iface.*;
+import org.jf.dexlib2.iface.reference.*;
 
-import java.util.Comparator;
+import java.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public abstract class BaseExceptionHandler implements ExceptionHandler {
     public static final Comparator<ExceptionHandler> BY_EXCEPTION = (o1, o2) -> {

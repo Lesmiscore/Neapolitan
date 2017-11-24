@@ -1,23 +1,13 @@
 package jadx.core.dex.visitors;
 
-import jadx.core.dex.attributes.AType;
-import jadx.core.dex.info.ClassInfo;
-import jadx.core.dex.info.FieldInfo;
-import jadx.core.dex.instructions.IndexInsnNode;
-import jadx.core.dex.instructions.InvokeNode;
-import jadx.core.dex.instructions.args.ArgType;
-import jadx.core.dex.instructions.args.InsnArg;
-import jadx.core.dex.instructions.args.InsnWrapArg;
-import jadx.core.dex.instructions.args.RegisterArg;
-import jadx.core.dex.nodes.BlockNode;
-import jadx.core.dex.nodes.ClassNode;
-import jadx.core.dex.nodes.DexNode;
-import jadx.core.dex.nodes.FieldNode;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.utils.exceptions.JadxException;
+import java.util.*;
 
-import java.util.Set;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.info.*;
+import jadx.core.dex.instructions.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.utils.exceptions.*;
 
 public class DependencyCollector extends AbstractVisitor {
 

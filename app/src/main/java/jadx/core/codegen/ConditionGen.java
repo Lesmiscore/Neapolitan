@@ -1,26 +1,16 @@
 package jadx.core.codegen;
 
-import jadx.core.dex.instructions.ArithNode;
-import jadx.core.dex.instructions.IfOp;
-import jadx.core.dex.instructions.InsnType;
-import jadx.core.dex.instructions.args.ArgType;
-import jadx.core.dex.instructions.args.InsnArg;
-import jadx.core.dex.instructions.args.InsnWrapArg;
-import jadx.core.dex.instructions.args.LiteralArg;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.dex.regions.conditions.Compare;
-import jadx.core.dex.regions.conditions.IfCondition;
-import jadx.core.dex.regions.conditions.IfCondition.Mode;
-import jadx.core.utils.ErrorsCounter;
-import jadx.core.utils.exceptions.CodegenException;
-import jadx.core.utils.exceptions.JadxRuntimeException;
+import org.slf4j.*;
 
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import jadx.core.dex.instructions.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.dex.regions.conditions.*;
+import jadx.core.dex.regions.conditions.IfCondition.*;
+import jadx.core.utils.*;
+import jadx.core.utils.exceptions.*;
 
 public class ConditionGen extends InsnGen {
 	private static final Logger LOG = LoggerFactory.getLogger(ConditionGen.class);

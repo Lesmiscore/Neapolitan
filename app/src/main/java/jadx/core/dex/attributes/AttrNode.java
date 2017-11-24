@@ -1,8 +1,8 @@
 package jadx.core.dex.attributes;
 
-import jadx.core.dex.attributes.annotations.Annotation;
+import java.util.*;
 
-import java.util.List;
+import jadx.core.dex.attributes.annotations.*;
 
 public abstract class AttrNode implements IAttributeNode {
 

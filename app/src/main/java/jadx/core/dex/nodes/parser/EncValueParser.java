@@ -1,15 +1,13 @@
 package jadx.core.dex.nodes.parser;
 
-import jadx.core.dex.info.FieldInfo;
-import jadx.core.dex.info.MethodInfo;
-import jadx.core.dex.nodes.DexNode;
-import jadx.core.utils.exceptions.DecodeException;
+import com.android.dex.Dex.*;
+import com.android.dex.*;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
-import com.android.dex.Dex.Section;
-import com.android.dex.Leb128;
+import jadx.core.dex.info.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.utils.exceptions.*;
 
 public class EncValueParser {
 

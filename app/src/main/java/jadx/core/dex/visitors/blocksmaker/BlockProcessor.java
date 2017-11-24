@@ -1,31 +1,21 @@
 package jadx.core.dex.visitors.blocksmaker;
 
-import jadx.core.dex.attributes.AFlag;
-import jadx.core.dex.attributes.AType;
-import jadx.core.dex.attributes.nodes.LoopInfo;
-import jadx.core.dex.instructions.InsnType;
-import jadx.core.dex.instructions.args.InsnArg;
-import jadx.core.dex.instructions.args.RegisterArg;
-import jadx.core.dex.nodes.BlockNode;
-import jadx.core.dex.nodes.Edge;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.dex.trycatch.CatchAttr;
-import jadx.core.dex.visitors.AbstractVisitor;
-import jadx.core.utils.BlockUtils;
-import jadx.core.utils.exceptions.JadxRuntimeException;
+import org.slf4j.*;
 
-import java.util.ArrayList;
-import java.util.BitSet;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.attributes.nodes.*;
+import jadx.core.dex.instructions.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.dex.trycatch.*;
+import jadx.core.dex.visitors.*;
+import jadx.core.utils.*;
+import jadx.core.utils.exceptions.*;
 
-import static jadx.core.dex.visitors.blocksmaker.BlockSplitter.connect;
-import static jadx.core.dex.visitors.blocksmaker.BlockSplitter.removeConnection;
-import static jadx.core.utils.EmptyBitSet.EMPTY;
+import static jadx.core.dex.visitors.blocksmaker.BlockSplitter.*;
+import static jadx.core.utils.EmptyBitSet.*;
 
 public class BlockProcessor extends AbstractVisitor {
 	private static final Logger LOG = LoggerFactory.getLogger(BlockProcessor.class);

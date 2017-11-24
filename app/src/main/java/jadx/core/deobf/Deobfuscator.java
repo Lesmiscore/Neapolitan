@@ -1,31 +1,17 @@
 package jadx.core.deobf;
 
-import jadx.api.IJadxArgs;
-import jadx.core.dex.attributes.AType;
-import jadx.core.dex.attributes.nodes.SourceFileAttr;
-import jadx.core.dex.info.ClassInfo;
-import jadx.core.dex.info.FieldInfo;
-import jadx.core.dex.info.MethodInfo;
-import jadx.core.dex.instructions.args.ArgType;
-import jadx.core.dex.nodes.ClassNode;
-import jadx.core.dex.nodes.DexNode;
-import jadx.core.dex.nodes.FieldNode;
-import jadx.core.dex.nodes.MethodNode;
+import org.jetbrains.annotations.*;
+import org.slf4j.*;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeSet;
+import java.io.*;
+import java.util.*;
 
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import jadx.api.*;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.attributes.nodes.*;
+import jadx.core.dex.info.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.*;
 
 public class Deobfuscator {
 	private static final Logger LOG = LoggerFactory.getLogger(Deobfuscator.class);

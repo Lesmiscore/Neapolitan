@@ -31,10 +31,9 @@
 
 package org.jf.dexlib2.iface.value;
 
-import org.jf.dexlib2.iface.reference.MethodReference;
+import org.jf.dexlib2.iface.reference.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 /**
  * This class represents an encoded method value.

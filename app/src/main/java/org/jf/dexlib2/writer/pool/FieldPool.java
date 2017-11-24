@@ -31,11 +31,11 @@
 
 package org.jf.dexlib2.writer.pool;
 
-import org.jf.dexlib2.iface.Field;
-import org.jf.dexlib2.iface.reference.FieldReference;
-import org.jf.dexlib2.writer.FieldSection;
+import org.jf.dexlib2.iface.*;
+import org.jf.dexlib2.iface.reference.*;
+import org.jf.dexlib2.writer.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class FieldPool extends BaseIndexPool<FieldReference>
         implements FieldSection<CharSequence, CharSequence, FieldReference, Field> {

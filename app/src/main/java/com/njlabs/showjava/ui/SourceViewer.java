@@ -1,26 +1,20 @@
 package com.njlabs.showjava.ui;
 
-import android.content.res.AssetManager;
-import android.graphics.Color;
-import android.net.Uri;
-import android.os.Bundle;
-import android.os.Environment;
-import android.support.v7.app.ActionBar;
-import android.view.View;
-import android.webkit.WebResourceResponse;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import android.widget.ProgressBar;
+import android.content.res.*;
+import android.graphics.*;
+import android.net.*;
+import android.os.*;
+import android.support.v7.app.*;
+import android.view.*;
+import android.webkit.*;
+import android.widget.*;
 
-import com.google.common.html.HtmlEscapers;
-import com.njlabs.showjava.R;
+import com.google.common.html.*;
+import com.nao20010128nao.Neapolitan.*;
 
-import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.io.*;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 
 public class SourceViewer extends BaseActivity {
 

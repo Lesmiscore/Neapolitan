@@ -1,14 +1,13 @@
 package com.njlabs.showjava.utils;
 
-import android.app.ActivityManager;
-import android.content.Context;
-import android.content.Intent;
+import android.app.*;
+import android.content.*;
 
-import com.njlabs.showjava.Constants;
-import com.njlabs.showjava.processor.ProcessService;
+import com.njlabs.showjava.*;
+import com.njlabs.showjava.processor.*;
 
-import java.io.File;
-import java.util.List;
+import java.io.*;
+import java.util.*;
 
 public class Utils {
 

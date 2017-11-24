@@ -31,16 +31,14 @@
 
 package org.jf.dexlib2.dexbacked.value;
 
-import org.jf.dexlib2.base.value.BaseArrayEncodedValue;
-import org.jf.dexlib2.dexbacked.DexBackedDexFile;
-import org.jf.dexlib2.dexbacked.DexReader;
-import org.jf.dexlib2.dexbacked.util.VariableSizeList;
-import org.jf.dexlib2.iface.value.ArrayEncodedValue;
-import org.jf.dexlib2.iface.value.EncodedValue;
+import org.jf.dexlib2.base.value.*;
+import org.jf.dexlib2.dexbacked.*;
+import org.jf.dexlib2.dexbacked.util.*;
+import org.jf.dexlib2.iface.value.*;
 
-import java.util.List;
+import java.util.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class DexBackedArrayEncodedValue extends BaseArrayEncodedValue implements ArrayEncodedValue {
     @Nonnull

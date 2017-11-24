@@ -24,7 +24,7 @@ THE SOFTWARE.
 
 package ds.tree;
 
-import java.util.ArrayList;
+import java.util.*;
 
 /**
  * This interface represent the operation of a radix tree. A radix tree,

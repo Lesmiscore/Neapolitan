@@ -31,18 +31,17 @@
 
 package org.jf.dexlib2.writer.builder;
 
-import com.google.common.collect.Maps;
+import com.google.common.collect.*;
 
-import org.jf.dexlib2.base.reference.BaseMethodReference;
-import org.jf.dexlib2.iface.reference.MethodReference;
-import org.jf.dexlib2.writer.MethodSection;
+import org.jf.dexlib2.base.reference.*;
+import org.jf.dexlib2.iface.reference.*;
+import org.jf.dexlib2.writer.*;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.Map.Entry;
-import java.util.concurrent.ConcurrentMap;
+import java.util.*;
+import java.util.Map.*;
+import java.util.concurrent.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 class BuilderMethodPool implements MethodSection<BuilderStringReference, BuilderTypeReference,
         BuilderProtoReference, BuilderMethodReference, BuilderMethod> {

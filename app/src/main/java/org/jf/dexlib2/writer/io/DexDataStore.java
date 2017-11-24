@@ -1,10 +1,8 @@
 package org.jf.dexlib2.writer.io;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public interface DexDataStore {
     @Nonnull

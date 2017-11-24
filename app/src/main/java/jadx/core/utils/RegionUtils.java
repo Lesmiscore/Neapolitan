@@ -1,22 +1,12 @@
 package jadx.core.utils;
 
-import jadx.core.dex.attributes.AType;
-import jadx.core.dex.instructions.InsnType;
-import jadx.core.dex.nodes.BlockNode;
-import jadx.core.dex.nodes.IBlock;
-import jadx.core.dex.nodes.IBranchRegion;
-import jadx.core.dex.nodes.IContainer;
-import jadx.core.dex.nodes.IRegion;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.dex.trycatch.CatchAttr;
-import jadx.core.dex.trycatch.ExceptionHandler;
-import jadx.core.dex.trycatch.TryCatchBlock;
-import jadx.core.utils.exceptions.JadxRuntimeException;
+import java.util.*;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Set;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.instructions.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.dex.trycatch.*;
+import jadx.core.utils.exceptions.*;
 
 public class RegionUtils {
 

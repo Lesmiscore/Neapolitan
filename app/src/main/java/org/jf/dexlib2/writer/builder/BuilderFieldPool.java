@@ -31,17 +31,17 @@
 
 package org.jf.dexlib2.writer.builder;
 
-import com.google.common.collect.Maps;
+import com.google.common.collect.*;
 
-import org.jf.dexlib2.iface.reference.FieldReference;
-import org.jf.dexlib2.immutable.reference.ImmutableFieldReference;
-import org.jf.dexlib2.writer.FieldSection;
+import org.jf.dexlib2.iface.reference.*;
+import org.jf.dexlib2.immutable.reference.*;
+import org.jf.dexlib2.writer.*;
 
-import java.util.Collection;
-import java.util.Map.Entry;
-import java.util.concurrent.ConcurrentMap;
+import java.util.*;
+import java.util.Map.*;
+import java.util.concurrent.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class BuilderFieldPool
         implements FieldSection<BuilderStringReference, BuilderTypeReference, BuilderFieldReference, BuilderField> {

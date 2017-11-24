@@ -1,22 +1,15 @@
 package jadx.core.utils.files;
 
-import jadx.core.utils.AsmUtils;
-import jadx.core.utils.exceptions.DecodeException;
-import jadx.core.utils.exceptions.JadxException;
+import com.android.dex.*;
 
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.jar.JarOutputStream;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipFile;
+import org.slf4j.*;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.io.*;
+import java.util.jar.*;
+import java.util.zip.*;
 
-import com.android.dex.Dex;
+import jadx.core.utils.*;
+import jadx.core.utils.exceptions.*;
 
 public class InputFile {
 	private static final Logger LOG = LoggerFactory.getLogger(InputFile.class);

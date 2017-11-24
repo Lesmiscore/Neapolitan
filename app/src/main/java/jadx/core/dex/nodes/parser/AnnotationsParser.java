@@ -1,22 +1,14 @@
 package jadx.core.dex.nodes.parser;
 
-import jadx.core.dex.attributes.annotations.Annotation;
-import jadx.core.dex.attributes.annotations.Annotation.Visibility;
-import jadx.core.dex.attributes.annotations.AnnotationsList;
-import jadx.core.dex.attributes.annotations.MethodParameters;
-import jadx.core.dex.instructions.args.ArgType;
-import jadx.core.dex.nodes.ClassNode;
-import jadx.core.dex.nodes.DexNode;
-import jadx.core.dex.nodes.FieldNode;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.utils.exceptions.DecodeException;
+import com.android.dex.Dex.*;
 
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
-import com.android.dex.Dex.Section;
+import jadx.core.dex.attributes.annotations.*;
+import jadx.core.dex.attributes.annotations.Annotation.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.utils.exceptions.*;
 
 public class AnnotationsParser {
 

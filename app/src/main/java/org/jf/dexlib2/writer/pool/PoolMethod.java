@@ -31,19 +31,14 @@
 
 package org.jf.dexlib2.writer.pool;
 
-import com.google.common.base.Function;
+import com.google.common.base.*;
 
-import org.jf.dexlib2.base.reference.BaseMethodReference;
-import org.jf.dexlib2.iface.Annotation;
-import org.jf.dexlib2.iface.Method;
-import org.jf.dexlib2.iface.MethodImplementation;
-import org.jf.dexlib2.iface.MethodParameter;
+import org.jf.dexlib2.base.reference.*;
+import org.jf.dexlib2.iface.*;
 
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 
 class PoolMethod extends BaseMethodReference implements Method {

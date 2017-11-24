@@ -1,10 +1,8 @@
 package org.slf4j.impl;
 
-import android.util.Log;
+import android.util.*;
 
-import org.slf4j.helpers.FormattingTuple;
-import org.slf4j.helpers.MarkerIgnoringBase;
-import org.slf4j.helpers.MessageFormatter;
+import org.slf4j.helpers.*;
 
 public class SystemOutLoggerAdapter extends MarkerIgnoringBase {
     /**

@@ -31,13 +31,11 @@
 
 package org.jf.dexlib2.dexbacked.util;
 
-import org.jf.dexlib2.dexbacked.DexBackedDexFile;
-import org.jf.dexlib2.dexbacked.DexReader;
-import org.jf.dexlib2.dexbacked.value.DexBackedEncodedValue;
-import org.jf.dexlib2.iface.value.EncodedValue;
+import org.jf.dexlib2.dexbacked.*;
+import org.jf.dexlib2.dexbacked.value.*;
+import org.jf.dexlib2.iface.value.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public abstract class StaticInitialValueIterator {
     public static final StaticInitialValueIterator EMPTY = new StaticInitialValueIterator() {

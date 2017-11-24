@@ -1,6 +1,6 @@
 package jadx.core.dex.nodes;
 
-import jadx.core.utils.exceptions.DecodeException;
+import jadx.core.utils.exceptions.*;
 
 public interface ILoadable {
 

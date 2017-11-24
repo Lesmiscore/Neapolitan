@@ -1,17 +1,15 @@
 package com.njlabs.showjava.ui;
 
-import android.graphics.Color;
-import android.graphics.drawable.Drawable;
-import android.os.Bundle;
-import android.os.Environment;
-import android.support.v7.app.ActionBar;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.graphics.*;
+import android.graphics.drawable.*;
+import android.os.*;
+import android.support.v7.app.*;
+import android.view.*;
 
-import com.njlabs.showjava.R;
-import com.njlabs.showjava.utils.TouchImageView;
+import com.nao20010128nao.Neapolitan.*;
+import com.njlabs.showjava.utils.*;
 
-import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.io.*;
 
 public class ImageResourceViewer extends BaseActivity {
 

@@ -1,33 +1,17 @@
 package jadx.core.dex.visitors;
 
-import jadx.core.dex.attributes.AFlag;
-import jadx.core.dex.attributes.AType;
-import jadx.core.dex.attributes.nodes.EnumMapAttr;
-import jadx.core.dex.info.AccessInfo;
-import jadx.core.dex.info.FieldInfo;
-import jadx.core.dex.instructions.FilledNewArrayNode;
-import jadx.core.dex.instructions.IndexInsnNode;
-import jadx.core.dex.instructions.InsnType;
-import jadx.core.dex.instructions.InvokeNode;
-import jadx.core.dex.instructions.NewArrayNode;
-import jadx.core.dex.instructions.SwitchNode;
-import jadx.core.dex.instructions.args.ArgType;
-import jadx.core.dex.instructions.args.InsnArg;
-import jadx.core.dex.instructions.args.InsnWrapArg;
-import jadx.core.dex.instructions.args.LiteralArg;
-import jadx.core.dex.nodes.BlockNode;
-import jadx.core.dex.nodes.ClassNode;
-import jadx.core.dex.nodes.FieldNode;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.utils.InstructionRemover;
-import jadx.core.utils.exceptions.DecodeException;
-import jadx.core.utils.exceptions.JadxException;
+import org.slf4j.*;
 
-import java.util.List;
+import java.util.*;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.attributes.nodes.*;
+import jadx.core.dex.info.*;
+import jadx.core.dex.instructions.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.utils.*;
+import jadx.core.utils.exceptions.*;
 
 @JadxVisitor(
 		name = "ReSugarCode",

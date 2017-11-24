@@ -1,33 +1,24 @@
 package com.njlabs.showjava.ui;
 
-import android.annotation.SuppressLint;
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.pm.ActivityInfo;
-import android.content.pm.PackageManager;
-import android.net.ConnectivityManager;
-import android.net.Uri;
-import android.os.Build;
-import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.provider.Settings;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
+import android.annotation.*;
+import android.content.*;
+import android.content.pm.*;
+import android.net.*;
+import android.os.*;
+import android.preference.*;
+import android.provider.*;
+import android.support.v7.app.*;
+import android.support.v7.widget.*;
+import android.view.*;
 
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.njlabs.showjava.R;
-import com.njlabs.showjava.utils.AesCbcWithIntegrity;
+import com.google.android.gms.ads.*;
+import com.nao20010128nao.Neapolitan.R;
+import com.njlabs.showjava.utils.*;
 
-import java.io.UnsupportedEncodingException;
-import java.security.GeneralSecurityException;
+import java.io.*;
+import java.security.*;
 
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+import uk.co.chrisjenx.calligraphy.*;
 
 @SuppressWarnings("unused")
 @SuppressLint("Registered")

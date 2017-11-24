@@ -1,8 +1,7 @@
 package jadx.core.utils.exceptions;
 
-import jadx.core.dex.nodes.ClassNode;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.utils.ErrorsCounter;
+import jadx.core.dex.nodes.*;
+import jadx.core.utils.*;
 
 public class JadxException extends Exception {
 

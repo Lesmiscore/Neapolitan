@@ -31,22 +31,13 @@
 
 package org.jf.dexlib2.rewriter;
 
-import org.jf.dexlib2.iface.Annotation;
-import org.jf.dexlib2.iface.AnnotationElement;
-import org.jf.dexlib2.iface.ClassDef;
-import org.jf.dexlib2.iface.ExceptionHandler;
-import org.jf.dexlib2.iface.Field;
-import org.jf.dexlib2.iface.Method;
-import org.jf.dexlib2.iface.MethodImplementation;
-import org.jf.dexlib2.iface.MethodParameter;
-import org.jf.dexlib2.iface.TryBlock;
-import org.jf.dexlib2.iface.debug.DebugItem;
-import org.jf.dexlib2.iface.instruction.Instruction;
-import org.jf.dexlib2.iface.reference.FieldReference;
-import org.jf.dexlib2.iface.reference.MethodReference;
-import org.jf.dexlib2.iface.value.EncodedValue;
+import org.jf.dexlib2.iface.*;
+import org.jf.dexlib2.iface.debug.*;
+import org.jf.dexlib2.iface.instruction.*;
+import org.jf.dexlib2.iface.reference.*;
+import org.jf.dexlib2.iface.value.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public interface Rewriters {
     @Nonnull

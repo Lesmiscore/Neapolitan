@@ -31,16 +31,13 @@
 
 package org.jf.dexlib2.immutable.instruction;
 
-import org.jf.dexlib2.Format;
-import org.jf.dexlib2.Opcode;
-import org.jf.dexlib2.ReferenceType;
-import org.jf.dexlib2.iface.instruction.formats.Instruction20bc;
-import org.jf.dexlib2.iface.reference.Reference;
-import org.jf.dexlib2.immutable.reference.ImmutableReference;
-import org.jf.dexlib2.immutable.reference.ImmutableReferenceFactory;
-import org.jf.dexlib2.util.Preconditions;
+import org.jf.dexlib2.*;
+import org.jf.dexlib2.iface.instruction.formats.*;
+import org.jf.dexlib2.iface.reference.*;
+import org.jf.dexlib2.immutable.reference.*;
+import org.jf.dexlib2.util.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class ImmutableInstruction20bc extends ImmutableInstruction implements Instruction20bc {
     public static final Format FORMAT = Format.Format20bc;

@@ -1,11 +1,9 @@
 package jadx.core.utils;
 
-import jadx.api.JadxDecompiler;
+import java.io.*;
+import java.util.*;
 
-import java.io.PrintWriter;
-import java.io.StringWriter;
-import java.util.Arrays;
-import java.util.Iterator;
+import jadx.api.*;
 
 public class Utils {
 

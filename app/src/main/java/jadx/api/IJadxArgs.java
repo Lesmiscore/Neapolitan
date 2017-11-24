@@ -1,6 +1,6 @@
 package jadx.api;
 
-import java.io.File;
+import java.io.*;
 
 public interface IJadxArgs {
 	File getOutDir();

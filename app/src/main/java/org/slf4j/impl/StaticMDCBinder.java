@@ -1,7 +1,7 @@
 package org.slf4j.impl;
 
-import org.slf4j.helpers.NOPMDCAdapter;
-import org.slf4j.spi.MDCAdapter;
+import org.slf4j.helpers.*;
+import org.slf4j.spi.*;
 
 
 /**

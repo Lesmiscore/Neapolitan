@@ -1,7 +1,6 @@
 package jadx.core.xmlgen;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class ParserConstants {
 

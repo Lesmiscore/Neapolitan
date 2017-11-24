@@ -1,15 +1,11 @@
 package com.njlabs.showjava.ui;
 
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
-import android.os.Bundle;
-import android.preference.ListPreference;
-import android.preference.Preference;
-import android.preference.PreferenceFragment;
-import android.preference.PreferenceManager;
-import android.view.Menu;
+import android.app.*;
+import android.os.*;
+import android.preference.*;
+import android.view.*;
 
-import com.njlabs.showjava.R;
+import com.nao20010128nao.Neapolitan.*;
 
 public class SettingsActivity extends BaseActivity {
 

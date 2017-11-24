@@ -1,13 +1,12 @@
 package jadx.core.dex.nodes.parser;
 
-import jadx.core.dex.nodes.DexNode;
-import jadx.core.dex.nodes.FieldNode;
-import jadx.core.utils.exceptions.DecodeException;
+import com.android.dex.Dex.*;
+import com.android.dex.*;
 
-import java.util.List;
+import java.util.*;
 
-import com.android.dex.Dex.Section;
-import com.android.dex.Leb128;
+import jadx.core.dex.nodes.*;
+import jadx.core.utils.exceptions.*;
 
 public class StaticValuesParser extends EncValueParser {
 

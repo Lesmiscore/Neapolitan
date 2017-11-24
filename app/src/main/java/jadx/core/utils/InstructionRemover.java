@@ -1,22 +1,13 @@
 package jadx.core.utils;
 
-import jadx.core.dex.attributes.AFlag;
-import jadx.core.dex.instructions.InsnType;
-import jadx.core.dex.instructions.PhiInsn;
-import jadx.core.dex.instructions.args.InsnArg;
-import jadx.core.dex.instructions.args.InsnWrapArg;
-import jadx.core.dex.instructions.args.RegisterArg;
-import jadx.core.dex.instructions.args.SSAVar;
-import jadx.core.dex.nodes.BlockNode;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.dex.nodes.MethodNode;
+import org.slf4j.*;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.instructions.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.*;
 
 /**
  * Helper class for correct instructions removing,

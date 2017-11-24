@@ -31,7 +31,7 @@
 
 package org.jf.dexlib2.immutable.value;
 
-import org.jf.dexlib2.base.value.BaseNullEncodedValue;
+import org.jf.dexlib2.base.value.*;
 
 public class ImmutableNullEncodedValue extends BaseNullEncodedValue implements ImmutableEncodedValue {
     public static final ImmutableNullEncodedValue INSTANCE = new ImmutableNullEncodedValue();

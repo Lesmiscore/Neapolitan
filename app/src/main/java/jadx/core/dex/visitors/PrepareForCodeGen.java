@@ -1,20 +1,13 @@
 package jadx.core.dex.visitors;
 
-import jadx.core.dex.attributes.AFlag;
-import jadx.core.dex.instructions.ArithNode;
-import jadx.core.dex.instructions.ArithOp;
-import jadx.core.dex.instructions.InsnType;
-import jadx.core.dex.instructions.args.InsnArg;
-import jadx.core.dex.instructions.args.InsnWrapArg;
-import jadx.core.dex.instructions.args.RegisterArg;
-import jadx.core.dex.instructions.mods.ConstructorInsn;
-import jadx.core.dex.nodes.BlockNode;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.utils.exceptions.JadxException;
+import java.util.*;
 
-import java.util.Iterator;
-import java.util.List;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.instructions.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.instructions.mods.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.utils.exceptions.*;
 
 /**
  * Prepare instructions for code generation pass,

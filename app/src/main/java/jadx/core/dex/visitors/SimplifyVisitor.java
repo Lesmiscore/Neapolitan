@@ -1,33 +1,16 @@
 package jadx.core.dex.visitors;
 
-import jadx.core.Consts;
-import jadx.core.dex.info.FieldInfo;
-import jadx.core.dex.info.MethodInfo;
-import jadx.core.dex.instructions.ArithNode;
-import jadx.core.dex.instructions.ArithOp;
-import jadx.core.dex.instructions.ConstStringNode;
-import jadx.core.dex.instructions.IfNode;
-import jadx.core.dex.instructions.IndexInsnNode;
-import jadx.core.dex.instructions.InsnType;
-import jadx.core.dex.instructions.InvokeNode;
-import jadx.core.dex.instructions.args.ArgType;
-import jadx.core.dex.instructions.args.FieldArg;
-import jadx.core.dex.instructions.args.InsnArg;
-import jadx.core.dex.instructions.args.InsnWrapArg;
-import jadx.core.dex.instructions.args.LiteralArg;
-import jadx.core.dex.instructions.mods.ConstructorInsn;
-import jadx.core.dex.instructions.mods.TernaryInsn;
-import jadx.core.dex.nodes.BlockNode;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.dex.regions.conditions.IfCondition;
+import org.slf4j.*;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import jadx.core.*;
+import jadx.core.dex.info.*;
+import jadx.core.dex.instructions.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.instructions.mods.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.dex.regions.conditions.*;
 
 public class SimplifyVisitor extends AbstractVisitor {
 

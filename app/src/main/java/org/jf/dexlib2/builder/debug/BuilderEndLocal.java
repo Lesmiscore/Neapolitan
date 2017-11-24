@@ -31,11 +31,11 @@
 
 package org.jf.dexlib2.builder.debug;
 
-import org.jf.dexlib2.DebugItemType;
-import org.jf.dexlib2.builder.BuilderDebugItem;
-import org.jf.dexlib2.iface.debug.EndLocal;
+import org.jf.dexlib2.*;
+import org.jf.dexlib2.builder.*;
+import org.jf.dexlib2.iface.debug.*;
 
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public class BuilderEndLocal extends BuilderDebugItem implements EndLocal {
     private final int register;

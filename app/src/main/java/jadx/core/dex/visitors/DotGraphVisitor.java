@@ -1,30 +1,16 @@
 package jadx.core.dex.visitors;
 
-import jadx.core.codegen.CodeWriter;
-import jadx.core.codegen.MethodGen;
-import jadx.core.dex.attributes.IAttributeNode;
-import jadx.core.dex.instructions.IfNode;
-import jadx.core.dex.instructions.InsnType;
-import jadx.core.dex.nodes.BlockNode;
-import jadx.core.dex.nodes.IBlock;
-import jadx.core.dex.nodes.IContainer;
-import jadx.core.dex.nodes.IRegion;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.dex.trycatch.ExceptionHandler;
-import jadx.core.utils.BlockUtils;
-import jadx.core.utils.InsnUtils;
-import jadx.core.utils.RegionUtils;
-import jadx.core.utils.StringUtils;
-import jadx.core.utils.Utils;
+import org.slf4j.*;
 
-import java.io.File;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.io.*;
+import java.util.*;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import jadx.core.codegen.*;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.instructions.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.dex.trycatch.*;
+import jadx.core.utils.*;
 
 public class DotGraphVisitor extends AbstractVisitor {
 

@@ -31,13 +31,12 @@
 
 package org.jf.dexlib2.rewriter;
 
-import org.jf.dexlib2.base.BaseTryBlock;
-import org.jf.dexlib2.iface.ExceptionHandler;
-import org.jf.dexlib2.iface.TryBlock;
+import org.jf.dexlib2.base.*;
+import org.jf.dexlib2.iface.*;
 
-import java.util.List;
+import java.util.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class TryBlockRewriter implements Rewriter<TryBlock<? extends ExceptionHandler>> {
     @Nonnull

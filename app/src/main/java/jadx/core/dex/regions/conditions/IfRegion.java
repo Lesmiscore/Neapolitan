@@ -1,15 +1,10 @@
 package jadx.core.dex.regions.conditions;
 
-import jadx.core.dex.nodes.BlockNode;
-import jadx.core.dex.nodes.IBranchRegion;
-import jadx.core.dex.nodes.IContainer;
-import jadx.core.dex.nodes.IRegion;
-import jadx.core.dex.regions.AbstractRegion;
-import jadx.core.utils.exceptions.JadxRuntimeException;
+import java.util.*;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import jadx.core.dex.nodes.*;
+import jadx.core.dex.regions.*;
+import jadx.core.utils.exceptions.*;
 
 public final class IfRegion extends AbstractRegion implements IBranchRegion {
 

@@ -31,18 +31,15 @@
 
 package org.jf.dexlib2.dexbacked;
 
-import org.jf.dexlib2.base.reference.BaseFieldReference;
-import org.jf.dexlib2.dexbacked.raw.FieldIdItem;
-import org.jf.dexlib2.dexbacked.util.AnnotationsDirectory;
-import org.jf.dexlib2.dexbacked.util.StaticInitialValueIterator;
-import org.jf.dexlib2.iface.ClassDef;
-import org.jf.dexlib2.iface.Field;
+import org.jf.dexlib2.base.reference.*;
+import org.jf.dexlib2.dexbacked.raw.*;
+import org.jf.dexlib2.dexbacked.util.*;
+import org.jf.dexlib2.iface.*;
 import org.jf.dexlib2.iface.value.EncodedValue;
 
-import java.util.Set;
+import java.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public class DexBackedField extends BaseFieldReference implements Field {
     @Nonnull

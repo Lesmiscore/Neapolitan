@@ -31,12 +31,12 @@
 
 package org.jf.dexlib2.dexbacked;
 
-import org.jf.dexlib2.base.BaseAnnotation;
-import org.jf.dexlib2.dexbacked.util.VariableSizeSet;
+import org.jf.dexlib2.base.*;
+import org.jf.dexlib2.dexbacked.util.*;
 
-import java.util.Set;
+import java.util.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class DexBackedAnnotation extends BaseAnnotation {
     @Nonnull

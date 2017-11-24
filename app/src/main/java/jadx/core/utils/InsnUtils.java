@@ -1,22 +1,16 @@
 package jadx.core.utils;
 
-import jadx.core.dex.attributes.AType;
-import jadx.core.dex.info.FieldInfo;
-import jadx.core.dex.instructions.ConstClassNode;
-import jadx.core.dex.instructions.ConstStringNode;
-import jadx.core.dex.instructions.IndexInsnNode;
-import jadx.core.dex.instructions.InsnType;
-import jadx.core.dex.nodes.DexNode;
-import jadx.core.dex.nodes.FieldNode;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.dex.nodes.parser.FieldInitAttr;
-import jadx.core.utils.exceptions.JadxRuntimeException;
+import com.android.dx.io.instructions.*;
 
-import org.jetbrains.annotations.Nullable;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.jetbrains.annotations.*;
+import org.slf4j.*;
 
-import com.android.dx.io.instructions.DecodedInstruction;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.info.*;
+import jadx.core.dex.instructions.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.dex.nodes.parser.*;
+import jadx.core.utils.exceptions.*;
 
 public class InsnUtils {
 

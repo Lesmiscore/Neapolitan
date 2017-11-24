@@ -1,15 +1,13 @@
 package com.njlabs.showjava.processor;
 
-import android.os.Handler;
-import android.support.annotation.NonNull;
-import android.util.Log;
-import android.widget.Toast;
+import android.os.*;
+import android.support.annotation.*;
+import android.util.*;
+import android.widget.*;
 
-import com.njlabs.showjava.utils.ExceptionHandler;
+import com.njlabs.showjava.utils.*;
 
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.PrintStream;
+import java.io.*;
 
 @SuppressWarnings("unused")
 public class ProcessServiceHelper {

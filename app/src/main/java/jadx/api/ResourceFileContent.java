@@ -1,7 +1,7 @@
 package jadx.api;
 
-import jadx.core.codegen.CodeWriter;
-import jadx.core.xmlgen.ResContainer;
+import jadx.core.codegen.*;
+import jadx.core.xmlgen.*;
 
 public class ResourceFileContent extends ResourceFile {
 

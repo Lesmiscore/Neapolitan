@@ -1,10 +1,9 @@
 package org.jf.dexlib2.builder.instruction;
 
-import org.jf.dexlib2.builder.BuilderSwitchPayload;
-import org.jf.dexlib2.builder.Label;
-import org.jf.dexlib2.iface.instruction.SwitchElement;
+import org.jf.dexlib2.builder.*;
+import org.jf.dexlib2.iface.instruction.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class BuilderSwitchElement implements SwitchElement {
     private final int key;

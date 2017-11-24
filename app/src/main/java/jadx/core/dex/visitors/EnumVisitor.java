@@ -1,34 +1,21 @@
 package jadx.core.dex.visitors;
 
-import jadx.core.codegen.TypeGen;
-import jadx.core.deobf.NameMapper;
-import jadx.core.dex.attributes.AFlag;
-import jadx.core.dex.attributes.nodes.EnumClassAttr;
-import jadx.core.dex.attributes.nodes.EnumClassAttr.EnumField;
-import jadx.core.dex.info.ClassInfo;
-import jadx.core.dex.info.FieldInfo;
-import jadx.core.dex.info.MethodInfo;
-import jadx.core.dex.instructions.IndexInsnNode;
-import jadx.core.dex.instructions.InsnType;
-import jadx.core.dex.instructions.args.ArgType;
-import jadx.core.dex.instructions.args.InsnArg;
-import jadx.core.dex.instructions.args.InsnWrapArg;
-import jadx.core.dex.instructions.mods.ConstructorInsn;
-import jadx.core.dex.nodes.BlockNode;
-import jadx.core.dex.nodes.ClassNode;
-import jadx.core.dex.nodes.DexNode;
-import jadx.core.dex.nodes.FieldNode;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.utils.ErrorsCounter;
-import jadx.core.utils.InsnUtils;
-import jadx.core.utils.exceptions.JadxException;
+import org.slf4j.*;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import jadx.core.codegen.*;
+import jadx.core.deobf.*;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.attributes.nodes.*;
+import jadx.core.dex.attributes.nodes.EnumClassAttr.*;
+import jadx.core.dex.info.*;
+import jadx.core.dex.instructions.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.instructions.mods.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.utils.*;
+import jadx.core.utils.exceptions.*;
 
 @JadxVisitor(
 		name = "EnumVisitor",

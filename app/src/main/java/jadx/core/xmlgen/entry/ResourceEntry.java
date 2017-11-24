@@ -1,6 +1,6 @@
 package jadx.core.xmlgen.entry;
 
-import java.util.List;
+import java.util.*;
 
 public final class ResourceEntry {
 

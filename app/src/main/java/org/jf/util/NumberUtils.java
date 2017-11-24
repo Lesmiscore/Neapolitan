@@ -31,7 +31,7 @@
 
 package org.jf.util;
 
-import java.text.DecimalFormat;
+import java.text.*;
 
 public class NumberUtils {
     private static final int canonicalFloatNaN = Float.floatToRawIntBits(Float.NaN);

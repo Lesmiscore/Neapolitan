@@ -31,10 +31,9 @@
 
 package org.jf.dexlib2.base.reference;
 
-import org.jf.dexlib2.iface.reference.FieldReference;
+import org.jf.dexlib2.iface.reference.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public abstract class BaseFieldReference implements FieldReference {
     @Override

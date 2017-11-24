@@ -31,11 +31,11 @@
 
 package org.jf.dexlib2.immutable.util;
 
-import org.jf.dexlib2.immutable.ImmutableMethodParameter;
+import org.jf.dexlib2.immutable.*;
 
-import java.util.Iterator;
+import java.util.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class ParamUtil {
     private static int findTypeEnd(@Nonnull String str, int index) {

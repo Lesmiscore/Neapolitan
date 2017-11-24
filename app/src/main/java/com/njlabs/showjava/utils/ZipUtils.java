@@ -1,19 +1,11 @@
 package com.njlabs.showjava.utils;
 
-import android.os.Environment;
+import android.os.*;
 
-import com.njlabs.showjava.utils.logging.Ln;
+import com.njlabs.showjava.utils.logging.*;
 
-import java.io.BufferedInputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.PrintStream;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipInputStream;
-import java.util.zip.ZipOutputStream;
+import java.io.*;
+import java.util.zip.*;
 
 public class ZipUtils {
 

@@ -1,6 +1,6 @@
 package jadx.core.dex.nodes;
 
-import jadx.core.dex.attributes.IAttributeNode;
+import jadx.core.dex.attributes.*;
 
 public interface IContainer extends IAttributeNode {
 

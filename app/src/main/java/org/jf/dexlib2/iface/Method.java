@@ -31,13 +31,11 @@
 
 package org.jf.dexlib2.iface;
 
-import org.jf.dexlib2.iface.reference.MethodReference;
+import org.jf.dexlib2.iface.reference.*;
 
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 /**
  * This class represents a specific method definition in a class.

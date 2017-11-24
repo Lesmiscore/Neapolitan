@@ -31,20 +31,18 @@
 
 package org.jf.dexlib2.writer.builder;
 
-import com.google.common.collect.Maps;
+import com.google.common.collect.*;
 
-import org.jf.dexlib2.iface.reference.MethodReference;
-import org.jf.dexlib2.util.MethodUtil;
-import org.jf.dexlib2.writer.ProtoSection;
-import org.jf.util.CharSequenceUtils;
+import org.jf.dexlib2.iface.reference.*;
+import org.jf.dexlib2.util.*;
+import org.jf.dexlib2.writer.*;
+import org.jf.util.*;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.Map.Entry;
-import java.util.concurrent.ConcurrentMap;
+import java.util.*;
+import java.util.Map.*;
+import java.util.concurrent.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 class BuilderProtoPool
         implements ProtoSection<BuilderStringReference, BuilderTypeReference, BuilderProtoReference, BuilderTypeList> {

@@ -31,19 +31,15 @@
 
 package org.jf.dexlib2.writer;
 
-import org.jf.dexlib2.builder.MutableMethodImplementation;
-import org.jf.dexlib2.iface.ExceptionHandler;
-import org.jf.dexlib2.iface.TryBlock;
-import org.jf.dexlib2.iface.debug.DebugItem;
-import org.jf.dexlib2.iface.instruction.Instruction;
+import org.jf.dexlib2.builder.*;
+import org.jf.dexlib2.iface.*;
+import org.jf.dexlib2.iface.debug.*;
+import org.jf.dexlib2.iface.instruction.*;
 
-import java.io.IOException;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
+import java.io.*;
+import java.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public interface ClassSection<StringKey extends CharSequence, TypeKey extends CharSequence, TypeListKey, ClassKey,
         FieldKey, MethodKey, AnnotationSetKey, EncodedValue> extends IndexSection<ClassKey> {

@@ -31,10 +31,10 @@
 
 package org.jf.dexlib2.dexbacked.reference;
 
-import org.jf.dexlib2.base.reference.BaseStringReference;
-import org.jf.dexlib2.dexbacked.DexBackedDexFile;
+import org.jf.dexlib2.base.reference.*;
+import org.jf.dexlib2.dexbacked.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class DexBackedStringReference extends BaseStringReference {
     @Nonnull

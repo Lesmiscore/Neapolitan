@@ -1,20 +1,14 @@
 package jadx.core.codegen;
 
-import jadx.api.CodePosition;
-import jadx.core.dex.attributes.nodes.LineAttrNode;
-import jadx.core.utils.files.FileUtils;
+import org.jetbrains.annotations.*;
+import org.slf4j.*;
 
-import java.io.File;
-import java.io.PrintWriter;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.TreeMap;
+import java.io.*;
+import java.util.*;
 
-import org.jetbrains.annotations.Nullable;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import jadx.api.*;
+import jadx.core.dex.attributes.nodes.*;
+import jadx.core.utils.files.*;
 
 public class CodeWriter {
 	private static final Logger LOG = LoggerFactory.getLogger(CodeWriter.class);

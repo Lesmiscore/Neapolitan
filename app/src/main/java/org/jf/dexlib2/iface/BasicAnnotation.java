@@ -1,8 +1,8 @@
 package org.jf.dexlib2.iface;
 
-import java.util.Set;
+import java.util.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 /**
  * This represents a basic annotation, and serves as a common superclass for Annotation and AnnotationEncodedValue

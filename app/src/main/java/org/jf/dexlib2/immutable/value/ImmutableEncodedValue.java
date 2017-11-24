@@ -31,7 +31,7 @@
 
 package org.jf.dexlib2.immutable.value;
 
-import org.jf.dexlib2.iface.value.EncodedValue;
+import org.jf.dexlib2.iface.value.*;
 
 public interface ImmutableEncodedValue extends EncodedValue {
 }

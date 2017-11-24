@@ -1,48 +1,25 @@
 package jadx.core.dex.nodes;
 
-import jadx.core.dex.attributes.AFlag;
-import jadx.core.dex.attributes.AType;
-import jadx.core.dex.attributes.nodes.JumpInfo;
-import jadx.core.dex.attributes.nodes.LineAttrNode;
-import jadx.core.dex.attributes.nodes.LoopInfo;
-import jadx.core.dex.info.AccessInfo;
-import jadx.core.dex.info.AccessInfo.AFType;
-import jadx.core.dex.info.ClassInfo;
-import jadx.core.dex.info.MethodInfo;
-import jadx.core.dex.instructions.GotoNode;
-import jadx.core.dex.instructions.IfNode;
-import jadx.core.dex.instructions.InsnDecoder;
-import jadx.core.dex.instructions.SwitchNode;
-import jadx.core.dex.instructions.args.ArgType;
-import jadx.core.dex.instructions.args.InsnArg;
-import jadx.core.dex.instructions.args.RegisterArg;
-import jadx.core.dex.instructions.args.SSAVar;
-import jadx.core.dex.instructions.args.TypeImmutableArg;
-import jadx.core.dex.nodes.parser.SignatureParser;
-import jadx.core.dex.regions.Region;
-import jadx.core.dex.trycatch.ExcHandlerAttr;
-import jadx.core.dex.trycatch.ExceptionHandler;
-import jadx.core.dex.trycatch.TryCatchBlock;
-import jadx.core.utils.Utils;
-import jadx.core.utils.exceptions.DecodeException;
-import jadx.core.utils.exceptions.JadxRuntimeException;
+import com.android.dex.ClassData.*;
+import com.android.dex.*;
+import com.android.dex.Code.*;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import org.jetbrains.annotations.*;
+import org.slf4j.*;
 
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.util.*;
 
-import com.android.dex.ClassData.Method;
-import com.android.dex.Code;
-import com.android.dex.Code.CatchHandler;
-import com.android.dex.Code.Try;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.attributes.nodes.*;
+import jadx.core.dex.info.*;
+import jadx.core.dex.info.AccessInfo.*;
+import jadx.core.dex.instructions.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.parser.*;
+import jadx.core.dex.regions.*;
+import jadx.core.dex.trycatch.*;
+import jadx.core.utils.*;
+import jadx.core.utils.exceptions.*;
 
 public class MethodNode extends LineAttrNode implements ILoadable {
 	private static final Logger LOG = LoggerFactory.getLogger(MethodNode.class);

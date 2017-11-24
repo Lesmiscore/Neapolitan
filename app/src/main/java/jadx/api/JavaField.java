@@ -1,8 +1,8 @@
 package jadx.api;
 
-import jadx.core.dex.info.AccessInfo;
-import jadx.core.dex.instructions.args.ArgType;
-import jadx.core.dex.nodes.FieldNode;
+import jadx.core.dex.info.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.*;
 
 public final class JavaField implements JavaNode {
 

@@ -31,10 +31,9 @@
 
 package org.jf.dexlib2.writer;
 
-import java.util.Collection;
+import java.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public interface TypeListSection<TypeKey, TypeListKey> extends NullableOffsetSection<TypeListKey> {
     int getNullableItemOffset(@Nullable TypeListKey index);

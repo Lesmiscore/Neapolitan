@@ -1,35 +1,18 @@
 package jadx.api;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.slf4j.*;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
+import java.io.*;
+import java.util.*;
+import java.util.concurrent.*;
 
-import jadx.core.Jadx;
-import jadx.core.ProcessClass;
-import jadx.core.codegen.CodeGen;
-import jadx.core.dex.nodes.ClassNode;
-import jadx.core.dex.nodes.FieldNode;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.dex.nodes.RootNode;
-import jadx.core.dex.visitors.IDexTreeVisitor;
-import jadx.core.dex.visitors.SaveCode;
-import jadx.core.utils.exceptions.DecodeException;
-import jadx.core.utils.exceptions.JadxException;
-import jadx.core.utils.exceptions.JadxRuntimeException;
-import jadx.core.utils.files.InputFile;
-import jadx.core.xmlgen.BinaryXMLParser;
-import jadx.core.xmlgen.ResourcesSaver;
+import jadx.core.*;
+import jadx.core.codegen.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.dex.visitors.*;
+import jadx.core.utils.exceptions.*;
+import jadx.core.utils.files.*;
+import jadx.core.xmlgen.*;
 
 /**
  * Jadx API usage example:

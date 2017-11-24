@@ -1,26 +1,17 @@
 package jadx.api;
 
-import jadx.api.ResourceFile.ZipRef;
-import jadx.core.codegen.CodeWriter;
-import jadx.core.utils.Utils;
-import jadx.core.utils.exceptions.JadxException;
-import jadx.core.utils.files.InputFile;
-import jadx.core.xmlgen.ResContainer;
-import jadx.core.xmlgen.ResTableParser;
+import org.slf4j.*;
 
-import java.io.BufferedInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.List;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipFile;
+import java.io.*;
+import java.util.*;
+import java.util.zip.*;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import jadx.api.ResourceFile.*;
+import jadx.core.codegen.*;
+import jadx.core.utils.*;
+import jadx.core.utils.exceptions.*;
+import jadx.core.utils.files.*;
+import jadx.core.xmlgen.*;
 
 // TODO: move to core package
 public final class ResourcesLoader {

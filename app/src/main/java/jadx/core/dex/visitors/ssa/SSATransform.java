@@ -1,31 +1,16 @@
 package jadx.core.dex.visitors.ssa;
 
-import jadx.core.dex.attributes.AFlag;
-import jadx.core.dex.attributes.AType;
-import jadx.core.dex.attributes.nodes.PhiListAttr;
-import jadx.core.dex.instructions.InsnType;
-import jadx.core.dex.instructions.PhiInsn;
-import jadx.core.dex.instructions.args.InsnArg;
-import jadx.core.dex.instructions.args.RegisterArg;
-import jadx.core.dex.instructions.args.SSAVar;
-import jadx.core.dex.nodes.BlockNode;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.dex.visitors.AbstractVisitor;
-import jadx.core.dex.visitors.JadxVisitor;
-import jadx.core.dex.visitors.blocksmaker.BlockFinish;
-import jadx.core.utils.InsnList;
-import jadx.core.utils.InstructionRemover;
-import jadx.core.utils.exceptions.JadxException;
-import jadx.core.utils.exceptions.JadxRuntimeException;
+import java.util.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.BitSet;
-import java.util.Deque;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.attributes.nodes.*;
+import jadx.core.dex.instructions.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.dex.visitors.*;
+import jadx.core.dex.visitors.blocksmaker.*;
+import jadx.core.utils.*;
+import jadx.core.utils.exceptions.*;
 
 @JadxVisitor(
 		name = "SSATransform",

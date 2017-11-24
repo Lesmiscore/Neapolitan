@@ -31,14 +31,12 @@
 
 package org.jf.dexlib2.base.value;
 
-import com.google.common.primitives.Ints;
+import com.google.common.primitives.*;
 
-import org.jf.dexlib2.ValueType;
-import org.jf.dexlib2.iface.value.DoubleEncodedValue;
-import org.jf.dexlib2.iface.value.EncodedValue;
+import org.jf.dexlib2.*;
+import org.jf.dexlib2.iface.value.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public abstract class BaseDoubleEncodedValue implements DoubleEncodedValue {
     @Override

@@ -28,8 +28,7 @@
 
 package org.jf.util;
 
-import java.io.IOException;
-import java.io.Writer;
+import java.io.*;
 
 public class IndentingWriter extends Writer {
     private static final String newLine = System.getProperty("line.separator");

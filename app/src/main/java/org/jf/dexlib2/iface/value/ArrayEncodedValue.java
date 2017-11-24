@@ -31,10 +31,9 @@
 
 package org.jf.dexlib2.iface.value;
 
-import java.util.List;
+import java.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 /**
  * This class represents an encoded array value.

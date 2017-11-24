@@ -31,7 +31,7 @@
 
 package org.jf.dexlib2.rewriter;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class TypeRewriter implements Rewriter<String> {
     @Nonnull

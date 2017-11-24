@@ -31,40 +31,21 @@
 
 package org.jf.dexlib2.dexbacked.raw;
 
-import com.google.common.base.Joiner;
-import com.google.common.collect.Lists;
+import com.google.common.base.*;
+import com.google.common.collect.*;
 
-import org.jf.dexlib2.VerificationError;
-import org.jf.dexlib2.dexbacked.DexReader;
-import org.jf.dexlib2.dexbacked.instruction.DexBackedInstruction;
-import org.jf.dexlib2.dexbacked.raw.util.DexAnnotator;
-import org.jf.dexlib2.iface.instruction.FieldOffsetInstruction;
-import org.jf.dexlib2.iface.instruction.InlineIndexInstruction;
-import org.jf.dexlib2.iface.instruction.Instruction;
-import org.jf.dexlib2.iface.instruction.NarrowLiteralInstruction;
-import org.jf.dexlib2.iface.instruction.OffsetInstruction;
-import org.jf.dexlib2.iface.instruction.OneRegisterInstruction;
-import org.jf.dexlib2.iface.instruction.ReferenceInstruction;
-import org.jf.dexlib2.iface.instruction.SwitchElement;
-import org.jf.dexlib2.iface.instruction.ThreeRegisterInstruction;
-import org.jf.dexlib2.iface.instruction.TwoRegisterInstruction;
-import org.jf.dexlib2.iface.instruction.VerificationErrorInstruction;
-import org.jf.dexlib2.iface.instruction.VtableIndexInstruction;
-import org.jf.dexlib2.iface.instruction.WideLiteralInstruction;
-import org.jf.dexlib2.iface.instruction.formats.ArrayPayload;
-import org.jf.dexlib2.iface.instruction.formats.Instruction35c;
-import org.jf.dexlib2.iface.instruction.formats.Instruction3rc;
-import org.jf.dexlib2.iface.instruction.formats.PackedSwitchPayload;
-import org.jf.dexlib2.iface.instruction.formats.SparseSwitchPayload;
-import org.jf.dexlib2.util.AnnotatedBytes;
-import org.jf.dexlib2.util.ReferenceUtil;
-import org.jf.util.ExceptionWithContext;
-import org.jf.util.NumberUtils;
+import org.jf.dexlib2.*;
+import org.jf.dexlib2.dexbacked.*;
+import org.jf.dexlib2.dexbacked.instruction.*;
+import org.jf.dexlib2.dexbacked.raw.util.*;
+import org.jf.dexlib2.iface.instruction.*;
+import org.jf.dexlib2.iface.instruction.formats.*;
+import org.jf.dexlib2.util.*;
+import org.jf.util.*;
 
-import java.util.List;
+import java.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public class CodeItem {
     public static final int REGISTERS_OFFSET = 0;

@@ -31,30 +31,15 @@
 
 package org.jf.dexlib2.dexbacked.util;
 
-import com.google.common.collect.Iterators;
-
-import org.jf.dexlib2.AccessFlags;
-import org.jf.dexlib2.DebugItemType;
-import org.jf.dexlib2.dexbacked.DexBackedDexFile;
-import org.jf.dexlib2.dexbacked.DexBackedMethod;
-import org.jf.dexlib2.dexbacked.DexBackedMethodImplementation;
-import org.jf.dexlib2.dexbacked.DexReader;
-import org.jf.dexlib2.iface.MethodParameter;
-import org.jf.dexlib2.iface.debug.DebugItem;
-import org.jf.dexlib2.iface.debug.EndLocal;
-import org.jf.dexlib2.iface.debug.LocalInfo;
-import org.jf.dexlib2.immutable.debug.ImmutableEndLocal;
-import org.jf.dexlib2.immutable.debug.ImmutableEpilogueBegin;
-import org.jf.dexlib2.immutable.debug.ImmutableLineNumber;
-import org.jf.dexlib2.immutable.debug.ImmutablePrologueEnd;
-import org.jf.dexlib2.immutable.debug.ImmutableRestartLocal;
-import org.jf.dexlib2.immutable.debug.ImmutableSetSourceFile;
-import org.jf.dexlib2.immutable.debug.ImmutableStartLocal;
+import org.jf.dexlib2.*;
+import org.jf.dexlib2.dexbacked.*;
+import org.jf.dexlib2.iface.*;
+import org.jf.dexlib2.iface.debug.*;
+import org.jf.dexlib2.immutable.debug.*;
 
 import java.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public abstract class DebugInfo implements Iterable<DebugItem> {
     public static DebugInfo newOrEmpty(@Nonnull DexBackedDexFile dexFile, int debugInfoOffset,

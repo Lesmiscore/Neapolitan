@@ -31,8 +31,8 @@
 
 package org.jf.dexlib2.immutable.value;
 
-import org.jf.dexlib2.base.value.BaseBooleanEncodedValue;
-import org.jf.dexlib2.iface.value.BooleanEncodedValue;
+import org.jf.dexlib2.base.value.*;
+import org.jf.dexlib2.iface.value.*;
 
 public class ImmutableBooleanEncodedValue extends BaseBooleanEncodedValue implements ImmutableEncodedValue {
     public static final ImmutableBooleanEncodedValue TRUE_VALUE = new ImmutableBooleanEncodedValue(true);

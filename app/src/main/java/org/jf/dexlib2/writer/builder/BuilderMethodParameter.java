@@ -31,10 +31,9 @@
 
 package org.jf.dexlib2.writer.builder;
 
-import org.jf.dexlib2.base.BaseMethodParameter;
+import org.jf.dexlib2.base.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public class BuilderMethodParameter extends BaseMethodParameter {
     @Nonnull

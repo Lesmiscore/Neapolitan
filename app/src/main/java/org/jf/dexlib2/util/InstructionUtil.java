@@ -31,7 +31,7 @@
 
 package org.jf.dexlib2.util;
 
-import org.jf.dexlib2.Opcode;
+import org.jf.dexlib2.*;
 
 public final class InstructionUtil {
     private InstructionUtil() {

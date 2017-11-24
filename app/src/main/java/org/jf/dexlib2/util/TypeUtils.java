@@ -31,9 +31,9 @@
 
 package org.jf.dexlib2.util;
 
-import org.jf.dexlib2.iface.reference.TypeReference;
+import org.jf.dexlib2.iface.reference.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public final class TypeUtils {
     private TypeUtils() {

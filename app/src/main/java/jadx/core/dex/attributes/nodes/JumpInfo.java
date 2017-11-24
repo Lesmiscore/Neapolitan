@@ -1,6 +1,6 @@
 package jadx.core.dex.attributes.nodes;
 
-import jadx.core.utils.InsnUtils;
+import jadx.core.utils.*;
 
 public class JumpInfo {
 

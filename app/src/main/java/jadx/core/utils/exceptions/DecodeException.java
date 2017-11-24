@@ -1,6 +1,6 @@
 package jadx.core.utils.exceptions;
 
-import jadx.core.dex.nodes.MethodNode;
+import jadx.core.dex.nodes.*;
 
 public class DecodeException extends JadxException {
 

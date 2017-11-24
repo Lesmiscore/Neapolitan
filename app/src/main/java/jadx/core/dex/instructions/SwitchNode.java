@@ -1,10 +1,10 @@
 package jadx.core.dex.instructions;
 
-import jadx.core.dex.instructions.args.InsnArg;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.utils.InsnUtils;
+import java.util.*;
 
-import java.util.Arrays;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.utils.*;
 
 public class SwitchNode extends InsnNode {
 

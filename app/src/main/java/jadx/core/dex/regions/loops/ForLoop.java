@@ -1,6 +1,6 @@
 package jadx.core.dex.regions.loops;
 
-import jadx.core.dex.nodes.InsnNode;
+import jadx.core.dex.nodes.*;
 
 public final class ForLoop extends LoopType {
 

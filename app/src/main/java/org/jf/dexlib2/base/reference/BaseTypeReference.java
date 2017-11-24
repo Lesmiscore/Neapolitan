@@ -31,9 +31,9 @@
 
 package org.jf.dexlib2.base.reference;
 
-import org.jf.dexlib2.iface.reference.TypeReference;
+import org.jf.dexlib2.iface.reference.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public abstract class BaseTypeReference implements TypeReference {
     @Override

@@ -31,11 +31,11 @@
 
 package org.jf.dexlib2.dexbacked.reference;
 
-import org.jf.dexlib2.base.reference.BaseFieldReference;
-import org.jf.dexlib2.dexbacked.DexBackedDexFile;
-import org.jf.dexlib2.dexbacked.raw.FieldIdItem;
+import org.jf.dexlib2.base.reference.*;
+import org.jf.dexlib2.dexbacked.*;
+import org.jf.dexlib2.dexbacked.raw.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class DexBackedFieldReference extends BaseFieldReference {
     @Nonnull

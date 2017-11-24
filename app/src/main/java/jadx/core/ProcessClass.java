@@ -1,22 +1,16 @@
 package jadx.core;
 
-import jadx.core.codegen.CodeGen;
-import jadx.core.dex.nodes.ClassNode;
-import jadx.core.dex.visitors.DepthTraversal;
-import jadx.core.dex.visitors.IDexTreeVisitor;
-import jadx.core.utils.ErrorsCounter;
+import org.jetbrains.annotations.*;
+import org.slf4j.*;
 
-import java.util.List;
+import java.util.*;
 
-import org.jetbrains.annotations.Nullable;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import jadx.core.codegen.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.dex.visitors.*;
+import jadx.core.utils.*;
 
-import static jadx.core.dex.nodes.ProcessState.GENERATED;
-import static jadx.core.dex.nodes.ProcessState.NOT_LOADED;
-import static jadx.core.dex.nodes.ProcessState.PROCESSED;
-import static jadx.core.dex.nodes.ProcessState.STARTED;
-import static jadx.core.dex.nodes.ProcessState.UNLOADED;
+import static jadx.core.dex.nodes.ProcessState.*;
 
 public final class ProcessClass {
 	private static final Logger LOG = LoggerFactory.getLogger(ProcessClass.class);

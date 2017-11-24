@@ -31,11 +31,11 @@
 
 package org.jf.dexlib2.writer.builder;
 
-import org.jf.dexlib2.base.BaseTryBlock;
+import org.jf.dexlib2.base.*;
 
-import java.util.List;
+import java.util.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class BuilderTryBlock extends BaseTryBlock<BuilderExceptionHandler> {
     private final int startCodeAddress;

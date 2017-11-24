@@ -31,17 +31,15 @@
 
 package org.jf.dexlib2.immutable;
 
-import com.google.common.collect.ImmutableSet;
+import com.google.common.collect.*;
 
-import org.jf.dexlib2.base.BaseAnnotationElement;
-import org.jf.dexlib2.iface.AnnotationElement;
-import org.jf.dexlib2.iface.value.EncodedValue;
-import org.jf.dexlib2.immutable.value.ImmutableEncodedValue;
-import org.jf.dexlib2.immutable.value.ImmutableEncodedValueFactory;
-import org.jf.util.ImmutableConverter;
+import org.jf.dexlib2.base.*;
+import org.jf.dexlib2.iface.*;
+import org.jf.dexlib2.iface.value.*;
+import org.jf.dexlib2.immutable.value.*;
+import org.jf.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public class ImmutableAnnotationElement extends BaseAnnotationElement {
     private static final ImmutableConverter<ImmutableAnnotationElement, AnnotationElement> CONVERTER =

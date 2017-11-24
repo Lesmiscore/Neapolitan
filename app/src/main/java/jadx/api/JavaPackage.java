@@ -1,8 +1,8 @@
 package jadx.api;
 
-import java.util.List;
+import org.jetbrains.annotations.*;
 
-import org.jetbrains.annotations.NotNull;
+import java.util.*;
 
 public final class JavaPackage implements JavaNode, Comparable<JavaPackage> {
 	private final String name;

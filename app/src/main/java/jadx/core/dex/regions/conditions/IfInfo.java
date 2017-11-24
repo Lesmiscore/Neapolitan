@@ -1,9 +1,8 @@
 package jadx.core.dex.regions.conditions;
 
-import jadx.core.dex.nodes.BlockNode;
+import java.util.*;
 
-import java.util.HashSet;
-import java.util.Set;
+import jadx.core.dex.nodes.*;
 
 public final class IfInfo {
 	private final IfCondition condition;

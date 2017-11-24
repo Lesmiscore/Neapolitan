@@ -31,22 +31,13 @@
 
 package org.jf.dexlib2.immutable.debug;
 
-import com.google.common.collect.ImmutableList;
+import com.google.common.collect.*;
 
-import org.jf.dexlib2.DebugItemType;
-import org.jf.dexlib2.iface.debug.DebugItem;
-import org.jf.dexlib2.iface.debug.EndLocal;
-import org.jf.dexlib2.iface.debug.EpilogueBegin;
-import org.jf.dexlib2.iface.debug.LineNumber;
-import org.jf.dexlib2.iface.debug.PrologueEnd;
-import org.jf.dexlib2.iface.debug.RestartLocal;
-import org.jf.dexlib2.iface.debug.SetSourceFile;
-import org.jf.dexlib2.iface.debug.StartLocal;
-import org.jf.util.ExceptionWithContext;
-import org.jf.util.ImmutableConverter;
+import org.jf.dexlib2.*;
+import org.jf.dexlib2.iface.debug.*;
+import org.jf.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public abstract class ImmutableDebugItem implements DebugItem {
     private static final ImmutableConverter<ImmutableDebugItem, DebugItem> CONVERTER =

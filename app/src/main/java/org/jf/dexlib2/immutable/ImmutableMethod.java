@@ -31,23 +31,15 @@
 
 package org.jf.dexlib2.immutable;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableSet;
-import com.google.common.collect.ImmutableSortedSet;
-import com.google.common.collect.Ordering;
+import com.google.common.collect.*;
 
-import org.jf.dexlib2.base.reference.BaseMethodReference;
-import org.jf.dexlib2.iface.Annotation;
-import org.jf.dexlib2.iface.Method;
-import org.jf.dexlib2.iface.MethodImplementation;
-import org.jf.dexlib2.iface.MethodParameter;
-import org.jf.util.ImmutableConverter;
-import org.jf.util.ImmutableUtils;
+import org.jf.dexlib2.base.reference.*;
+import org.jf.dexlib2.iface.*;
+import org.jf.util.*;
 
-import java.util.Set;
+import java.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public class ImmutableMethod extends BaseMethodReference implements Method {
     private static final ImmutableConverter<ImmutableMethod, Method> CONVERTER =

@@ -1,9 +1,8 @@
 package jadx.core.dex.info;
 
-import jadx.core.dex.instructions.args.ArgType;
+import java.util.*;
 
-import java.util.HashMap;
-import java.util.Map;
+import jadx.core.dex.instructions.args.*;
 
 public class InfoStorage {
 

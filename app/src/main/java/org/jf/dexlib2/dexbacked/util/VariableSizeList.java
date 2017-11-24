@@ -31,12 +31,11 @@
 
 package org.jf.dexlib2.dexbacked.util;
 
-import org.jf.dexlib2.dexbacked.DexBackedDexFile;
-import org.jf.dexlib2.dexbacked.DexReader;
+import org.jf.dexlib2.dexbacked.*;
 
-import java.util.AbstractSequentialList;
+import java.util.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public abstract class VariableSizeList<T> extends AbstractSequentialList<T> {
     @Nonnull

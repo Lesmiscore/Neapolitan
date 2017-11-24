@@ -31,8 +31,8 @@
 
 package org.jf.dexlib2.analysis;
 
-import org.jf.dexlib2.Opcode;
-import org.jf.dexlib2.iface.instruction.Instruction;
+import org.jf.dexlib2.*;
+import org.jf.dexlib2.iface.instruction.*;
 
 /**
  * This represents a "fixed" odexed instruction, where the object register is always null and so the correct type

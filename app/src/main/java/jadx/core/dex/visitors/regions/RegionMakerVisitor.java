@@ -1,33 +1,18 @@
 package jadx.core.dex.visitors.regions;
 
-import jadx.core.dex.attributes.AFlag;
-import jadx.core.dex.attributes.AType;
-import jadx.core.dex.attributes.nodes.EdgeInsnAttr;
-import jadx.core.dex.instructions.InsnType;
-import jadx.core.dex.nodes.BlockNode;
-import jadx.core.dex.nodes.IBlock;
-import jadx.core.dex.nodes.IContainer;
-import jadx.core.dex.nodes.IRegion;
-import jadx.core.dex.nodes.InsnContainer;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.dex.regions.Region;
-import jadx.core.dex.regions.SwitchRegion;
-import jadx.core.dex.regions.SynchronizedRegion;
-import jadx.core.dex.regions.loops.LoopRegion;
-import jadx.core.dex.visitors.AbstractVisitor;
-import jadx.core.utils.InstructionRemover;
-import jadx.core.utils.RegionUtils;
-import jadx.core.utils.exceptions.JadxException;
+import org.slf4j.*;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.attributes.nodes.*;
+import jadx.core.dex.instructions.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.dex.regions.*;
+import jadx.core.dex.regions.loops.*;
+import jadx.core.dex.visitors.*;
+import jadx.core.utils.*;
+import jadx.core.utils.exceptions.*;
 
 /**
  * Pack blocks into regions for code generation

@@ -1,11 +1,9 @@
 package jadx.core.dex.attributes.annotations;
 
-import jadx.core.dex.attributes.AType;
-import jadx.core.dex.attributes.IAttribute;
-import jadx.core.utils.Utils;
+import java.util.*;
 
-import java.util.ArrayList;
-import java.util.List;
+import jadx.core.dex.attributes.*;
+import jadx.core.utils.*;
 
 public class MethodParameters implements IAttribute {
 

@@ -31,11 +31,11 @@
 
 package org.jf.dexlib2.writer;
 
-import org.jf.dexlib2.iface.Annotation;
+import org.jf.dexlib2.iface.*;
 
-import java.util.Collection;
+import java.util.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public interface AnnotationSetSection<AnnotationKey extends Annotation, AnnotationSetKey>
         extends NullableOffsetSection<AnnotationSetKey> {

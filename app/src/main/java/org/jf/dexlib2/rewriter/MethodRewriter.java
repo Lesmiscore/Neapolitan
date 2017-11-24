@@ -31,17 +31,12 @@
 
 package org.jf.dexlib2.rewriter;
 
-import org.jf.dexlib2.base.reference.BaseMethodReference;
-import org.jf.dexlib2.iface.Annotation;
-import org.jf.dexlib2.iface.Method;
-import org.jf.dexlib2.iface.MethodImplementation;
-import org.jf.dexlib2.iface.MethodParameter;
+import org.jf.dexlib2.base.reference.*;
+import org.jf.dexlib2.iface.*;
 
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public class MethodRewriter implements Rewriter<Method> {
     @Nonnull

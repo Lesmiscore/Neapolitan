@@ -1,9 +1,8 @@
 package jadx.core.dex.visitors.typeinference;
 
-import jadx.core.dex.instructions.args.InsnArg;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.utils.ErrorsCounter;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.utils.*;
 
 public class CheckTypeVisitor {
 

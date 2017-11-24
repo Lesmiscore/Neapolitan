@@ -1,22 +1,14 @@
 package jadx.core.dex.visitors.regions;
 
-import jadx.core.dex.attributes.AFlag;
-import jadx.core.dex.instructions.args.ArgType;
-import jadx.core.dex.nodes.BlockNode;
-import jadx.core.dex.nodes.IBlock;
-import jadx.core.dex.nodes.IBranchRegion;
-import jadx.core.dex.nodes.IContainer;
-import jadx.core.dex.nodes.IRegion;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.dex.regions.SwitchRegion;
-import jadx.core.dex.regions.loops.LoopRegion;
-import jadx.core.dex.visitors.AbstractVisitor;
-import jadx.core.utils.exceptions.JadxException;
-import jadx.core.utils.exceptions.JadxRuntimeException;
+import java.util.*;
 
-import java.util.List;
-import java.util.ListIterator;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.dex.regions.*;
+import jadx.core.dex.regions.loops.*;
+import jadx.core.dex.visitors.*;
+import jadx.core.utils.exceptions.*;
 
 /**
  * Remove unnecessary return instructions for void methods

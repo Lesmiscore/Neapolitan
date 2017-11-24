@@ -31,7 +31,7 @@
 
 package org.jf.dexlib2;
 
-import org.jf.util.ExceptionWithContext;
+import org.jf.util.*;
 
 public final class AnnotationVisibility {
     public static final int BUILD = 0;

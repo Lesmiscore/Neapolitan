@@ -1,18 +1,13 @@
 package jadx.core.dex.regions.loops;
 
-import jadx.core.dex.attributes.nodes.LoopInfo;
-import jadx.core.dex.instructions.IfNode;
-import jadx.core.dex.instructions.args.RegisterArg;
-import jadx.core.dex.nodes.BlockNode;
-import jadx.core.dex.nodes.IContainer;
-import jadx.core.dex.nodes.IRegion;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.dex.regions.AbstractRegion;
-import jadx.core.dex.regions.conditions.IfCondition;
+import java.util.*;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import jadx.core.dex.attributes.nodes.*;
+import jadx.core.dex.instructions.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.dex.regions.*;
+import jadx.core.dex.regions.conditions.*;
 
 public final class LoopRegion extends AbstractRegion {
 

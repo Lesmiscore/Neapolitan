@@ -31,7 +31,7 @@
 
 package org.jf.dexlib2;
 
-import java.util.HashMap;
+import java.util.*;
 
 public enum AccessFlags {
     PUBLIC(0x1, "public", true, true, true),

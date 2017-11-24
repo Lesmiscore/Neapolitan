@@ -28,9 +28,7 @@
 
 package org.jf.smali;
 
-import org.antlr.runtime.CharStream;
-import org.antlr.runtime.Lexer;
-import org.antlr.runtime.RecognizerSharedState;
+import org.antlr.runtime.*;
 
 public interface LexerErrorInterface {
     public int getNumberOfSyntaxErrors();

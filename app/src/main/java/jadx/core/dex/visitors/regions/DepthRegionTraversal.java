@@ -1,11 +1,8 @@
 package jadx.core.dex.visitors.regions;
 
-import jadx.core.dex.nodes.IBlock;
-import jadx.core.dex.nodes.IContainer;
-import jadx.core.dex.nodes.IRegion;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.dex.trycatch.ExceptionHandler;
-import jadx.core.utils.exceptions.JadxOverflowException;
+import jadx.core.dex.nodes.*;
+import jadx.core.dex.trycatch.*;
+import jadx.core.utils.exceptions.*;
 
 public class DepthRegionTraversal {
 

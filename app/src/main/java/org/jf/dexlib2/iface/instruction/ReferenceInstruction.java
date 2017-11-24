@@ -31,9 +31,9 @@
 
 package org.jf.dexlib2.iface.instruction;
 
-import org.jf.dexlib2.iface.reference.Reference;
+import org.jf.dexlib2.iface.reference.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public interface ReferenceInstruction extends Instruction {
     @Nonnull

@@ -31,10 +31,10 @@
 
 package org.jf.dexlib2.writer.pool;
 
-import org.jf.dexlib2.iface.reference.MethodReference;
-import org.jf.dexlib2.writer.MethodSection;
+import org.jf.dexlib2.iface.reference.*;
+import org.jf.dexlib2.writer.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class MethodPool extends BaseIndexPool<MethodReference>
         implements MethodSection<CharSequence, CharSequence, ProtoPool.Key, MethodReference, PoolMethod> {

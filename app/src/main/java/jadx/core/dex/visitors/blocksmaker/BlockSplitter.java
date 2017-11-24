@@ -1,25 +1,14 @@
 package jadx.core.dex.visitors.blocksmaker;
 
-import jadx.core.dex.attributes.AFlag;
-import jadx.core.dex.attributes.AType;
-import jadx.core.dex.attributes.nodes.JumpInfo;
-import jadx.core.dex.instructions.IfNode;
-import jadx.core.dex.instructions.InsnType;
-import jadx.core.dex.nodes.BlockNode;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.dex.trycatch.CatchAttr;
-import jadx.core.dex.trycatch.ExceptionHandler;
-import jadx.core.dex.trycatch.SplitterBlockAttr;
-import jadx.core.dex.visitors.AbstractVisitor;
-import jadx.core.utils.exceptions.JadxRuntimeException;
+import java.util.*;
 
-import java.util.EnumSet;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.attributes.nodes.*;
+import jadx.core.dex.instructions.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.dex.trycatch.*;
+import jadx.core.dex.visitors.*;
+import jadx.core.utils.exceptions.*;
 
 public class BlockSplitter extends AbstractVisitor {
 

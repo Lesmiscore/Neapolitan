@@ -1,7 +1,7 @@
 package jadx.core.xmlgen;
 
-import java.io.IOException;
-import java.util.Arrays;
+import java.io.*;
+import java.util.*;
 
 public class CommonBinaryParser extends ParserConstants {
 	protected ParserStream is;

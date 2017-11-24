@@ -1,25 +1,19 @@
 package jadx.core.dex.visitors;
 
-import jadx.api.IJadxArgs;
-import jadx.core.Consts;
-import jadx.core.codegen.TypeGen;
-import jadx.core.deobf.Deobfuscator;
-import jadx.core.dex.attributes.AFlag;
-import jadx.core.dex.info.ClassInfo;
-import jadx.core.dex.info.FieldInfo;
-import jadx.core.dex.info.MethodInfo;
-import jadx.core.dex.instructions.args.ArgType;
-import jadx.core.dex.nodes.ClassNode;
-import jadx.core.dex.nodes.FieldNode;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.dex.nodes.RootNode;
-import jadx.core.utils.exceptions.JadxException;
+import org.apache.commons.io.*;
 
-import java.io.File;
-import java.util.HashSet;
-import java.util.Set;
+import java.io.*;
+import java.util.*;
 
-import org.apache.commons.io.IOCase;
+import jadx.api.*;
+import jadx.core.*;
+import jadx.core.codegen.*;
+import jadx.core.deobf.*;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.info.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.utils.exceptions.*;
 
 public class RenameVisitor extends AbstractVisitor {
 

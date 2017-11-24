@@ -31,7 +31,7 @@
 
 package org.jf.dexlib2.dexbacked;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class DexReader extends BaseDexReader<DexBackedDexFile> {
     public DexReader(@Nonnull DexBackedDexFile dexFile, int offset) {

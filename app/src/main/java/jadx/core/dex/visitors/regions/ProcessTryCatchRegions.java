@@ -1,33 +1,16 @@
 package jadx.core.dex.visitors.regions;
 
-import jadx.core.dex.attributes.AType;
-import jadx.core.dex.nodes.BlockNode;
-import jadx.core.dex.nodes.IBranchRegion;
-import jadx.core.dex.nodes.IContainer;
-import jadx.core.dex.nodes.IRegion;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.dex.regions.AbstractRegion;
-import jadx.core.dex.regions.Region;
-import jadx.core.dex.regions.TryCatchRegion;
-import jadx.core.dex.regions.loops.LoopRegion;
-import jadx.core.dex.trycatch.CatchAttr;
-import jadx.core.dex.trycatch.ExceptionHandler;
-import jadx.core.dex.trycatch.SplitterBlockAttr;
-import jadx.core.dex.trycatch.TryCatchBlock;
-import jadx.core.utils.BlockUtils;
-import jadx.core.utils.ErrorsCounter;
-import jadx.core.utils.RegionUtils;
-import jadx.core.utils.exceptions.JadxRuntimeException;
+import org.slf4j.*;
 
-import java.util.BitSet;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.dex.regions.*;
+import jadx.core.dex.regions.loops.*;
+import jadx.core.dex.trycatch.*;
+import jadx.core.utils.*;
+import jadx.core.utils.exceptions.*;
 
 /**
  * Extract blocks to separate try/catch region

@@ -31,15 +31,13 @@
 
 package org.jf.dexlib2.builder.instruction;
 
-import org.jf.dexlib2.Format;
-import org.jf.dexlib2.Opcode;
-import org.jf.dexlib2.ReferenceType;
-import org.jf.dexlib2.builder.BuilderInstruction;
-import org.jf.dexlib2.iface.instruction.formats.Instruction20bc;
-import org.jf.dexlib2.iface.reference.Reference;
-import org.jf.dexlib2.util.Preconditions;
+import org.jf.dexlib2.*;
+import org.jf.dexlib2.builder.*;
+import org.jf.dexlib2.iface.instruction.formats.*;
+import org.jf.dexlib2.iface.reference.*;
+import org.jf.dexlib2.util.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class BuilderInstruction20bc extends BuilderInstruction implements Instruction20bc {
     public static final Format FORMAT = Format.Format20bc;

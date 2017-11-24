@@ -1,6 +1,6 @@
 package jadx.core.deobf;
 
-import jadx.core.dex.nodes.ClassNode;
+import jadx.core.dex.nodes.*;
 
 class DeobfClsInfo {
 	private final Deobfuscator deobfuscator;

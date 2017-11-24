@@ -1,6 +1,6 @@
 package jadx.core.utils;
 
-import java.util.BitSet;
+import java.util.*;
 
 public final class EmptyBitSet extends BitSet {
 

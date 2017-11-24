@@ -31,24 +31,16 @@
 
 package org.jf.dexlib2.util;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.Maps;
+import com.google.common.collect.*;
 
-import org.jf.dexlib2.AccessFlags;
-import org.jf.dexlib2.iface.ClassDef;
-import org.jf.dexlib2.iface.Method;
-import org.jf.dexlib2.iface.MethodImplementation;
-import org.jf.dexlib2.iface.instruction.Instruction;
-import org.jf.dexlib2.iface.instruction.ReferenceInstruction;
-import org.jf.dexlib2.iface.reference.MethodReference;
-import org.jf.dexlib2.iface.reference.Reference;
+import org.jf.dexlib2.*;
+import org.jf.dexlib2.iface.*;
+import org.jf.dexlib2.iface.instruction.*;
+import org.jf.dexlib2.iface.reference.*;
 
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public class SyntheticAccessorResolver {
     public static final int METHOD = 0;

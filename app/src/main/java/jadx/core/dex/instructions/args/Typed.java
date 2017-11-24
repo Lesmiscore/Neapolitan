@@ -1,7 +1,7 @@
 package jadx.core.dex.instructions.args;
 
-import jadx.core.dex.attributes.AttrNode;
-import jadx.core.dex.nodes.DexNode;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.nodes.*;
 
 public abstract class Typed extends AttrNode {
 

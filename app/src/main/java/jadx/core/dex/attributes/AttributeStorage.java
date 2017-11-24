@@ -1,16 +1,9 @@
 package jadx.core.dex.attributes;
 
-import jadx.core.dex.attributes.annotations.Annotation;
-import jadx.core.dex.attributes.annotations.AnnotationsList;
-import jadx.core.utils.Utils;
+import java.util.*;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.EnumSet;
-import java.util.IdentityHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import jadx.core.dex.attributes.annotations.*;
+import jadx.core.utils.*;
 
 /**
  * Storage for different attribute types:

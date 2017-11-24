@@ -31,7 +31,7 @@
 
 package org.jf.dexlib2.immutable.reference;
 
-import org.jf.dexlib2.iface.reference.Reference;
+import org.jf.dexlib2.iface.reference.*;
 
 public interface ImmutableReference extends Reference {
 }

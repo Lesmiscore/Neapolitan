@@ -31,50 +31,27 @@
 
 package org.jf.dexlib2.writer.builder;
 
-import com.google.common.base.Function;
-import com.google.common.base.Predicate;
-import com.google.common.collect.FluentIterable;
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.Iterables;
-import com.google.common.collect.Maps;
-import com.google.common.collect.Ordering;
+import com.google.common.base.*;
+import com.google.common.collect.*;
 
-import org.jf.dexlib2.DebugItemType;
-import org.jf.dexlib2.builder.MutableMethodImplementation;
-import org.jf.dexlib2.iface.ExceptionHandler;
-import org.jf.dexlib2.iface.Field;
-import org.jf.dexlib2.iface.MethodImplementation;
-import org.jf.dexlib2.iface.TryBlock;
-import org.jf.dexlib2.iface.debug.DebugItem;
-import org.jf.dexlib2.iface.debug.EndLocal;
-import org.jf.dexlib2.iface.debug.LineNumber;
-import org.jf.dexlib2.iface.debug.RestartLocal;
-import org.jf.dexlib2.iface.debug.SetSourceFile;
-import org.jf.dexlib2.iface.debug.StartLocal;
-import org.jf.dexlib2.iface.instruction.Instruction;
-import org.jf.dexlib2.iface.reference.StringReference;
-import org.jf.dexlib2.iface.reference.TypeReference;
-import org.jf.dexlib2.iface.value.EncodedValue;
-import org.jf.dexlib2.util.EncodedValueUtils;
-import org.jf.dexlib2.writer.ClassSection;
-import org.jf.dexlib2.writer.DebugWriter;
-import org.jf.dexlib2.writer.builder.BuilderEncodedValues.BuilderEncodedValue;
-import org.jf.util.AbstractForwardSequentialList;
-import org.jf.util.CollectionUtils;
-import org.jf.util.ExceptionWithContext;
+import org.jf.dexlib2.*;
+import org.jf.dexlib2.builder.*;
+import org.jf.dexlib2.iface.*;
+import org.jf.dexlib2.iface.debug.*;
+import org.jf.dexlib2.iface.instruction.*;
+import org.jf.dexlib2.iface.reference.*;
+import org.jf.dexlib2.iface.value.*;
+import org.jf.dexlib2.util.*;
+import org.jf.dexlib2.writer.*;
+import org.jf.dexlib2.writer.builder.BuilderEncodedValues.*;
+import org.jf.util.*;
 
-import java.io.IOException;
-import java.util.AbstractCollection;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.SortedSet;
-import java.util.concurrent.ConcurrentMap;
+import java.io.*;
+import java.util.*;
+import java.util.Map.*;
+import java.util.concurrent.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public class BuilderClassPool implements ClassSection<BuilderStringReference, BuilderTypeReference, BuilderTypeList,
         BuilderClassDef, BuilderField, BuilderMethod, BuilderAnnotationSet, BuilderEncodedValue> {

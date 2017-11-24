@@ -31,12 +31,12 @@
 
 package org.jf.dexlib2.writer.builder;
 
-import org.jf.dexlib2.base.BaseAnnotation;
-import org.jf.dexlib2.writer.DexWriter;
+import org.jf.dexlib2.base.*;
+import org.jf.dexlib2.writer.*;
 
-import java.util.Set;
+import java.util.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 class BuilderAnnotation extends BaseAnnotation {
     @Nonnull

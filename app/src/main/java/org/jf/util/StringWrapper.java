@@ -31,8 +31,7 @@
 
 package org.jf.util;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public class StringWrapper {
     /**

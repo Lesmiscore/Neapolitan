@@ -1,10 +1,7 @@
 package jadx.core.dex.visitors.typeinference;
 
-import jadx.core.dex.nodes.BlockNode;
-import jadx.core.dex.nodes.DexNode;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.dex.visitors.AbstractVisitor;
+import jadx.core.dex.nodes.*;
+import jadx.core.dex.visitors.*;
 
 public class FinishTypeInference extends AbstractVisitor {
 

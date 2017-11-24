@@ -1,12 +1,12 @@
 package com.njlabs.showjava.utils.logging;
 
-import android.app.Application;
-import android.content.pm.ApplicationInfo;
-import android.util.Log;
+import android.app.*;
+import android.content.pm.*;
+import android.util.*;
 
-import com.njlabs.showjava.utils.Strings;
+import com.njlabs.showjava.utils.*;
 
-import java.util.Locale;
+import java.util.*;
 
 /**
  * Created by Niranjan on 12-07-2014.

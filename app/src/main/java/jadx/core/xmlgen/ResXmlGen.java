@@ -1,22 +1,12 @@
 package jadx.core.xmlgen;
 
-import jadx.core.codegen.CodeWriter;
-import jadx.core.utils.StringUtils;
-import jadx.core.xmlgen.entry.RawNamedValue;
-import jadx.core.xmlgen.entry.ResourceEntry;
-import jadx.core.xmlgen.entry.ValuesParser;
+import org.slf4j.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import jadx.core.codegen.*;
+import jadx.core.utils.*;
+import jadx.core.xmlgen.entry.*;
 
 public class ResXmlGen {
 

@@ -31,13 +31,12 @@
 
 package org.jf.dexlib2.iface;
 
-import org.jf.dexlib2.iface.reference.FieldReference;
-import org.jf.dexlib2.iface.value.EncodedValue;
+import org.jf.dexlib2.iface.reference.*;
+import org.jf.dexlib2.iface.value.*;
 
-import java.util.Set;
+import java.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 /**
  * This class represents a specific field definition in a class.

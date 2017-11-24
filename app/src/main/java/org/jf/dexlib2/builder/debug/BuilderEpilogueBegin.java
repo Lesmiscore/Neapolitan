@@ -31,9 +31,9 @@
 
 package org.jf.dexlib2.builder.debug;
 
-import org.jf.dexlib2.DebugItemType;
-import org.jf.dexlib2.builder.BuilderDebugItem;
-import org.jf.dexlib2.iface.debug.EpilogueBegin;
+import org.jf.dexlib2.*;
+import org.jf.dexlib2.builder.*;
+import org.jf.dexlib2.iface.debug.*;
 
 public class BuilderEpilogueBegin extends BuilderDebugItem implements EpilogueBegin {
     public BuilderEpilogueBegin() {

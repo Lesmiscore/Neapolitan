@@ -31,27 +31,15 @@
 
 package org.jf.dexlib2.builder;
 
-import com.google.common.collect.ImmutableList;
+import com.google.common.collect.*;
 
-import org.jf.dexlib2.builder.debug.BuilderEndLocal;
-import org.jf.dexlib2.builder.debug.BuilderEpilogueBegin;
-import org.jf.dexlib2.builder.debug.BuilderLineNumber;
-import org.jf.dexlib2.builder.debug.BuilderPrologueEnd;
-import org.jf.dexlib2.builder.debug.BuilderRestartLocal;
-import org.jf.dexlib2.builder.debug.BuilderSetSourceFile;
-import org.jf.dexlib2.builder.debug.BuilderStartLocal;
-import org.jf.dexlib2.iface.instruction.Instruction;
-import org.jf.dexlib2.iface.reference.StringReference;
-import org.jf.dexlib2.iface.reference.TypeReference;
+import org.jf.dexlib2.builder.debug.*;
+import org.jf.dexlib2.iface.instruction.*;
+import org.jf.dexlib2.iface.reference.*;
 
-import java.util.AbstractSet;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public class MethodLocation {
     @Nullable

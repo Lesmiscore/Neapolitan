@@ -31,9 +31,9 @@
 
 package org.jf.dexlib2.iface.instruction;
 
-import java.util.List;
+import java.util.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public interface SwitchPayload extends PayloadInstruction {
     @Nonnull

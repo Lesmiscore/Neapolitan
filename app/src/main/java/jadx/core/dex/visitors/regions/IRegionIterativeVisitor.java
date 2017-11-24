@@ -1,7 +1,6 @@
 package jadx.core.dex.visitors.regions;
 
-import jadx.core.dex.nodes.IRegion;
-import jadx.core.dex.nodes.MethodNode;
+import jadx.core.dex.nodes.*;
 
 public interface IRegionIterativeVisitor {
 

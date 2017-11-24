@@ -1,7 +1,7 @@
 package jadx.core.dex.instructions;
 
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.utils.InsnUtils;
+import jadx.core.dex.nodes.*;
+import jadx.core.utils.*;
 
 public class IndexInsnNode extends InsnNode {
 

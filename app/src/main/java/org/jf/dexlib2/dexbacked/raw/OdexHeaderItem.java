@@ -31,7 +31,7 @@
 
 package org.jf.dexlib2.dexbacked.raw;
 
-import org.jf.dexlib2.dexbacked.BaseDexBuffer;
+import org.jf.dexlib2.dexbacked.*;
 
 public class OdexHeaderItem {
     public static final int ITEM_SIZE = 40;

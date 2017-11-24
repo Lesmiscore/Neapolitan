@@ -31,10 +31,9 @@
 
 package org.jf.dexlib2.writer.pool;
 
-import org.jf.dexlib2.writer.DexWriter;
-import org.jf.dexlib2.writer.NullableOffsetSection;
+import org.jf.dexlib2.writer.*;
 
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public abstract class BaseNullableOffsetPool<Key> extends BaseOffsetPool<Key>
         implements NullableOffsetSection<Key> {

@@ -31,18 +31,17 @@
 
 package org.jf.dexlib2.immutable.value;
 
-import com.google.common.collect.ImmutableSet;
+import com.google.common.collect.*;
 
-import org.jf.dexlib2.base.value.BaseAnnotationEncodedValue;
-import org.jf.dexlib2.iface.AnnotationElement;
-import org.jf.dexlib2.iface.value.AnnotationEncodedValue;
-import org.jf.dexlib2.immutable.ImmutableAnnotationElement;
-import org.jf.util.ImmutableUtils;
+import org.jf.dexlib2.base.value.*;
+import org.jf.dexlib2.iface.*;
+import org.jf.dexlib2.iface.value.*;
+import org.jf.dexlib2.immutable.*;
+import org.jf.util.*;
 
-import java.util.Collection;
+import java.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public class ImmutableAnnotationEncodedValue extends BaseAnnotationEncodedValue implements ImmutableEncodedValue {
     @Nonnull

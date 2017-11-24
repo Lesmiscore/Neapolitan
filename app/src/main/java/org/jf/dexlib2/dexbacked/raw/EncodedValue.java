@@ -31,11 +31,11 @@
 
 package org.jf.dexlib2.dexbacked.raw;
 
-import org.jf.dexlib2.dexbacked.DexReader;
-import org.jf.dexlib2.util.AnnotatedBytes;
-import org.jf.util.ExceptionWithContext;
+import org.jf.dexlib2.dexbacked.*;
+import org.jf.dexlib2.util.*;
+import org.jf.util.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class EncodedValue {
     public static void annotateEncodedValue(@Nonnull AnnotatedBytes out, @Nonnull DexReader reader) {

@@ -31,22 +31,15 @@
 
 package org.jf.dexlib2.util;
 
-import com.google.common.base.Strings;
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
+import com.google.common.base.*;
+import com.google.common.collect.*;
 
-import org.jf.util.ExceptionWithContext;
-import org.jf.util.Hex;
-import org.jf.util.TwoColumnOutput;
+import org.jf.util.*;
 
-import java.io.IOException;
-import java.io.Writer;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
+import java.io.*;
+import java.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 /**
  * Collects/presents a set of textual annotations, each associated with a range of bytes or a specific point

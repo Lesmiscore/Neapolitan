@@ -1,21 +1,17 @@
 package jadx.core.dex.visitors.regions;
 
-import jadx.core.dex.attributes.AFlag;
-import jadx.core.dex.instructions.args.ArgType;
-import jadx.core.dex.nodes.IBlock;
-import jadx.core.dex.nodes.IContainer;
-import jadx.core.dex.nodes.IRegion;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.dex.regions.Region;
-import jadx.core.dex.regions.conditions.IfCondition;
-import jadx.core.dex.regions.conditions.IfCondition.Mode;
-import jadx.core.dex.regions.conditions.IfRegion;
-import jadx.core.dex.visitors.AbstractVisitor;
-import jadx.core.utils.RegionUtils;
+import java.util.*;
 
-import java.util.List;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.dex.regions.*;
+import jadx.core.dex.regions.conditions.*;
+import jadx.core.dex.regions.conditions.IfCondition.*;
+import jadx.core.dex.visitors.*;
+import jadx.core.utils.*;
 
-import static jadx.core.utils.RegionUtils.insnsCount;
+import static jadx.core.utils.RegionUtils.*;
 
 public class IfRegionVisitor extends AbstractVisitor implements IRegionVisitor, IRegionIterativeVisitor {
 

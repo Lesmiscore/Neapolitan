@@ -1,7 +1,6 @@
 package jadx.core.dex.trycatch;
 
-import jadx.core.dex.attributes.AType;
-import jadx.core.dex.attributes.IAttribute;
+import jadx.core.dex.attributes.*;
 
 public class ExcHandlerAttr implements IAttribute {
 

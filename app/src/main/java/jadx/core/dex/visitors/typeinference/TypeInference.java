@@ -1,16 +1,12 @@
 package jadx.core.dex.visitors.typeinference;
 
-import jadx.core.dex.instructions.PhiInsn;
-import jadx.core.dex.instructions.args.ArgType;
-import jadx.core.dex.instructions.args.InsnArg;
-import jadx.core.dex.instructions.args.RegisterArg;
-import jadx.core.dex.instructions.args.SSAVar;
-import jadx.core.dex.nodes.DexNode;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.dex.visitors.AbstractVisitor;
-import jadx.core.utils.exceptions.JadxException;
+import java.util.*;
 
-import java.util.List;
+import jadx.core.dex.instructions.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.dex.visitors.*;
+import jadx.core.utils.exceptions.*;
 
 public class TypeInference extends AbstractVisitor {
 

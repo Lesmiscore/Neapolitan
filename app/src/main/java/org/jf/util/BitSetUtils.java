@@ -31,7 +31,7 @@
 
 package org.jf.util;
 
-import java.util.BitSet;
+import java.util.*;
 
 public class BitSetUtils {
     public static BitSet bitSetOfIndexes(int... indexes) {

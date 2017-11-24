@@ -31,16 +31,15 @@
 
 package org.jf.dexlib2.immutable.reference;
 
-import com.google.common.collect.ImmutableList;
+import com.google.common.collect.*;
 
-import org.jf.dexlib2.base.reference.BaseTypeReference;
-import org.jf.dexlib2.iface.reference.TypeReference;
-import org.jf.util.ImmutableConverter;
+import org.jf.dexlib2.base.reference.*;
+import org.jf.dexlib2.iface.reference.*;
+import org.jf.util.*;
 
-import java.util.List;
+import java.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public class ImmutableTypeReference extends BaseTypeReference implements ImmutableReference {
     private static final ImmutableConverter<ImmutableTypeReference, TypeReference> CONVERTER =

@@ -31,27 +31,18 @@
 
 package org.jf.dexlib2.analysis;
 
-import com.google.common.base.Splitter;
-import com.google.common.collect.Lists;
+import com.google.common.base.*;
+import com.google.common.collect.*;
 
-import org.apache.commons.cli.CommandLine;
-import org.apache.commons.cli.CommandLineParser;
-import org.apache.commons.cli.Option;
-import org.apache.commons.cli.OptionBuilder;
-import org.apache.commons.cli.Options;
-import org.apache.commons.cli.ParseException;
-import org.apache.commons.cli.PosixParser;
-import org.jf.dexlib2.DexFileFactory;
-import org.jf.dexlib2.dexbacked.DexBackedDexFile;
-import org.jf.dexlib2.iface.ClassDef;
-import org.jf.dexlib2.iface.reference.FieldReference;
-import org.jf.util.ConsoleUtil;
-import org.jf.util.SparseArray;
+import org.apache.commons.cli.*;
+import org.jf.dexlib2.*;
+import org.jf.dexlib2.dexbacked.*;
+import org.jf.dexlib2.iface.*;
+import org.jf.dexlib2.iface.reference.*;
+import org.jf.util.*;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.util.ArrayList;
+import java.io.*;
+import java.util.*;
 
 public class DumpFields {
     private static final Options options;

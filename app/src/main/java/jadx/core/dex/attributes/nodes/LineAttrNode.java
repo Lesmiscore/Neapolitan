@@ -1,6 +1,6 @@
 package jadx.core.dex.attributes.nodes;
 
-import jadx.core.dex.attributes.AttrNode;
+import jadx.core.dex.attributes.*;
 
 public abstract class LineAttrNode extends AttrNode {
 

@@ -1,12 +1,10 @@
 package jadx.core.dex.nodes.parser;
 
-import jadx.core.dex.instructions.args.ArgType;
-import jadx.core.dex.instructions.args.RegisterArg;
-import jadx.core.dex.nodes.DexNode;
-import jadx.core.utils.InsnUtils;
+import org.slf4j.*;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.utils.*;
 
 final class LocalVar {
 	private static final Logger LOG = LoggerFactory.getLogger(LocalVar.class);

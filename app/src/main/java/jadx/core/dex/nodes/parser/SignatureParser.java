@@ -1,19 +1,14 @@
 package jadx.core.dex.nodes.parser;
 
-import jadx.core.Consts;
-import jadx.core.dex.attributes.IAttributeNode;
-import jadx.core.dex.attributes.annotations.Annotation;
-import jadx.core.dex.instructions.args.ArgType;
-import jadx.core.utils.exceptions.JadxRuntimeException;
+import org.slf4j.*;
 
-import java.util.Collections;
-import java.util.LinkedHashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import jadx.core.*;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.attributes.annotations.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.utils.exceptions.*;
 
 public class SignatureParser {
 

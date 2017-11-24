@@ -1,8 +1,8 @@
 package jadx.core.dex.info;
 
-import jadx.core.Consts;
+import com.android.dx.rop.code.*;
 
-import com.android.dx.rop.code.AccessFlags;
+import jadx.core.*;
 
 public class AccessInfo {
 

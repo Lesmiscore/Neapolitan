@@ -1,6 +1,6 @@
 package com.njlabs.showjava.modals;
 
-import android.support.annotation.NonNull;
+import android.support.annotation.*;
 
 @SuppressWarnings("unused")
 public class Item implements Comparable<Item> {

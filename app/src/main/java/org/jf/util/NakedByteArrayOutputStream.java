@@ -31,8 +31,7 @@
 
 package org.jf.util;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
+import java.io.*;
 
 /**
  * A ByteArrayOutputStream that lets you grab its protected bits.

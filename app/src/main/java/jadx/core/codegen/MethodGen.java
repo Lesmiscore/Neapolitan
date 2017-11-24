@@ -1,32 +1,22 @@
 package jadx.core.codegen;
 
-import jadx.core.dex.attributes.AFlag;
-import jadx.core.dex.attributes.AType;
-import jadx.core.dex.attributes.annotations.MethodParameters;
-import jadx.core.dex.attributes.nodes.JadxErrorAttr;
-import jadx.core.dex.info.AccessInfo;
-import jadx.core.dex.instructions.InsnType;
-import jadx.core.dex.instructions.args.ArgType;
-import jadx.core.dex.instructions.args.RegisterArg;
-import jadx.core.dex.instructions.args.SSAVar;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.dex.trycatch.CatchAttr;
-import jadx.core.dex.visitors.DepthTraversal;
-import jadx.core.dex.visitors.FallbackModeVisitor;
-import jadx.core.utils.ErrorsCounter;
-import jadx.core.utils.InsnUtils;
-import jadx.core.utils.Utils;
-import jadx.core.utils.exceptions.CodegenException;
-import jadx.core.utils.exceptions.DecodeException;
+import com.android.dx.rop.code.*;
 
-import java.util.Iterator;
-import java.util.List;
+import org.slf4j.*;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.util.*;
 
-import com.android.dx.rop.code.AccessFlags;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.attributes.annotations.*;
+import jadx.core.dex.attributes.nodes.*;
+import jadx.core.dex.info.*;
+import jadx.core.dex.instructions.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.dex.trycatch.*;
+import jadx.core.dex.visitors.*;
+import jadx.core.utils.*;
+import jadx.core.utils.exceptions.*;
 
 public class MethodGen {
 	private static final Logger LOG = LoggerFactory.getLogger(MethodGen.class);

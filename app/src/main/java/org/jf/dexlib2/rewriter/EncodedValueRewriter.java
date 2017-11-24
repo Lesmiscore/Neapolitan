@@ -31,28 +31,15 @@
 
 package org.jf.dexlib2.rewriter;
 
-import org.jf.dexlib2.ValueType;
-import org.jf.dexlib2.base.value.BaseAnnotationEncodedValue;
-import org.jf.dexlib2.base.value.BaseArrayEncodedValue;
-import org.jf.dexlib2.base.value.BaseEnumEncodedValue;
-import org.jf.dexlib2.base.value.BaseFieldEncodedValue;
-import org.jf.dexlib2.base.value.BaseMethodEncodedValue;
-import org.jf.dexlib2.base.value.BaseTypeEncodedValue;
-import org.jf.dexlib2.iface.AnnotationElement;
-import org.jf.dexlib2.iface.reference.FieldReference;
-import org.jf.dexlib2.iface.reference.MethodReference;
-import org.jf.dexlib2.iface.value.AnnotationEncodedValue;
-import org.jf.dexlib2.iface.value.ArrayEncodedValue;
-import org.jf.dexlib2.iface.value.EncodedValue;
-import org.jf.dexlib2.iface.value.EnumEncodedValue;
-import org.jf.dexlib2.iface.value.FieldEncodedValue;
-import org.jf.dexlib2.iface.value.MethodEncodedValue;
-import org.jf.dexlib2.iface.value.TypeEncodedValue;
+import org.jf.dexlib2.*;
+import org.jf.dexlib2.base.value.*;
+import org.jf.dexlib2.iface.*;
+import org.jf.dexlib2.iface.reference.*;
+import org.jf.dexlib2.iface.value.*;
 
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class EncodedValueRewriter implements Rewriter<EncodedValue> {
     @Nonnull

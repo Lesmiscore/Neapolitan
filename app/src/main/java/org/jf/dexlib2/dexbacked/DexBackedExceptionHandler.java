@@ -31,7 +31,7 @@
 
 package org.jf.dexlib2.dexbacked;
 
-import org.jf.dexlib2.base.BaseExceptionHandler;
+import org.jf.dexlib2.base.*;
 
 public abstract class DexBackedExceptionHandler extends BaseExceptionHandler {
 }

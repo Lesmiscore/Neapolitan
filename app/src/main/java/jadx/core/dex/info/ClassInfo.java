@@ -1,10 +1,10 @@
 package jadx.core.dex.info;
 
-import jadx.core.dex.instructions.args.ArgType;
-import jadx.core.dex.nodes.DexNode;
-import jadx.core.utils.exceptions.JadxRuntimeException;
+import java.io.*;
 
-import java.io.File;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.utils.exceptions.*;
 
 public final class ClassInfo {
 

@@ -31,9 +31,9 @@
 
 package org.jf.dexlib2.writer;
 
-import org.jf.dexlib2.iface.reference.FieldReference;
+import org.jf.dexlib2.iface.reference.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public interface FieldSection<StringKey, TypeKey, FieldRefKey extends FieldReference, FieldKey>
         extends IndexSection<FieldRefKey> {

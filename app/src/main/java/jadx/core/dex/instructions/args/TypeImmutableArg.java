@@ -1,6 +1,6 @@
 package jadx.core.dex.instructions.args;
 
-import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.*;
 
 public class TypeImmutableArg extends RegisterArg {
 

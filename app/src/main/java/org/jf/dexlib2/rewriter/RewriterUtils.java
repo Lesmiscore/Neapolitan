@@ -31,17 +31,12 @@
 
 package org.jf.dexlib2.rewriter;
 
-import org.jf.dexlib2.base.reference.BaseTypeReference;
-import org.jf.dexlib2.iface.reference.TypeReference;
+import org.jf.dexlib2.base.reference.*;
+import org.jf.dexlib2.iface.reference.*;
 
-import java.util.AbstractList;
-import java.util.AbstractSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public class RewriterUtils {
     @Nullable

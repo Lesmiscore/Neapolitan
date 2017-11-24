@@ -1,32 +1,17 @@
 package jadx.core.dex.nodes;
 
-import jadx.core.dex.info.ClassInfo;
-import jadx.core.dex.info.FieldInfo;
-import jadx.core.dex.info.InfoStorage;
-import jadx.core.dex.info.MethodInfo;
-import jadx.core.dex.instructions.args.ArgType;
-import jadx.core.utils.exceptions.DecodeException;
-import jadx.core.utils.files.InputFile;
+import com.android.dex.*;
+import com.android.dex.ClassData.*;
+import com.android.dex.Dex.*;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import org.jetbrains.annotations.*;
 
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
+import java.util.*;
 
-import com.android.dex.ClassData;
-import com.android.dex.ClassData.Method;
-import com.android.dex.ClassDef;
-import com.android.dex.Code;
-import com.android.dex.Dex;
-import com.android.dex.Dex.Section;
-import com.android.dex.FieldId;
-import com.android.dex.MethodId;
-import com.android.dex.ProtoId;
-import com.android.dex.TypeList;
+import jadx.core.dex.info.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.utils.exceptions.*;
+import jadx.core.utils.files.*;
 
 public class DexNode {
 

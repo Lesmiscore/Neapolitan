@@ -1,26 +1,16 @@
 package jadx.core.codegen;
 
-import jadx.core.Consts;
-import jadx.core.deobf.NameMapper;
-import jadx.core.dex.attributes.nodes.LoopLabelAttr;
-import jadx.core.dex.info.ClassInfo;
-import jadx.core.dex.info.MethodInfo;
-import jadx.core.dex.instructions.InvokeNode;
-import jadx.core.dex.instructions.args.ArgType;
-import jadx.core.dex.instructions.args.InsnArg;
-import jadx.core.dex.instructions.args.InsnWrapArg;
-import jadx.core.dex.instructions.args.NamedArg;
-import jadx.core.dex.instructions.args.RegisterArg;
-import jadx.core.dex.instructions.args.SSAVar;
-import jadx.core.dex.instructions.mods.ConstructorInsn;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.utils.StringUtils;
+import java.util.*;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import jadx.core.*;
+import jadx.core.deobf.*;
+import jadx.core.dex.attributes.nodes.*;
+import jadx.core.dex.info.*;
+import jadx.core.dex.instructions.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.instructions.mods.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.utils.*;
 
 public class NameGen {
 

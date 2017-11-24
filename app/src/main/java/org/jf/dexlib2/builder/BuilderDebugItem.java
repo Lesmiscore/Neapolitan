@@ -31,9 +31,9 @@
 
 package org.jf.dexlib2.builder;
 
-import org.jf.dexlib2.iface.debug.DebugItem;
+import org.jf.dexlib2.iface.debug.*;
 
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public abstract class BuilderDebugItem implements DebugItem {
     @Nullable

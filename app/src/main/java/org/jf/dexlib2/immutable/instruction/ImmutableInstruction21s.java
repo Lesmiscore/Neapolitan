@@ -31,12 +31,11 @@
 
 package org.jf.dexlib2.immutable.instruction;
 
-import org.jf.dexlib2.Format;
-import org.jf.dexlib2.Opcode;
-import org.jf.dexlib2.iface.instruction.formats.Instruction21s;
-import org.jf.dexlib2.util.Preconditions;
+import org.jf.dexlib2.*;
+import org.jf.dexlib2.iface.instruction.formats.*;
+import org.jf.dexlib2.util.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class ImmutableInstruction21s extends ImmutableInstruction implements Instruction21s {
     public static final Format FORMAT = Format.Format21s;

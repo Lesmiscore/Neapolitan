@@ -1,14 +1,12 @@
 package jadx.core.utils.files;
 
-import jadx.core.utils.exceptions.JadxException;
-
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-import java.io.UnsupportedEncodingException;
-
-import com.android.dx.command.DxConsole;
+import com.android.dx.command.*;
 import com.android.dx.command.dexer.Main;
-import com.android.dx.command.dexer.Main.Arguments;
+import com.android.dx.command.dexer.Main.*;
+
+import java.io.*;
+
+import jadx.core.utils.exceptions.*;
 
 public class JavaToDex {
 

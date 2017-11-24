@@ -1,10 +1,8 @@
 package org.slf4j.impl;
 
-import org.slf4j.ILoggerFactory;
-import org.slf4j.Logger;
+import org.slf4j.*;
 
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentMap;
+import java.util.concurrent.*;
 
 public class SystemOutLoggerFactory implements ILoggerFactory {
     static final String ANONYMOUS_TAG = "null";

@@ -1,6 +1,6 @@
 package jadx.core.dex.instructions;
 
-import jadx.core.utils.exceptions.JadxRuntimeException;
+import jadx.core.utils.exceptions.*;
 
 public enum IfOp {
 	EQ("=="),

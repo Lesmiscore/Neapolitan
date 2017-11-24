@@ -1,15 +1,11 @@
 package jadx.core.dex.visitors.regions;
 
-import jadx.core.dex.nodes.BlockNode;
-import jadx.core.dex.nodes.IContainer;
-import jadx.core.dex.nodes.IRegion;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.dex.regions.Region;
+import org.slf4j.*;
 
-import java.util.Iterator;
+import java.util.*;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import jadx.core.dex.nodes.*;
+import jadx.core.dex.regions.*;
 
 public class CleanRegions {
 	private static final Logger LOG = LoggerFactory.getLogger(CleanRegions.class);

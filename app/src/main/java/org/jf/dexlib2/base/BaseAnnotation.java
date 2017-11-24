@@ -31,12 +31,12 @@
 
 package org.jf.dexlib2.base;
 
-import com.google.common.primitives.Ints;
+import com.google.common.primitives.*;
 
-import org.jf.dexlib2.iface.Annotation;
-import org.jf.util.CollectionUtils;
+import org.jf.dexlib2.iface.*;
+import org.jf.util.*;
 
-import java.util.Comparator;
+import java.util.*;
 
 public abstract class BaseAnnotation implements Annotation {
     public static final Comparator<? super Annotation> BY_TYPE = (Comparator<Annotation>) (annotation1, annotation2) -> annotation1.getType().compareTo(annotation2.getType());

@@ -31,8 +31,7 @@
 
 package org.jf.util;
 
-import java.io.IOException;
-import java.io.Writer;
+import java.io.*;
 
 public class StringUtils {
     public static void writeEscapedChar(Writer writer, char c) throws IOException {

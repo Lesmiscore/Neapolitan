@@ -1,21 +1,12 @@
 package jadx.core.dex.visitors.blocksmaker;
 
-import jadx.core.dex.attributes.AFlag;
-import jadx.core.dex.attributes.AType;
-import jadx.core.dex.instructions.InsnType;
-import jadx.core.dex.instructions.args.ArgType;
-import jadx.core.dex.instructions.args.InsnArg;
-import jadx.core.dex.instructions.args.RegisterArg;
-import jadx.core.dex.nodes.BlockNode;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.dex.trycatch.CatchAttr;
-import jadx.core.dex.trycatch.ExcHandlerAttr;
-import jadx.core.dex.trycatch.ExceptionHandler;
-import jadx.core.dex.trycatch.TryCatchBlock;
-import jadx.core.dex.visitors.AbstractVisitor;
-import jadx.core.utils.BlockUtils;
-import jadx.core.utils.InstructionRemover;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.instructions.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.dex.trycatch.*;
+import jadx.core.dex.visitors.*;
+import jadx.core.utils.*;
 
 public class BlockExceptionHandler extends AbstractVisitor {
 

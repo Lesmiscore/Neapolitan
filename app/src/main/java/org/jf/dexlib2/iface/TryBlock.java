@@ -31,10 +31,9 @@
 
 package org.jf.dexlib2.iface;
 
-import java.util.List;
+import java.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 /**
  * This class represents an individual try block and associated set of handlers.

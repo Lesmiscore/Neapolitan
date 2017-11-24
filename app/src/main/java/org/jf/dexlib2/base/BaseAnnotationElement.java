@@ -31,11 +31,9 @@
 
 package org.jf.dexlib2.base;
 
-import org.jf.dexlib2.iface.AnnotationElement;
+import org.jf.dexlib2.iface.*;
 
-import java.util.Comparator;
-
-import javax.annotation.Nonnull;
+import java.util.*;
 
 public abstract class BaseAnnotationElement implements AnnotationElement {
     public static final Comparator<AnnotationElement> BY_NAME = (element1, element2) -> element1.getName().compareTo(element2.getName());

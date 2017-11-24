@@ -24,8 +24,7 @@ THE SOFTWARE.
 
 package ds.tree;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Represents a node of a Radix tree {@link RadixTreeImpl}

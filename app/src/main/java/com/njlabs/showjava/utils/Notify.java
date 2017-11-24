@@ -1,8 +1,7 @@
 package com.njlabs.showjava.utils;
 
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.support.v4.app.NotificationCompat;
+import android.app.*;
+import android.support.v4.app.*;
 
 /**
  * Created by Niranjan on 24-05-2015.

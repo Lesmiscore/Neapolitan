@@ -1,9 +1,7 @@
 package jadx.core.dex.visitors;
 
-import jadx.core.dex.nodes.ClassNode;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.dex.nodes.RootNode;
-import jadx.core.utils.exceptions.JadxException;
+import jadx.core.dex.nodes.*;
+import jadx.core.utils.exceptions.*;
 
 public class AbstractVisitor implements IDexTreeVisitor {
 

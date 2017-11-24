@@ -31,14 +31,13 @@
 
 package org.jf.dexlib2.writer.builder;
 
-import com.google.common.collect.ImmutableList;
+import com.google.common.collect.*;
 
-import org.jf.dexlib2.writer.DexWriter;
+import org.jf.dexlib2.writer.*;
 
-import java.util.AbstractList;
-import java.util.List;
+import java.util.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class BuilderTypeList extends AbstractList<BuilderTypeReference> {
     static final BuilderTypeList EMPTY = new BuilderTypeList(ImmutableList.<BuilderTypeReference>of());

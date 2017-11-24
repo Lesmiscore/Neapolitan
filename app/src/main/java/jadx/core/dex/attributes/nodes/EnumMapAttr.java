@@ -1,11 +1,9 @@
 package jadx.core.dex.attributes.nodes;
 
-import jadx.core.dex.attributes.AType;
-import jadx.core.dex.attributes.IAttribute;
-import jadx.core.dex.nodes.FieldNode;
+import java.util.*;
 
-import java.util.HashMap;
-import java.util.Map;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.nodes.*;
 
 public class EnumMapAttr implements IAttribute {
 

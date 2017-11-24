@@ -1,6 +1,6 @@
 package jadx.core.dex.visitors.blocksmaker.helpers;
 
-import jadx.core.dex.nodes.BlockNode;
+import jadx.core.dex.nodes.*;
 
 public final class BlocksPair {
 	private final BlockNode first;

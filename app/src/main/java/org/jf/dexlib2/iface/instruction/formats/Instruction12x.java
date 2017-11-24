@@ -31,7 +31,7 @@
 
 package org.jf.dexlib2.iface.instruction.formats;
 
-import org.jf.dexlib2.iface.instruction.TwoRegisterInstruction;
+import org.jf.dexlib2.iface.instruction.*;
 
 public interface Instruction12x extends TwoRegisterInstruction {
 }

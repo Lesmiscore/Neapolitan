@@ -1,18 +1,11 @@
 package jadx.core.dex.visitors.regions;
 
-import jadx.core.dex.nodes.BlockNode;
-import jadx.core.dex.nodes.IRegion;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.utils.exceptions.JadxOverflowException;
+import org.slf4j.*;
 
-import java.util.ArrayDeque;
-import java.util.Collection;
-import java.util.Deque;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import jadx.core.dex.nodes.*;
+import jadx.core.utils.exceptions.*;
 
 final class RegionStack {
 	private static final Logger LOG = LoggerFactory.getLogger(RegionStack.class);

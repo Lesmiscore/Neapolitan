@@ -1,23 +1,18 @@
 package jadx.core.xmlgen;
 
-import jadx.api.ResourcesLoader;
-import jadx.core.codegen.CodeWriter;
-import jadx.core.dex.instructions.args.ArgType;
-import jadx.core.dex.nodes.DexNode;
-import jadx.core.dex.nodes.FieldNode;
-import jadx.core.dex.nodes.RootNode;
-import jadx.core.utils.StringUtils;
-import jadx.core.utils.exceptions.JadxRuntimeException;
-import jadx.core.xmlgen.entry.ValuesParser;
+import org.slf4j.*;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.lang.reflect.Field;
-import java.util.HashMap;
-import java.util.Map;
+import java.io.*;
+import java.lang.reflect.*;
+import java.util.*;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import jadx.api.*;
+import jadx.core.codegen.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.utils.*;
+import jadx.core.utils.exceptions.*;
+import jadx.core.xmlgen.entry.*;
 
 /* TODO:
 	Don't die when error occurs

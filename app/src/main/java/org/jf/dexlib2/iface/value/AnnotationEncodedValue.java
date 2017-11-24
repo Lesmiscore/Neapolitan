@@ -31,13 +31,11 @@
 
 package org.jf.dexlib2.iface.value;
 
-import org.jf.dexlib2.iface.AnnotationElement;
-import org.jf.dexlib2.iface.BasicAnnotation;
+import org.jf.dexlib2.iface.*;
 
-import java.util.Set;
+import java.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 /**
  * This class represents an encoded annotation value.

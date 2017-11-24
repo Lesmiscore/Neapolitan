@@ -32,11 +32,9 @@
 
 package org.jf.dexlib2.util;
 
-import org.jf.dexlib2.iface.instruction.Instruction;
-import org.jf.dexlib2.iface.instruction.OneRegisterInstruction;
-import org.jf.dexlib2.iface.instruction.WideLiteralInstruction;
+import org.jf.dexlib2.iface.instruction.*;
 
-import java.util.List;
+import java.util.*;
 
 public class SyntheticAccessorFSM {
 

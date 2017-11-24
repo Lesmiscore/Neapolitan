@@ -31,8 +31,7 @@
 
 package org.jf.util;
 
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class LinearSearch {
     /**

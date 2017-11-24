@@ -31,11 +31,11 @@
 
 package org.jf.dexlib2;
 
-import com.google.common.collect.Maps;
+import com.google.common.collect.*;
 
-import java.util.HashMap;
+import java.util.*;
 
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public class Opcodes {
     private final Opcode[] opcodesByValue;

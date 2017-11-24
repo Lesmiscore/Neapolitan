@@ -1,16 +1,10 @@
 package org.jf.dexlib2.writer.io;
 
-import org.jf.util.RandomAccessFileInputStream;
-import org.jf.util.RandomAccessFileOutputStream;
+import org.jf.util.*;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.RandomAccessFile;
+import java.io.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class FileDataStore implements DexDataStore {
     private final RandomAccessFile raf;

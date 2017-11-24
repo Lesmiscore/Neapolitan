@@ -24,8 +24,7 @@
 
 package org.jf.util;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 /**
  * Constants of type <code>CONSTANT_Utf8_info</code>.

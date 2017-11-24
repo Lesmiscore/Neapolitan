@@ -1,32 +1,21 @@
 package jadx.core.dex.visitors.regions;
 
-import jadx.core.dex.attributes.AFlag;
-import jadx.core.dex.attributes.AType;
-import jadx.core.dex.attributes.nodes.LoopInfo;
-import jadx.core.dex.instructions.IfNode;
-import jadx.core.dex.instructions.InsnType;
-import jadx.core.dex.instructions.args.InsnArg;
-import jadx.core.dex.instructions.args.RegisterArg;
-import jadx.core.dex.nodes.BlockNode;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.dex.regions.conditions.IfCondition;
-import jadx.core.dex.regions.conditions.IfCondition.Mode;
-import jadx.core.dex.regions.conditions.IfInfo;
-import jadx.core.utils.BlockUtils;
-import jadx.core.utils.exceptions.JadxRuntimeException;
+import org.slf4j.*;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.attributes.nodes.*;
+import jadx.core.dex.instructions.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.dex.regions.conditions.*;
+import jadx.core.dex.regions.conditions.IfCondition.*;
+import jadx.core.utils.*;
+import jadx.core.utils.exceptions.*;
 
-import static jadx.core.dex.visitors.regions.RegionMaker.isEqualPaths;
-import static jadx.core.dex.visitors.regions.RegionMaker.isEqualReturnBlocks;
-import static jadx.core.utils.BlockUtils.getNextBlock;
-import static jadx.core.utils.BlockUtils.isPathExists;
+import static jadx.core.dex.visitors.regions.RegionMaker.*;
+import static jadx.core.utils.BlockUtils.*;
 
 public class IfMakerHelper {
 	private static final Logger LOG = LoggerFactory.getLogger(IfMakerHelper.class);

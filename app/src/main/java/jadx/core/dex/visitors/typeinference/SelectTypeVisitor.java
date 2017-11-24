@@ -1,9 +1,7 @@
 package jadx.core.dex.visitors.typeinference;
 
-import jadx.core.dex.instructions.args.ArgType;
-import jadx.core.dex.instructions.args.InsnArg;
-import jadx.core.dex.nodes.DexNode;
-import jadx.core.dex.nodes.InsnNode;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.*;
 
 public class SelectTypeVisitor {
 

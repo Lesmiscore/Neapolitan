@@ -1,36 +1,24 @@
 package com.njlabs.showjava.processor;
 
-import android.app.Notification;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.app.Service;
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.pm.PackageInfo;
-import android.graphics.BitmapFactory;
-import android.os.Bundle;
-import android.os.Environment;
-import android.os.Handler;
-import android.os.IBinder;
-import android.preference.PreferenceManager;
-import android.support.annotation.Nullable;
-import android.support.v4.app.NotificationCompat;
-import android.widget.Toast;
+import android.app.*;
+import android.content.*;
+import android.content.pm.*;
+import android.graphics.*;
+import android.os.*;
+import android.preference.*;
+import android.support.annotation.*;
+import android.support.v4.app.*;
+import android.widget.*;
 
-import com.njlabs.showjava.Constants;
-import com.njlabs.showjava.R;
-import com.njlabs.showjava.ui.AppProcessActivity;
-import com.njlabs.showjava.ui.JavaExplorer;
-import com.njlabs.showjava.utils.ExceptionHandler;
-import com.njlabs.showjava.utils.Notify;
-import com.njlabs.showjava.utils.SourceInfo;
-import com.njlabs.showjava.utils.Utils;
-import com.njlabs.showjava.utils.logging.Ln;
+import com.nao20010128nao.Neapolitan.*;
+import com.njlabs.showjava.*;
+import com.njlabs.showjava.ui.*;
+import com.njlabs.showjava.utils.*;
+import com.njlabs.showjava.utils.logging.*;
 
-import net.dongliu.apk.parser.ApkParser;
+import net.dongliu.apk.parser.*;
 
-import java.io.File;
+import java.io.*;
 
 @SuppressWarnings({"ConstantConditions", "ResultOfMethodCallIgnored"})
 public class ProcessService extends Service {

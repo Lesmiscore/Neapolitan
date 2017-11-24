@@ -1,12 +1,11 @@
 package jadx.core.dex.nodes;
 
-import jadx.core.dex.attributes.nodes.LineAttrNode;
-import jadx.core.dex.info.AccessInfo;
-import jadx.core.dex.info.AccessInfo.AFType;
-import jadx.core.dex.info.FieldInfo;
-import jadx.core.dex.instructions.args.ArgType;
+import com.android.dex.ClassData.*;
 
-import com.android.dex.ClassData.Field;
+import jadx.core.dex.attributes.nodes.*;
+import jadx.core.dex.info.*;
+import jadx.core.dex.info.AccessInfo.*;
+import jadx.core.dex.instructions.args.*;
 
 public class FieldNode extends LineAttrNode {
 

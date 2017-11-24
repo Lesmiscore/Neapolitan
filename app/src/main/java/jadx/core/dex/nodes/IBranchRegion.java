@@ -1,6 +1,6 @@
 package jadx.core.dex.nodes;
 
-import java.util.List;
+import java.util.*;
 
 public interface IBranchRegion extends IRegion {
 

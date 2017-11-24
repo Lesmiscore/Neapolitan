@@ -31,12 +31,11 @@
 
 package org.jf.dexlib2.writer.pool;
 
-import org.jf.dexlib2.iface.reference.StringReference;
-import org.jf.dexlib2.writer.StringSection;
-import org.jf.util.ExceptionWithContext;
+import org.jf.dexlib2.iface.reference.*;
+import org.jf.dexlib2.writer.*;
+import org.jf.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public class StringPool extends StringTypeBasePool implements StringSection<CharSequence, StringReference> {
     public void intern(@Nonnull CharSequence string) {

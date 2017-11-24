@@ -31,22 +31,12 @@
 
 package org.jf.dexlib2.rewriter;
 
-import org.jf.dexlib2.Opcode;
-import org.jf.dexlib2.ReferenceType;
-import org.jf.dexlib2.iface.instruction.Instruction;
-import org.jf.dexlib2.iface.instruction.ReferenceInstruction;
-import org.jf.dexlib2.iface.instruction.formats.Instruction20bc;
-import org.jf.dexlib2.iface.instruction.formats.Instruction21c;
-import org.jf.dexlib2.iface.instruction.formats.Instruction22c;
-import org.jf.dexlib2.iface.instruction.formats.Instruction31c;
-import org.jf.dexlib2.iface.instruction.formats.Instruction35c;
-import org.jf.dexlib2.iface.instruction.formats.Instruction3rc;
-import org.jf.dexlib2.iface.reference.FieldReference;
-import org.jf.dexlib2.iface.reference.MethodReference;
-import org.jf.dexlib2.iface.reference.Reference;
-import org.jf.dexlib2.iface.reference.TypeReference;
+import org.jf.dexlib2.*;
+import org.jf.dexlib2.iface.instruction.*;
+import org.jf.dexlib2.iface.instruction.formats.*;
+import org.jf.dexlib2.iface.reference.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class InstructionRewriter implements Rewriter<Instruction> {
     @Nonnull

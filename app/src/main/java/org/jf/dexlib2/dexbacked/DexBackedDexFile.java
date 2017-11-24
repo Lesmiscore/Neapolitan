@@ -31,27 +31,18 @@
 
 package org.jf.dexlib2.dexbacked;
 
-import com.google.common.io.ByteStreams;
+import com.google.common.io.*;
 
-import org.jf.dexlib2.Opcodes;
-import org.jf.dexlib2.dexbacked.raw.ClassDefItem;
-import org.jf.dexlib2.dexbacked.raw.FieldIdItem;
-import org.jf.dexlib2.dexbacked.raw.HeaderItem;
-import org.jf.dexlib2.dexbacked.raw.MethodIdItem;
-import org.jf.dexlib2.dexbacked.raw.ProtoIdItem;
-import org.jf.dexlib2.dexbacked.raw.StringIdItem;
-import org.jf.dexlib2.dexbacked.raw.TypeIdItem;
-import org.jf.dexlib2.dexbacked.util.FixedSizeSet;
-import org.jf.dexlib2.iface.DexFile;
-import org.jf.util.ExceptionWithContext;
+import org.jf.dexlib2.*;
+import org.jf.dexlib2.dexbacked.raw.*;
+import org.jf.dexlib2.dexbacked.util.*;
+import org.jf.dexlib2.iface.*;
+import org.jf.util.*;
 
-import java.io.EOFException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Set;
+import java.io.*;
+import java.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public class DexBackedDexFile extends BaseDexBuffer implements DexFile {
     private final Opcodes opcodes;

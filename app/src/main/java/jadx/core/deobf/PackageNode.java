@@ -1,9 +1,6 @@
 package jadx.core.deobf;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 public class PackageNode {
 

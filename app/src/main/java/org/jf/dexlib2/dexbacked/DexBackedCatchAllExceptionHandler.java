@@ -31,8 +31,7 @@
 
 package org.jf.dexlib2.dexbacked;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public class DexBackedCatchAllExceptionHandler extends DexBackedExceptionHandler {
     private final int handlerCodeAddress;

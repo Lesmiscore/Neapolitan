@@ -31,13 +31,11 @@
 
 package org.jf.dexlib2.dexbacked.raw;
 
-import org.jf.dexlib2.dexbacked.DexBackedDexFile;
-import org.jf.dexlib2.dexbacked.DexReader;
-import org.jf.dexlib2.dexbacked.raw.util.DexAnnotator;
-import org.jf.dexlib2.util.AnnotatedBytes;
+import org.jf.dexlib2.dexbacked.*;
+import org.jf.dexlib2.dexbacked.raw.util.*;
+import org.jf.dexlib2.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public class AnnotationItem {
     public static final int VISIBILITY_OFFSET = 0;

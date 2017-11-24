@@ -31,13 +31,12 @@
 
 package org.jf.dexlib2.dexbacked.value;
 
-import org.jf.dexlib2.base.value.BaseEnumEncodedValue;
-import org.jf.dexlib2.dexbacked.DexBackedDexFile;
-import org.jf.dexlib2.dexbacked.DexReader;
-import org.jf.dexlib2.dexbacked.reference.DexBackedFieldReference;
-import org.jf.dexlib2.iface.reference.FieldReference;
+import org.jf.dexlib2.base.value.*;
+import org.jf.dexlib2.dexbacked.*;
+import org.jf.dexlib2.dexbacked.reference.*;
+import org.jf.dexlib2.iface.reference.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class DexBackedEnumEncodedValue extends BaseEnumEncodedValue {
     @Nonnull

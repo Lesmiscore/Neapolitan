@@ -32,15 +32,13 @@
 
 package org.jf.dexlib2.writer;
 
-import org.jf.dexlib2.Opcode;
-import org.jf.dexlib2.iface.instruction.Instruction;
-import org.jf.dexlib2.iface.instruction.SwitchElement;
-import org.jf.dexlib2.iface.reference.Reference;
+import org.jf.dexlib2.*;
+import org.jf.dexlib2.iface.instruction.*;
+import org.jf.dexlib2.iface.reference.*;
 
-import java.util.List;
+import java.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public interface InstructionFactory<Ref extends Reference> {
     Instruction makeInstruction10t(@Nonnull Opcode opcode, int codeOffset);

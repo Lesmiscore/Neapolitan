@@ -31,30 +31,20 @@
 
 package org.jf.dexlib2.analysis;
 
-import com.google.common.cache.CacheBuilder;
-import com.google.common.cache.CacheLoader;
-import com.google.common.cache.LoadingCache;
-import com.google.common.collect.ImmutableSet;
-import com.google.common.collect.Iterables;
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
+import com.google.common.cache.*;
+import com.google.common.collect.*;
 
-import org.jf.dexlib2.DexFileFactory;
-import org.jf.dexlib2.analysis.reflection.ReflectionClassDef;
-import org.jf.dexlib2.iface.ClassDef;
-import org.jf.dexlib2.iface.DexFile;
-import org.jf.dexlib2.immutable.ImmutableDexFile;
-import org.jf.util.ExceptionWithContext;
+import org.jf.dexlib2.*;
+import org.jf.dexlib2.analysis.reflection.*;
+import org.jf.dexlib2.iface.*;
+import org.jf.dexlib2.immutable.*;
+import org.jf.util.*;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.io.*;
+import java.util.*;
+import java.util.regex.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class ClassPath {
     private static final Pattern dalvikCacheOdexPattern = Pattern.compile("@([^@]+)@classes.dex$");

@@ -31,7 +31,7 @@
 
 package org.jf.dexlib2.analysis;
 
-import org.jf.util.ExceptionWithContext;
+import org.jf.util.*;
 
 public class UnresolvedClassException extends ExceptionWithContext {
     public UnresolvedClassException(Throwable cause) {

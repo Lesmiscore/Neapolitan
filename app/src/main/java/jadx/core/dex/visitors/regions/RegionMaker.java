@@ -1,61 +1,25 @@
 package jadx.core.dex.visitors.regions;
 
-import jadx.core.Consts;
-import jadx.core.dex.attributes.AFlag;
-import jadx.core.dex.attributes.AType;
-import jadx.core.dex.attributes.nodes.EdgeInsnAttr;
-import jadx.core.dex.attributes.nodes.LoopInfo;
-import jadx.core.dex.attributes.nodes.LoopLabelAttr;
-import jadx.core.dex.instructions.IfNode;
-import jadx.core.dex.instructions.InsnType;
-import jadx.core.dex.instructions.SwitchNode;
-import jadx.core.dex.instructions.args.InsnArg;
-import jadx.core.dex.nodes.BlockNode;
-import jadx.core.dex.nodes.Edge;
-import jadx.core.dex.nodes.IBlock;
-import jadx.core.dex.nodes.IContainer;
-import jadx.core.dex.nodes.IRegion;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.dex.regions.Region;
-import jadx.core.dex.regions.SwitchRegion;
-import jadx.core.dex.regions.SynchronizedRegion;
-import jadx.core.dex.regions.conditions.IfInfo;
-import jadx.core.dex.regions.conditions.IfRegion;
-import jadx.core.dex.regions.loops.LoopRegion;
-import jadx.core.dex.trycatch.ExcHandlerAttr;
-import jadx.core.dex.trycatch.ExceptionHandler;
-import jadx.core.dex.trycatch.SplitterBlockAttr;
-import jadx.core.dex.trycatch.TryCatchBlock;
-import jadx.core.utils.BlockUtils;
-import jadx.core.utils.ErrorsCounter;
-import jadx.core.utils.InstructionRemover;
-import jadx.core.utils.RegionUtils;
-import jadx.core.utils.exceptions.JadxOverflowException;
-import jadx.core.utils.exceptions.JadxRuntimeException;
+import org.slf4j.*;
 
-import java.util.ArrayList;
-import java.util.BitSet;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
+import java.util.*;
+import java.util.Map.*;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import jadx.core.*;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.attributes.nodes.*;
+import jadx.core.dex.instructions.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.dex.regions.*;
+import jadx.core.dex.regions.conditions.*;
+import jadx.core.dex.regions.loops.*;
+import jadx.core.dex.trycatch.*;
+import jadx.core.utils.*;
+import jadx.core.utils.exceptions.*;
 
-import static jadx.core.dex.visitors.regions.IfMakerHelper.confirmMerge;
-import static jadx.core.dex.visitors.regions.IfMakerHelper.makeIfInfo;
-import static jadx.core.dex.visitors.regions.IfMakerHelper.mergeNestedIfNodes;
-import static jadx.core.dex.visitors.regions.IfMakerHelper.searchNestedIf;
-import static jadx.core.utils.BlockUtils.getBlockByOffset;
-import static jadx.core.utils.BlockUtils.getNextBlock;
-import static jadx.core.utils.BlockUtils.isPathExists;
-import static jadx.core.utils.BlockUtils.skipSyntheticSuccessor;
+import static jadx.core.dex.visitors.regions.IfMakerHelper.*;
+import static jadx.core.utils.BlockUtils.*;
 
 public class RegionMaker {
 	private static final Logger LOG = LoggerFactory.getLogger(RegionMaker.class);

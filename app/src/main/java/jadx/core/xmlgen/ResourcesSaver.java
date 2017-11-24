@@ -1,15 +1,12 @@
 package jadx.core.xmlgen;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.slf4j.*;
 
-import java.io.File;
-import java.util.List;
+import java.io.*;
+import java.util.*;
 
-import jadx.api.JadxDecompiler;
-import jadx.api.ResourceFile;
-import jadx.api.ResourceType;
-import jadx.core.codegen.CodeWriter;
+import jadx.api.*;
+import jadx.core.codegen.*;
 
 public class ResourcesSaver implements Runnable {
 	private final ResourceFile resourceFile;

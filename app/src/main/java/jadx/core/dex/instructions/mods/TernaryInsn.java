@@ -1,15 +1,12 @@
 package jadx.core.dex.instructions.mods;
 
-import jadx.core.dex.instructions.InsnType;
-import jadx.core.dex.instructions.args.InsnArg;
-import jadx.core.dex.instructions.args.LiteralArg;
-import jadx.core.dex.instructions.args.RegisterArg;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.dex.regions.conditions.IfCondition;
-import jadx.core.utils.InsnUtils;
-import jadx.core.utils.Utils;
+import java.util.*;
 
-import java.util.Collection;
+import jadx.core.dex.instructions.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.dex.regions.conditions.*;
+import jadx.core.utils.*;
 
 public final class TernaryInsn extends InsnNode {
 

@@ -31,48 +31,16 @@
 
 package org.jf.dexlib2.writer;
 
-import org.jf.dexlib2.ReferenceType;
-import org.jf.dexlib2.iface.instruction.ReferenceInstruction;
-import org.jf.dexlib2.iface.instruction.SwitchElement;
-import org.jf.dexlib2.iface.instruction.formats.ArrayPayload;
-import org.jf.dexlib2.iface.instruction.formats.Instruction10t;
-import org.jf.dexlib2.iface.instruction.formats.Instruction10x;
-import org.jf.dexlib2.iface.instruction.formats.Instruction11n;
-import org.jf.dexlib2.iface.instruction.formats.Instruction11x;
-import org.jf.dexlib2.iface.instruction.formats.Instruction12x;
-import org.jf.dexlib2.iface.instruction.formats.Instruction20bc;
-import org.jf.dexlib2.iface.instruction.formats.Instruction20t;
-import org.jf.dexlib2.iface.instruction.formats.Instruction21c;
-import org.jf.dexlib2.iface.instruction.formats.Instruction21ih;
-import org.jf.dexlib2.iface.instruction.formats.Instruction21lh;
-import org.jf.dexlib2.iface.instruction.formats.Instruction21s;
-import org.jf.dexlib2.iface.instruction.formats.Instruction21t;
-import org.jf.dexlib2.iface.instruction.formats.Instruction22b;
-import org.jf.dexlib2.iface.instruction.formats.Instruction22c;
-import org.jf.dexlib2.iface.instruction.formats.Instruction22s;
-import org.jf.dexlib2.iface.instruction.formats.Instruction22t;
-import org.jf.dexlib2.iface.instruction.formats.Instruction22x;
-import org.jf.dexlib2.iface.instruction.formats.Instruction23x;
-import org.jf.dexlib2.iface.instruction.formats.Instruction30t;
-import org.jf.dexlib2.iface.instruction.formats.Instruction31c;
-import org.jf.dexlib2.iface.instruction.formats.Instruction31i;
-import org.jf.dexlib2.iface.instruction.formats.Instruction31t;
-import org.jf.dexlib2.iface.instruction.formats.Instruction32x;
-import org.jf.dexlib2.iface.instruction.formats.Instruction35c;
-import org.jf.dexlib2.iface.instruction.formats.Instruction3rc;
-import org.jf.dexlib2.iface.instruction.formats.Instruction51l;
-import org.jf.dexlib2.iface.instruction.formats.PackedSwitchPayload;
-import org.jf.dexlib2.iface.instruction.formats.SparseSwitchPayload;
-import org.jf.dexlib2.iface.reference.FieldReference;
-import org.jf.dexlib2.iface.reference.MethodReference;
-import org.jf.dexlib2.iface.reference.StringReference;
-import org.jf.dexlib2.iface.reference.TypeReference;
-import org.jf.util.ExceptionWithContext;
+import org.jf.dexlib2.*;
+import org.jf.dexlib2.iface.instruction.*;
+import org.jf.dexlib2.iface.instruction.formats.*;
+import org.jf.dexlib2.iface.reference.*;
+import org.jf.util.*;
 
-import java.io.IOException;
-import java.util.List;
+import java.io.*;
+import java.util.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class InstructionWriter<StringRef extends StringReference, TypeRef extends TypeReference,
         FieldRefKey extends FieldReference, MethodRefKey extends MethodReference> {

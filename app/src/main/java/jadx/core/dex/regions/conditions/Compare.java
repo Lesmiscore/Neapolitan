@@ -1,9 +1,7 @@
 package jadx.core.dex.regions.conditions;
 
-import jadx.core.dex.instructions.IfNode;
-import jadx.core.dex.instructions.IfOp;
-import jadx.core.dex.instructions.args.InsnArg;
-import jadx.core.dex.instructions.args.LiteralArg;
+import jadx.core.dex.instructions.*;
+import jadx.core.dex.instructions.args.*;
 
 public final class Compare {
 	private final IfNode insn;

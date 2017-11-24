@@ -1,47 +1,25 @@
 package jadx.core.dex.nodes;
 
-import jadx.core.Consts;
-import jadx.core.codegen.CodeWriter;
-import jadx.core.dex.attributes.AType;
+import com.android.dex.*;
+import com.android.dex.ClassData.*;
+import com.android.dx.rop.code.*;
+
+import org.jetbrains.annotations.*;
+import org.slf4j.*;
+
+import java.util.*;
+
+import jadx.core.*;
+import jadx.core.codegen.*;
+import jadx.core.dex.attributes.*;
 import jadx.core.dex.attributes.annotations.Annotation;
-import jadx.core.dex.attributes.nodes.JadxErrorAttr;
-import jadx.core.dex.attributes.nodes.LineAttrNode;
-import jadx.core.dex.attributes.nodes.SourceFileAttr;
-import jadx.core.dex.info.AccessInfo;
-import jadx.core.dex.info.AccessInfo.AFType;
-import jadx.core.dex.info.ClassInfo;
-import jadx.core.dex.info.FieldInfo;
-import jadx.core.dex.info.MethodInfo;
-import jadx.core.dex.instructions.args.ArgType;
-import jadx.core.dex.instructions.args.LiteralArg;
-import jadx.core.dex.instructions.args.PrimitiveType;
-import jadx.core.dex.nodes.parser.AnnotationsParser;
-import jadx.core.dex.nodes.parser.FieldInitAttr;
-import jadx.core.dex.nodes.parser.FieldInitAttr.InitType;
-import jadx.core.dex.nodes.parser.SignatureParser;
-import jadx.core.dex.nodes.parser.StaticValuesParser;
-import jadx.core.utils.exceptions.DecodeException;
-import jadx.core.utils.exceptions.JadxRuntimeException;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
-import org.jetbrains.annotations.Nullable;
-import org.jetbrains.annotations.TestOnly;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.android.dex.ClassData;
-import com.android.dex.ClassData.Field;
-import com.android.dex.ClassData.Method;
-import com.android.dex.ClassDef;
-import com.android.dx.rop.code.AccessFlags;
+import jadx.core.dex.attributes.nodes.*;
+import jadx.core.dex.info.*;
+import jadx.core.dex.info.AccessInfo.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.parser.*;
+import jadx.core.dex.nodes.parser.FieldInitAttr.*;
+import jadx.core.utils.exceptions.*;
 
 public class ClassNode extends LineAttrNode implements ILoadable {
 	private static final Logger LOG = LoggerFactory.getLogger(ClassNode.class);

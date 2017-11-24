@@ -31,10 +31,10 @@
 
 package org.jf.dexlib2.immutable.debug;
 
-import org.jf.dexlib2.DebugItemType;
-import org.jf.dexlib2.iface.debug.LineNumber;
+import org.jf.dexlib2.*;
+import org.jf.dexlib2.iface.debug.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class ImmutableLineNumber extends ImmutableDebugItem implements LineNumber {
     protected final int lineNumber;

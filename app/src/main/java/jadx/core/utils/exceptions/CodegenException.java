@@ -1,7 +1,6 @@
 package jadx.core.utils.exceptions;
 
-import jadx.core.dex.nodes.ClassNode;
-import jadx.core.dex.nodes.MethodNode;
+import jadx.core.dex.nodes.*;
 
 public class CodegenException extends JadxException {
 

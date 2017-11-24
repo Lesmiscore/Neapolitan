@@ -1,32 +1,17 @@
 package jadx.core.utils;
 
-import jadx.core.dex.attributes.AFlag;
-import jadx.core.dex.attributes.AType;
-import jadx.core.dex.attributes.nodes.IgnoreEdgeAttr;
-import jadx.core.dex.attributes.nodes.PhiListAttr;
-import jadx.core.dex.instructions.IfNode;
-import jadx.core.dex.instructions.InsnType;
-import jadx.core.dex.instructions.PhiInsn;
-import jadx.core.dex.instructions.args.InsnArg;
-import jadx.core.dex.instructions.args.InsnWrapArg;
-import jadx.core.dex.instructions.mods.TernaryInsn;
-import jadx.core.dex.nodes.BlockNode;
-import jadx.core.dex.nodes.IBlock;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.dex.regions.conditions.IfCondition;
-import jadx.core.utils.exceptions.JadxRuntimeException;
+import org.jetbrains.annotations.*;
 
-import java.util.ArrayList;
-import java.util.BitSet;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
-import org.jetbrains.annotations.Nullable;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.attributes.nodes.*;
+import jadx.core.dex.instructions.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.instructions.mods.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.dex.regions.conditions.*;
+import jadx.core.utils.exceptions.*;
 
 public class BlockUtils {
 

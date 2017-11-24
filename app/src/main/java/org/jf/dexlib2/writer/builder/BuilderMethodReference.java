@@ -31,10 +31,10 @@
 
 package org.jf.dexlib2.writer.builder;
 
-import org.jf.dexlib2.base.reference.BaseMethodReference;
-import org.jf.dexlib2.writer.DexWriter;
+import org.jf.dexlib2.base.reference.*;
+import org.jf.dexlib2.writer.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class BuilderMethodReference extends BaseMethodReference implements BuilderReference {
     @Nonnull

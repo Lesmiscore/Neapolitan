@@ -1,11 +1,11 @@
 package com.njlabs.showjava.ui;
 
-import android.content.Intent;
-import android.net.Uri;
-import android.os.Bundle;
-import android.view.View;
+import android.content.*;
+import android.net.*;
+import android.os.*;
+import android.view.*;
 
-import com.njlabs.showjava.R;
+import com.nao20010128nao.Neapolitan.*;
 
 public class ErrorActivity extends BaseActivity {
 
@@ -13,6 +13,7 @@ public class ErrorActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setupLayout(R.layout.activity_error);
+        finish();
     }
 
     public void openAppInfoPage(View v) {

@@ -1,9 +1,9 @@
 package jadx.core.dex.nodes;
 
-import jadx.core.dex.info.FieldInfo;
-import jadx.core.dex.instructions.args.ArgType;
+import com.android.dx.rop.code.*;
 
-import com.android.dx.rop.code.AccessFlags;
+import jadx.core.dex.info.*;
+import jadx.core.dex.instructions.args.*;
 
 public class ResRefField extends FieldNode {
 

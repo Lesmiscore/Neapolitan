@@ -31,13 +31,12 @@
 
 package org.jf.dexlib2.util;
 
-import org.jf.dexlib2.iface.instruction.Instruction;
-import org.jf.util.ExceptionWithContext;
+import org.jf.dexlib2.iface.instruction.*;
+import org.jf.util.*;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class InstructionOffsetMap {
     @Nonnull

@@ -31,10 +31,9 @@
 
 package org.jf.dexlib2.writer;
 
-import java.util.Collection;
-import java.util.Map;
+import java.util.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public interface OffsetSection<Key> {
     int getItemOffset(@Nonnull Key key);

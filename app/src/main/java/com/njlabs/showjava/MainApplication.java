@@ -12,7 +12,7 @@ public class MainApplication extends Application {
         super.onCreate();
         CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
                 .setDefaultFontPath("fonts/lato-light.ttf")
-                .setFontAttrId(R.attr.fontPath)
+                .setFontAttrId(com.nao20010128nao.Neapolitan.R.attr.fontPath)
                 .build());
     }
 

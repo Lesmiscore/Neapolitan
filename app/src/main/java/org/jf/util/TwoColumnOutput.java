@@ -31,12 +31,9 @@
 
 package org.jf.util;
 
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.io.Writer;
+import java.io.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 /**
  * Class that takes a combined output destination and provides two

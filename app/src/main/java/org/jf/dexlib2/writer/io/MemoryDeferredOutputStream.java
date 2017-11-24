@@ -1,12 +1,11 @@
 package org.jf.dexlib2.writer.io;
 
-import com.google.common.collect.Lists;
+import com.google.common.collect.*;
 
-import java.io.IOException;
-import java.io.OutputStream;
-import java.util.List;
+import java.io.*;
+import java.util.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 /**
  * A deferred output stream that is stored in memory

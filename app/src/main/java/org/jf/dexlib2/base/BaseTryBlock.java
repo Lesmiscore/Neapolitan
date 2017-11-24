@@ -31,8 +31,7 @@
 
 package org.jf.dexlib2.base;
 
-import org.jf.dexlib2.iface.ExceptionHandler;
-import org.jf.dexlib2.iface.TryBlock;
+import org.jf.dexlib2.iface.*;
 
 public abstract class BaseTryBlock<EH extends ExceptionHandler> implements TryBlock<EH> {
     @Override

@@ -31,19 +31,15 @@
 
 package org.jf.dexlib2.writer.util;
 
-import com.google.common.collect.Lists;
+import com.google.common.collect.*;
 
-import org.jf.dexlib2.base.BaseTryBlock;
-import org.jf.dexlib2.iface.ExceptionHandler;
-import org.jf.dexlib2.iface.TryBlock;
-import org.jf.util.ExceptionWithContext;
+import org.jf.dexlib2.base.*;
+import org.jf.dexlib2.iface.*;
+import org.jf.util.*;
 
-import java.util.Iterator;
-import java.util.List;
-import java.util.NoSuchElementException;
+import java.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public class TryListBuilder<EH extends ExceptionHandler> {
     // Linked list sentinels that don't represent an actual try block

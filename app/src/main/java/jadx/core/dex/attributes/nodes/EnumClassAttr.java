@@ -1,14 +1,11 @@
 package jadx.core.dex.attributes.nodes;
 
-import jadx.core.dex.attributes.AType;
-import jadx.core.dex.attributes.IAttribute;
-import jadx.core.dex.info.FieldInfo;
-import jadx.core.dex.instructions.mods.ConstructorInsn;
-import jadx.core.dex.nodes.ClassNode;
-import jadx.core.dex.nodes.MethodNode;
+import java.util.*;
 
-import java.util.ArrayList;
-import java.util.List;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.info.*;
+import jadx.core.dex.instructions.mods.*;
+import jadx.core.dex.nodes.*;
 
 public class EnumClassAttr implements IAttribute {
 

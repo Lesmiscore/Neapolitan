@@ -31,9 +31,7 @@
 
 package org.jf.util;
 
-import java.io.FilterWriter;
-import java.io.IOException;
-import java.io.Writer;
+import java.io.*;
 
 /**
  * Writer that wraps another writer and passes width-limited and

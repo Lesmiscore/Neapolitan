@@ -1,18 +1,11 @@
 package jadx.core.dex.trycatch;
 
-import jadx.core.dex.attributes.AFlag;
-import jadx.core.dex.attributes.AType;
-import jadx.core.dex.info.ClassInfo;
-import jadx.core.dex.nodes.BlockNode;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.utils.BlockUtils;
-import jadx.core.utils.Utils;
+import java.util.*;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.info.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.utils.*;
 
 public class TryCatchBlock {
 

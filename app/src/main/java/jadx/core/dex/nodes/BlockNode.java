@@ -1,19 +1,10 @@
 package jadx.core.dex.nodes;
 
-import jadx.core.dex.attributes.AFlag;
-import jadx.core.dex.attributes.AType;
-import jadx.core.dex.attributes.AttrNode;
-import jadx.core.dex.attributes.nodes.IgnoreEdgeAttr;
-import jadx.core.dex.attributes.nodes.LoopInfo;
-import jadx.core.utils.BlockUtils;
-import jadx.core.utils.EmptyBitSet;
-import jadx.core.utils.InsnUtils;
+import java.util.*;
 
-import java.util.ArrayList;
-import java.util.BitSet;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.attributes.nodes.*;
+import jadx.core.utils.*;
 
 public class BlockNode extends AttrNode implements IBlock {
 

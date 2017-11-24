@@ -1,12 +1,10 @@
 package jadx.core.dex.attributes.nodes;
 
-import jadx.core.dex.attributes.AType;
-import jadx.core.dex.attributes.IAttribute;
-import jadx.core.dex.nodes.BlockNode;
-import jadx.core.utils.Utils;
+import java.util.*;
 
-import java.util.HashSet;
-import java.util.Set;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.utils.*;
 
 public class IgnoreEdgeAttr implements IAttribute {
 

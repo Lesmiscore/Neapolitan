@@ -1,7 +1,7 @@
 package jadx.core.dex.instructions.args;
 
-import jadx.core.codegen.TypeGen;
-import jadx.core.utils.exceptions.JadxRuntimeException;
+import jadx.core.codegen.*;
+import jadx.core.utils.exceptions.*;
 
 public final class LiteralArg extends InsnArg {
 

@@ -1,10 +1,9 @@
 package jadx.core.dex.visitors;
 
-import jadx.core.dex.attributes.AType;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.dex.trycatch.CatchAttr;
-import jadx.core.utils.exceptions.JadxException;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.dex.trycatch.*;
+import jadx.core.utils.exceptions.*;
 
 public class FallbackModeVisitor extends AbstractVisitor {
 

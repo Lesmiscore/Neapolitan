@@ -31,8 +31,8 @@
 
 package org.jf.dexlib2.immutable.value;
 
-import org.jf.dexlib2.base.value.BaseIntEncodedValue;
-import org.jf.dexlib2.iface.value.IntEncodedValue;
+import org.jf.dexlib2.base.value.*;
+import org.jf.dexlib2.iface.value.*;
 
 public class ImmutableIntEncodedValue extends BaseIntEncodedValue implements ImmutableEncodedValue {
     protected final int value;

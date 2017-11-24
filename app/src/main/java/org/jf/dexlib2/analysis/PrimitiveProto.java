@@ -31,12 +31,10 @@
 
 package org.jf.dexlib2.analysis;
 
-import org.jf.dexlib2.iface.reference.FieldReference;
-import org.jf.dexlib2.iface.reference.MethodReference;
-import org.jf.util.ExceptionWithContext;
+import org.jf.dexlib2.iface.reference.*;
+import org.jf.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public class PrimitiveProto implements TypeProto {
     protected final ClassPath classPath;

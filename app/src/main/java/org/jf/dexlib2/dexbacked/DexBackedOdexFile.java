@@ -31,19 +31,16 @@
 
 package org.jf.dexlib2.dexbacked;
 
-import com.google.common.io.ByteStreams;
+import com.google.common.io.*;
 
-import org.jf.dexlib2.Opcodes;
-import org.jf.dexlib2.dexbacked.raw.OdexHeaderItem;
-import org.jf.dexlib2.dexbacked.util.VariableSizeList;
+import org.jf.dexlib2.*;
+import org.jf.dexlib2.dexbacked.raw.*;
+import org.jf.dexlib2.dexbacked.util.*;
 
-import java.io.EOFException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.UnsupportedEncodingException;
-import java.util.List;
+import java.io.*;
+import java.util.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class DexBackedOdexFile extends DexBackedDexFile {
     private static final int DEPENDENCY_COUNT_OFFSET = 12;

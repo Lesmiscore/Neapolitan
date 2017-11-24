@@ -23,39 +23,19 @@ package com.njlabs.showjava.utils;
  * Created by Isaac Potoczny-Jones on 11/12/14.
  */
 
-import android.os.Build;
+import android.os.*;
 import android.os.Process;
 import android.util.Base64;
-import android.util.Log;
+import android.util.*;
 
-import java.io.ByteArrayOutputStream;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.UnsupportedEncodingException;
-import java.security.GeneralSecurityException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
-import java.security.Provider;
-import java.security.SecureRandom;
-import java.security.SecureRandomSpi;
-import java.security.Security;
-import java.security.spec.KeySpec;
-import java.util.Arrays;
-import java.util.concurrent.atomic.AtomicBoolean;
+import java.io.*;
+import java.security.*;
+import java.security.spec.*;
+import java.util.*;
+import java.util.concurrent.atomic.*;
 
-import javax.crypto.Cipher;
-import javax.crypto.KeyGenerator;
-import javax.crypto.Mac;
-import javax.crypto.SecretKey;
-import javax.crypto.SecretKeyFactory;
-import javax.crypto.spec.IvParameterSpec;
-import javax.crypto.spec.PBEKeySpec;
-import javax.crypto.spec.SecretKeySpec;
+import javax.crypto.*;
+import javax.crypto.spec.*;
 
 /**
  * Simple library for the "right" defaults for AES key generation, encryption,

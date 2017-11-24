@@ -1,9 +1,9 @@
 package jadx.core.dex.instructions.args;
 
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.utils.exceptions.JadxRuntimeException;
+import org.jetbrains.annotations.*;
 
-import org.jetbrains.annotations.NotNull;
+import jadx.core.dex.nodes.*;
+import jadx.core.utils.exceptions.*;
 
 public final class InsnWrapArg extends InsnArg {
 

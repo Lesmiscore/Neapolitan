@@ -31,16 +31,15 @@
 
 package org.jf.dexlib2.dexbacked.raw;
 
-import com.google.common.collect.Maps;
+import com.google.common.collect.*;
 
-import org.jf.dexlib2.dexbacked.raw.util.DexAnnotator;
-import org.jf.dexlib2.util.AnnotatedBytes;
-import org.jf.util.AlignmentUtils;
+import org.jf.dexlib2.dexbacked.raw.util.*;
+import org.jf.dexlib2.util.*;
+import org.jf.util.*;
 
-import java.util.Map;
+import java.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public abstract class SectionAnnotator {
     @Nonnull

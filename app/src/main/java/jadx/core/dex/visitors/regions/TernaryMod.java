@@ -1,24 +1,16 @@
 package jadx.core.dex.visitors.regions;
 
-import jadx.core.dex.attributes.AFlag;
-import jadx.core.dex.instructions.InsnType;
-import jadx.core.dex.instructions.PhiInsn;
-import jadx.core.dex.instructions.args.ArgType;
-import jadx.core.dex.instructions.args.InsnArg;
-import jadx.core.dex.instructions.args.InsnWrapArg;
-import jadx.core.dex.instructions.args.RegisterArg;
-import jadx.core.dex.instructions.mods.TernaryInsn;
-import jadx.core.dex.nodes.BlockNode;
-import jadx.core.dex.nodes.IContainer;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.dex.regions.Region;
-import jadx.core.dex.regions.conditions.IfRegion;
-import jadx.core.dex.visitors.CodeShrinker;
-import jadx.core.utils.InsnList;
+import java.util.*;
 
-import java.util.HashMap;
-import java.util.Map;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.instructions.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.instructions.mods.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.dex.regions.*;
+import jadx.core.dex.regions.conditions.*;
+import jadx.core.dex.visitors.*;
+import jadx.core.utils.*;
 
 public class TernaryMod {
 

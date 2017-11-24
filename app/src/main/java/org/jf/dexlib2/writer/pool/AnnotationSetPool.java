@@ -31,13 +31,12 @@
 
 package org.jf.dexlib2.writer.pool;
 
-import org.jf.dexlib2.iface.Annotation;
-import org.jf.dexlib2.writer.AnnotationSetSection;
+import org.jf.dexlib2.iface.*;
+import org.jf.dexlib2.writer.*;
 
-import java.util.Collection;
-import java.util.Set;
+import java.util.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class AnnotationSetPool extends BaseNullableOffsetPool<Set<? extends Annotation>>
         implements AnnotationSetSection<Annotation, Set<? extends Annotation>> {

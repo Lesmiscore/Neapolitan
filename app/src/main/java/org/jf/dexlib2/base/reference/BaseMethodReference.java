@@ -31,14 +31,12 @@
 
 package org.jf.dexlib2.base.reference;
 
-import com.google.common.collect.Ordering;
+import com.google.common.collect.*;
 
-import org.jf.dexlib2.iface.reference.MethodReference;
-import org.jf.util.CharSequenceUtils;
-import org.jf.util.CollectionUtils;
+import org.jf.dexlib2.iface.reference.*;
+import org.jf.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public abstract class BaseMethodReference implements MethodReference {
     @Override

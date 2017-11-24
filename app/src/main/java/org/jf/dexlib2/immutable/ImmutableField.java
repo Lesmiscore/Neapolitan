@@ -31,23 +31,17 @@
 
 package org.jf.dexlib2.immutable;
 
-import com.google.common.collect.ImmutableSet;
-import com.google.common.collect.ImmutableSortedSet;
-import com.google.common.collect.Ordering;
+import com.google.common.collect.*;
 
-import org.jf.dexlib2.base.reference.BaseFieldReference;
-import org.jf.dexlib2.iface.Annotation;
-import org.jf.dexlib2.iface.Field;
-import org.jf.dexlib2.iface.value.EncodedValue;
-import org.jf.dexlib2.immutable.value.ImmutableEncodedValue;
-import org.jf.dexlib2.immutable.value.ImmutableEncodedValueFactory;
-import org.jf.util.ImmutableConverter;
-import org.jf.util.ImmutableUtils;
+import org.jf.dexlib2.base.reference.*;
+import org.jf.dexlib2.iface.*;
+import org.jf.dexlib2.iface.value.*;
+import org.jf.dexlib2.immutable.value.*;
+import org.jf.util.*;
 
-import java.util.Collection;
+import java.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public class ImmutableField extends BaseFieldReference implements Field {
     private static final ImmutableConverter<ImmutableField, Field> CONVERTER =

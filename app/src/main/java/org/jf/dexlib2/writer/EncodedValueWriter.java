@@ -31,14 +31,13 @@
 
 package org.jf.dexlib2.writer;
 
-import org.jf.dexlib2.ValueType;
-import org.jf.dexlib2.iface.reference.FieldReference;
-import org.jf.dexlib2.iface.reference.MethodReference;
+import org.jf.dexlib2.*;
+import org.jf.dexlib2.iface.reference.*;
 
-import java.io.IOException;
-import java.util.Collection;
+import java.io.*;
+import java.util.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public abstract class EncodedValueWriter<StringKey, TypeKey, FieldRefKey extends FieldReference,
         MethodRefKey extends MethodReference, AnnotationElement, EncodedValue> {

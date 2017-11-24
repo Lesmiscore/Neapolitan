@@ -1,10 +1,10 @@
 package jadx.core.dex.info;
 
-import jadx.core.codegen.TypeGen;
-import jadx.core.dex.instructions.args.ArgType;
-import jadx.core.dex.nodes.DexNode;
+import com.android.dex.*;
 
-import com.android.dex.FieldId;
+import jadx.core.codegen.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.*;
 
 public final class FieldInfo {
 

@@ -1,42 +1,18 @@
 package jadx.core.dex.visitors.regions;
 
-import jadx.core.dex.attributes.AFlag;
-import jadx.core.dex.info.MethodInfo;
-import jadx.core.dex.instructions.ArithNode;
-import jadx.core.dex.instructions.ArithOp;
-import jadx.core.dex.instructions.IfOp;
-import jadx.core.dex.instructions.InsnType;
-import jadx.core.dex.instructions.InvokeNode;
-import jadx.core.dex.instructions.InvokeType;
-import jadx.core.dex.instructions.PhiInsn;
-import jadx.core.dex.instructions.args.ArgType;
-import jadx.core.dex.instructions.args.InsnArg;
-import jadx.core.dex.instructions.args.InsnWrapArg;
-import jadx.core.dex.instructions.args.LiteralArg;
-import jadx.core.dex.instructions.args.RegisterArg;
-import jadx.core.dex.instructions.args.SSAVar;
-import jadx.core.dex.nodes.BlockNode;
-import jadx.core.dex.nodes.IBlock;
-import jadx.core.dex.nodes.IRegion;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.dex.regions.conditions.Compare;
-import jadx.core.dex.regions.conditions.IfCondition;
-import jadx.core.dex.regions.loops.ForEachLoop;
-import jadx.core.dex.regions.loops.ForLoop;
-import jadx.core.dex.regions.loops.LoopRegion;
-import jadx.core.dex.regions.loops.LoopType;
-import jadx.core.dex.visitors.AbstractVisitor;
-import jadx.core.dex.visitors.CodeShrinker;
-import jadx.core.utils.BlockUtils;
-import jadx.core.utils.InstructionRemover;
-import jadx.core.utils.RegionUtils;
+import org.slf4j.*;
 
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.info.*;
+import jadx.core.dex.instructions.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.dex.regions.conditions.*;
+import jadx.core.dex.regions.loops.*;
+import jadx.core.dex.visitors.*;
+import jadx.core.utils.*;
 
 public class LoopRegionVisitor extends AbstractVisitor implements IRegionVisitor {
 	private static final Logger LOG = LoggerFactory.getLogger(LoopRegionVisitor.class);

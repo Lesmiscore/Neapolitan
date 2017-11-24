@@ -31,7 +31,7 @@
 
 package org.jf.dexlib2.builder;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class SwitchLabelElement {
     public final int key;

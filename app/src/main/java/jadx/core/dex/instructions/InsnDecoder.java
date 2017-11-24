@@ -1,25 +1,14 @@
 package jadx.core.dex.instructions;
 
-import jadx.core.dex.info.FieldInfo;
-import jadx.core.dex.info.MethodInfo;
-import jadx.core.dex.instructions.args.ArgType;
-import jadx.core.dex.instructions.args.InsnArg;
-import jadx.core.dex.instructions.args.PrimitiveType;
-import jadx.core.dex.instructions.args.RegisterArg;
-import jadx.core.dex.nodes.DexNode;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.utils.InsnUtils;
-import jadx.core.utils.exceptions.DecodeException;
+import com.android.dex.*;
+import com.android.dx.io.*;
+import com.android.dx.io.instructions.*;
 
-import com.android.dex.Code;
-import com.android.dx.io.OpcodeInfo;
-import com.android.dx.io.Opcodes;
-import com.android.dx.io.instructions.DecodedInstruction;
-import com.android.dx.io.instructions.FillArrayDataPayloadDecodedInstruction;
-import com.android.dx.io.instructions.PackedSwitchPayloadDecodedInstruction;
-import com.android.dx.io.instructions.ShortArrayCodeInput;
-import com.android.dx.io.instructions.SparseSwitchPayloadDecodedInstruction;
+import jadx.core.dex.info.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.utils.*;
+import jadx.core.utils.exceptions.*;
 
 public class InsnDecoder {
 

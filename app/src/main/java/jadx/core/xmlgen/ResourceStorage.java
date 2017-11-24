@@ -1,15 +1,9 @@
 package jadx.core.xmlgen;
 
-import jadx.core.utils.Utils;
-import jadx.core.xmlgen.entry.ResourceEntry;
+import java.util.*;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import jadx.core.utils.*;
+import jadx.core.xmlgen.entry.*;
 
 public class ResourceStorage {
 

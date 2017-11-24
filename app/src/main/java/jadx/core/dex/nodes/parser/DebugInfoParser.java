@@ -1,20 +1,15 @@
 package jadx.core.dex.nodes.parser;
 
-import jadx.core.dex.attributes.nodes.SourceFileAttr;
-import jadx.core.dex.instructions.args.InsnArg;
-import jadx.core.dex.instructions.args.RegisterArg;
-import jadx.core.dex.instructions.args.SSAVar;
-import jadx.core.dex.nodes.DexNode;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.utils.exceptions.DecodeException;
+import com.android.dex.Dex.*;
 
-import java.util.List;
+import org.slf4j.*;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.util.*;
 
-import com.android.dex.Dex.Section;
+import jadx.core.dex.attributes.nodes.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.utils.exceptions.*;
 
 public class DebugInfoParser {
 

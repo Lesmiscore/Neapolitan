@@ -31,11 +31,9 @@
 
 package org.jf.util;
 
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.RandomAccessFile;
+import java.io.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class RandomAccessFileOutputStream extends OutputStream {
     @Nonnull

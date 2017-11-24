@@ -1,29 +1,15 @@
 package jadx.core.dex.visitors;
 
-import jadx.core.dex.attributes.AFlag;
-import jadx.core.dex.attributes.AType;
-import jadx.core.dex.info.AccessInfo;
-import jadx.core.dex.info.FieldInfo;
-import jadx.core.dex.instructions.IndexInsnNode;
-import jadx.core.dex.instructions.InsnType;
-import jadx.core.dex.instructions.args.InsnArg;
-import jadx.core.dex.instructions.args.InsnWrapArg;
-import jadx.core.dex.instructions.args.RegisterArg;
-import jadx.core.dex.nodes.BlockNode;
-import jadx.core.dex.nodes.ClassNode;
-import jadx.core.dex.nodes.FieldNode;
-import jadx.core.dex.nodes.InsnNode;
-import jadx.core.dex.nodes.MethodNode;
-import jadx.core.dex.nodes.parser.FieldInitAttr;
-import jadx.core.utils.BlockUtils;
-import jadx.core.utils.InstructionRemover;
-import jadx.core.utils.exceptions.JadxException;
+import java.util.*;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.info.*;
+import jadx.core.dex.instructions.*;
+import jadx.core.dex.instructions.args.*;
+import jadx.core.dex.nodes.*;
+import jadx.core.dex.nodes.parser.*;
+import jadx.core.utils.*;
+import jadx.core.utils.exceptions.*;
 
 @JadxVisitor(
 		name = "ExtractFieldInit",

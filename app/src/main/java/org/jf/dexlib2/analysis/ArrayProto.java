@@ -31,16 +31,14 @@
 
 package org.jf.dexlib2.analysis;
 
-import com.google.common.base.Strings;
+import com.google.common.base.*;
 
-import org.jf.dexlib2.iface.reference.FieldReference;
-import org.jf.dexlib2.iface.reference.MethodReference;
-import org.jf.dexlib2.immutable.reference.ImmutableFieldReference;
-import org.jf.dexlib2.util.TypeUtils;
-import org.jf.util.ExceptionWithContext;
+import org.jf.dexlib2.iface.reference.*;
+import org.jf.dexlib2.immutable.reference.*;
+import org.jf.dexlib2.util.*;
+import org.jf.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public class ArrayProto implements TypeProto {
     private static final String BRACKETS = Strings.repeat("[", 256);

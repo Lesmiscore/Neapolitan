@@ -1,31 +1,23 @@
 package com.njlabs.showjava.ui;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.os.Bundle;
-import android.os.Handler;
-import android.text.TextUtils;
-import android.view.animation.Animation;
-import android.view.animation.LinearInterpolator;
-import android.view.animation.RotateAnimation;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.content.*;
+import android.os.*;
+import android.text.*;
+import android.view.animation.*;
+import android.widget.*;
 
-import com.njlabs.showjava.Constants;
-import com.njlabs.showjava.R;
-import com.njlabs.showjava.processor.ProcessService;
-import com.njlabs.showjava.utils.Utils;
-import com.njlabs.showjava.utils.logging.Ln;
+import com.nao20010128nao.Neapolitan.*;
+import com.njlabs.showjava.*;
+import com.njlabs.showjava.processor.*;
+import com.njlabs.showjava.utils.*;
+import com.njlabs.showjava.utils.logging.*;
 
-import net.dongliu.apk.parser.ApkParser;
+import net.dongliu.apk.parser.*;
 
-import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.io.*;
 
-import java.io.File;
-import java.net.URI;
+import java.io.*;
+import java.net.*;
 
 public class AppProcessActivity extends BaseActivity {
 

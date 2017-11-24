@@ -1,10 +1,9 @@
 package jadx.core.xmlgen;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.Charset;
+import org.jetbrains.annotations.*;
 
-import org.jetbrains.annotations.NotNull;
+import java.io.*;
+import java.nio.charset.*;
 
 public class ParserStream {
 

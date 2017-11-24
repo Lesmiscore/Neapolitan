@@ -31,10 +31,9 @@
 
 package org.jf.dexlib2.iface;
 
-import org.jf.dexlib2.iface.reference.TypeReference;
+import org.jf.dexlib2.iface.reference.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 /**
  * This class represents an individual exception handler entry, in a try block.

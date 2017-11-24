@@ -1,13 +1,11 @@
 package jadx.core.xmlgen;
 
-import jadx.core.codegen.CodeWriter;
+import org.jetbrains.annotations.*;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.io.*;
+import java.util.*;
 
-import org.jetbrains.annotations.Nullable;
+import jadx.core.codegen.*;
 
 public class ResContainer implements Comparable<ResContainer> {
 

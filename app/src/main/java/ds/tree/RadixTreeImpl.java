@@ -26,12 +26,7 @@ THE SOFTWARE.
 
 package ds.tree;
 
-import java.util.ArrayList;
-import java.util.Formattable;
-import java.util.Formatter;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * Implementation for Radix tree {@link RadixTree}

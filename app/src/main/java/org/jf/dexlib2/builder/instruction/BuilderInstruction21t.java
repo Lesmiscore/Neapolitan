@@ -31,14 +31,12 @@
 
 package org.jf.dexlib2.builder.instruction;
 
-import org.jf.dexlib2.Format;
-import org.jf.dexlib2.Opcode;
-import org.jf.dexlib2.builder.BuilderOffsetInstruction;
-import org.jf.dexlib2.builder.Label;
-import org.jf.dexlib2.iface.instruction.formats.Instruction21t;
-import org.jf.dexlib2.util.Preconditions;
+import org.jf.dexlib2.*;
+import org.jf.dexlib2.builder.*;
+import org.jf.dexlib2.iface.instruction.formats.*;
+import org.jf.dexlib2.util.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public class BuilderInstruction21t extends BuilderOffsetInstruction implements Instruction21t {
     public static final Format FORMAT = Format.Format21t;

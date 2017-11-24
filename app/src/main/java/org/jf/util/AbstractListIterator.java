@@ -31,7 +31,7 @@
 
 package org.jf.util;
 
-import java.util.ListIterator;
+import java.util.*;
 
 public abstract class AbstractListIterator<T> implements ListIterator<T> {
     @Override

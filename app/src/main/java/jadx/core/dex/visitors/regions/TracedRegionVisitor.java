@@ -1,11 +1,8 @@
 package jadx.core.dex.visitors.regions;
 
-import jadx.core.dex.nodes.IBlock;
-import jadx.core.dex.nodes.IRegion;
-import jadx.core.dex.nodes.MethodNode;
+import java.util.*;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
+import jadx.core.dex.nodes.*;
 
 public abstract class TracedRegionVisitor implements IRegionVisitor {
 

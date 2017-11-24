@@ -31,52 +31,18 @@
 
 package org.jf.dexlib2.writer.builder;
 
-import com.google.common.base.Function;
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableSet;
-import com.google.common.collect.Iterators;
+import com.google.common.base.*;
+import com.google.common.collect.*;
 
-import org.jf.dexlib2.ValueType;
-import org.jf.dexlib2.iface.AnnotationElement;
-import org.jf.dexlib2.iface.value.AnnotationEncodedValue;
-import org.jf.dexlib2.iface.value.ArrayEncodedValue;
-import org.jf.dexlib2.iface.value.BooleanEncodedValue;
-import org.jf.dexlib2.iface.value.ByteEncodedValue;
-import org.jf.dexlib2.iface.value.CharEncodedValue;
-import org.jf.dexlib2.iface.value.DoubleEncodedValue;
-import org.jf.dexlib2.iface.value.EncodedValue;
-import org.jf.dexlib2.iface.value.EnumEncodedValue;
-import org.jf.dexlib2.iface.value.FieldEncodedValue;
-import org.jf.dexlib2.iface.value.FloatEncodedValue;
-import org.jf.dexlib2.iface.value.IntEncodedValue;
-import org.jf.dexlib2.iface.value.LongEncodedValue;
-import org.jf.dexlib2.iface.value.MethodEncodedValue;
-import org.jf.dexlib2.iface.value.ShortEncodedValue;
-import org.jf.dexlib2.iface.value.StringEncodedValue;
-import org.jf.dexlib2.iface.value.TypeEncodedValue;
-import org.jf.dexlib2.writer.builder.BuilderEncodedValues.BuilderAnnotationEncodedValue;
-import org.jf.dexlib2.writer.builder.BuilderEncodedValues.BuilderArrayEncodedValue;
-import org.jf.dexlib2.writer.builder.BuilderEncodedValues.BuilderBooleanEncodedValue;
-import org.jf.dexlib2.writer.builder.BuilderEncodedValues.BuilderByteEncodedValue;
-import org.jf.dexlib2.writer.builder.BuilderEncodedValues.BuilderCharEncodedValue;
-import org.jf.dexlib2.writer.builder.BuilderEncodedValues.BuilderDoubleEncodedValue;
-import org.jf.dexlib2.writer.builder.BuilderEncodedValues.BuilderEncodedValue;
-import org.jf.dexlib2.writer.builder.BuilderEncodedValues.BuilderEnumEncodedValue;
-import org.jf.dexlib2.writer.builder.BuilderEncodedValues.BuilderFieldEncodedValue;
-import org.jf.dexlib2.writer.builder.BuilderEncodedValues.BuilderFloatEncodedValue;
-import org.jf.dexlib2.writer.builder.BuilderEncodedValues.BuilderIntEncodedValue;
-import org.jf.dexlib2.writer.builder.BuilderEncodedValues.BuilderLongEncodedValue;
-import org.jf.dexlib2.writer.builder.BuilderEncodedValues.BuilderMethodEncodedValue;
-import org.jf.dexlib2.writer.builder.BuilderEncodedValues.BuilderNullEncodedValue;
-import org.jf.dexlib2.writer.builder.BuilderEncodedValues.BuilderShortEncodedValue;
-import org.jf.dexlib2.writer.builder.BuilderEncodedValues.BuilderStringEncodedValue;
-import org.jf.dexlib2.writer.builder.BuilderEncodedValues.BuilderTypeEncodedValue;
-import org.jf.util.ExceptionWithContext;
+import org.jf.dexlib2.*;
+import org.jf.dexlib2.iface.*;
+import org.jf.dexlib2.iface.value.*;
+import org.jf.dexlib2.writer.builder.BuilderEncodedValues.*;
+import org.jf.util.*;
 
-import java.util.Set;
+import java.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 class BuilderContext {
     // keep our own local references to the various pools, using the Builder specific pool type;

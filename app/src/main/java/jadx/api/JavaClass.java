@@ -1,21 +1,14 @@
 package jadx.api;
 
-import jadx.core.codegen.CodeWriter;
-import jadx.core.dex.attributes.AFlag;
-import jadx.core.dex.attributes.nodes.LineAttrNode;
-import jadx.core.dex.info.AccessInfo;
-import jadx.core.dex.nodes.ClassNode;
-import jadx.core.dex.nodes.FieldNode;
-import jadx.core.dex.nodes.MethodNode;
+import org.jetbrains.annotations.*;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
-import org.jetbrains.annotations.Nullable;
+import jadx.core.codegen.*;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.attributes.nodes.*;
+import jadx.core.dex.info.*;
+import jadx.core.dex.nodes.*;
 
 public final class JavaClass implements JavaNode {
 

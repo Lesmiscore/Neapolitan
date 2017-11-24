@@ -31,15 +31,12 @@
 
 package org.jf.dexlib2.immutable.debug;
 
-import org.jf.dexlib2.DebugItemType;
-import org.jf.dexlib2.base.reference.BaseStringReference;
-import org.jf.dexlib2.base.reference.BaseTypeReference;
-import org.jf.dexlib2.iface.debug.StartLocal;
-import org.jf.dexlib2.iface.reference.StringReference;
-import org.jf.dexlib2.iface.reference.TypeReference;
+import org.jf.dexlib2.*;
+import org.jf.dexlib2.base.reference.*;
+import org.jf.dexlib2.iface.debug.*;
+import org.jf.dexlib2.iface.reference.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public class ImmutableStartLocal extends ImmutableDebugItem implements StartLocal {
     protected final int register;

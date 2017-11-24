@@ -31,9 +31,9 @@
 
 package org.jf.dexlib2.writer;
 
-import org.jf.dexlib2.iface.reference.MethodReference;
+import org.jf.dexlib2.iface.reference.*;
 
-import javax.annotation.Nonnull;
+import javax.annotation.*;
 
 public interface MethodSection<StringKey, TypeKey, ProtoKey, MethodRefKey extends MethodReference, MethodKey>
         extends IndexSection<MethodRefKey> {

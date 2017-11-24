@@ -31,17 +31,15 @@
 
 package org.jf.dexlib2.immutable.instruction;
 
-import com.google.common.collect.ImmutableList;
+import com.google.common.collect.*;
 
-import org.jf.dexlib2.Format;
-import org.jf.dexlib2.Opcode;
-import org.jf.dexlib2.iface.instruction.formats.ArrayPayload;
-import org.jf.util.ImmutableUtils;
+import org.jf.dexlib2.*;
+import org.jf.dexlib2.iface.instruction.formats.*;
+import org.jf.util.*;
 
-import java.util.List;
+import java.util.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public class ImmutableArrayPayload extends ImmutableInstruction implements ArrayPayload {
     public static final Opcode OPCODE = Opcode.ARRAY_PAYLOAD;

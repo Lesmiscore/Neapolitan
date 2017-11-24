@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.njlabs.showjava">
+    package="com.nao20010128nao.Neapolitan">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -20,9 +20,6 @@
         tools:replace="android:icon, android:allowBackup">
 
         <meta-data
-            android:name="com.crashlytics.ApiKey"
-            android:value="37243dbea20e385bdebdc999bef0715ef594e382" />
-        <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
@@ -32,7 +29,7 @@
             android:theme="@android:style/Theme.Translucent" />
 
         <activity
-            android:name=".ui.Landing"
+            android:name="com.njlabs.showjava.ui.Landing"
             android:label="@string/title_activity_landing">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,19 +37,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.AppListing"
+            android:name="com.njlabs.showjava.ui.AppListing"
             android:label="@string/app_name">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.Landing" />
+                android:value="com.njlabs.showjava.ui.Landing" />
         </activity>
         <activity
-            android:name=".ui.AppProcessActivity"
+            android:name="com.njlabs.showjava.ui.AppProcessActivity"
             android:label="@string/title_activity_app_process"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.AppListing" />
+                android:value="com.njlabs.showjava.ui.AppListing" />
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -63,44 +60,39 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.JavaExplorer"
+            android:name="com.njlabs.showjava.ui.JavaExplorer"
             android:label="@string/title_activity_java_explorer"/>
         <activity
-            android:name=".ui.SourceViewer"
+            android:name="com.njlabs.showjava.ui.SourceViewer"
             android:label="@string/title_activity_source_viewer"
             android:theme="@style/SourceViewerTheme"/>
 
         <activity
-            android:name=".ui.ImageResourceViewer"
+            android:name="com.njlabs.showjava.ui.ImageResourceViewer"
             android:label="@string/title_activity_image_resource_viewer"
             android:theme="@style/SourceViewerTheme"/>
 
         <activity
-            android:name=".ui.About"
+            android:name="com.njlabs.showjava.ui.About"
             android:label="@string/title_activity_about"/>
 
         <activity
-            android:name=".ui.SettingsActivity"
+            android:name="com.njlabs.showjava.ui.SettingsActivity"
             android:label="@string/title_activity_settings"/>
 
         <activity
-            android:name=".ui.FilePicker"
+            android:name="com.njlabs.showjava.ui.FilePicker"
             android:label="@string/app_name"
             android:theme="@style/FilePickerTheme"/>
 
         <service
-            android:name=".processor.ProcessService"
+            android:name="com.njlabs.showjava.processor.ProcessService"
             android:exported="false"
             android:process=":service" />
 
         <activity
-            android:name=".ui.ErrorActivity"
+            android:name="com.njlabs.showjava.ui.ErrorActivity"
             android:label="@string/title_activity_error"/>
-
-        <activity
-            android:name=".ui.PurchaseActivity"
-            android:label="@string/title_activity_purchase"/>
-
 
     </application>
 

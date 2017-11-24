@@ -1,9 +1,8 @@
 package jadx.core.dex.attributes.nodes;
 
-import jadx.core.dex.attributes.AType;
-import jadx.core.dex.attributes.IAttribute;
-import jadx.core.dex.info.ClassInfo;
-import jadx.core.dex.instructions.args.InsnArg;
+import jadx.core.dex.attributes.*;
+import jadx.core.dex.info.*;
+import jadx.core.dex.instructions.args.*;
 
 public class FieldReplaceAttr implements IAttribute {
 

@@ -32,13 +32,11 @@
 package org.jf.dexlib2.analysis;
 
 
-import org.jf.util.ExceptionWithContext;
+import org.jf.util.*;
 
-import java.io.IOException;
-import java.io.Writer;
+import java.io.*;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import javax.annotation.*;
 
 public class RegisterType {
     // The Unknown category denotes a register type that hasn't been determined yet
