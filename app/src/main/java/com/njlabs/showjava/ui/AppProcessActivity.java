@@ -52,7 +52,7 @@ public class AppProcessActivity extends BaseActivity {
 
             if (packageFilePath != null) {
                 try {
-                    ApkParser apkParser = new ApkParser(new File(packageFilePath));
+                    ApkFile apkParser = new ApkFile(new File(packageFilePath));
                     appNameView.setText(apkParser.getApkMeta().getLabel());
                 } catch (Exception e) {
                     Ln.e(e);
@@ -71,7 +71,7 @@ public class AppProcessActivity extends BaseActivity {
             packageFilePath = (new File(URI.create(getIntent().getDataString()))).getAbsolutePath();
             if (FilenameUtils.isExtension(packageFilePath, "apk")) {
                 try {
-                    ApkParser apkParser = new ApkParser(new File(packageFilePath));
+                    ApkFile apkParser = new ApkFile(new File(packageFilePath));
                     appNameView.setText(apkParser.getApkMeta().getLabel());
                 } catch (Exception e) {
                     Ln.e(e);
