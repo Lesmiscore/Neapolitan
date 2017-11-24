@@ -1,15 +1,13 @@
 package com.njlabs.showjava.utils;
 
-import android.content.Context;
-import android.content.Intent;
-import android.util.Log;
-import android.widget.Toast;
+import android.content.*;
+import android.util.*;
+import android.widget.*;
 
-import com.crashlytics.android.Crashlytics;
-import com.njlabs.showjava.ui.JavaExplorer;
+import com.google.firebase.crash.*;
+import com.njlabs.showjava.ui.*;
 
-import java.io.PrintWriter;
-import java.io.StringWriter;
+import java.io.*;
 
 /**
  * Created by Niranjan on 27-05-2015.
@@ -30,7 +28,7 @@ public class ExceptionHandler implements java.lang.Thread.UncaughtExceptionHandl
 
     public void uncaughtException(Thread thread, Throwable exception) {
 
-        Crashlytics.logException(exception);
+        FirebaseCrash.report(exception);
 
         StringWriter stackTrace = new StringWriter();
         exception.printStackTrace(new PrintWriter(stackTrace));

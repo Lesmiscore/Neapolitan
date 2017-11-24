@@ -1,6 +1,6 @@
 package com.njlabs.showjava.ui;
 
-import android.*;
+import android.Manifest;
 import android.annotation.*;
 import android.content.*;
 import android.content.pm.*;
@@ -16,7 +16,6 @@ import android.view.*;
 import android.widget.*;
 
 import com.mikepenz.materialdrawer.*;
-import com.mikepenz.materialdrawer.accountswitcher.*;
 import com.mikepenz.materialdrawer.model.*;
 import com.mikepenz.materialdrawer.model.interfaces.*;
 import com.njlabs.showjava.BuildConfig;
@@ -56,25 +55,25 @@ public class Landing extends BaseActivity{
                 .withActivity(this)
                 .withHeaderBackground(R.drawable.navbar_header)
                 .addProfiles(
-                        new ProfileDrawerItem().withName(getResources().getString(R.string.app_name)+(isPro()?" Pro":"")).withEmail("Version " + BuildConfig.VERSION_NAME).setSelectable(false)
+                        new ProfileDrawerItem().withName(getResources().getString(R.string.app_name)+(isPro()?" Pro":"")).withEmail("Version " + BuildConfig.VERSION_NAME).withSelectable(false)
                 )
                 .withSelectionListEnabledForSingleProfile(false)
                 .build();
 
         ArrayList<IDrawerItem> drawerItems = new ArrayList<>();
 
-        drawerItems.add(new PrimaryDrawerItem().withName("Home").withIcon(R.drawable.ic_action_home).withCheckable(false));
+        drawerItems.add(new PrimaryDrawerItem().withName("Home").withIcon(R.drawable.ic_action_home).withSelectable(false));
         drawerItems.add(new DividerDrawerItem());
-        drawerItems.add(new PrimaryDrawerItem().withName("Report a Bug").withIcon(R.drawable.ic_action_bug_report).withCheckable(false));
-        drawerItems.add(new PrimaryDrawerItem().withName("About the app").withIcon(R.drawable.ic_action_info).withCheckable(false));
-        drawerItems.add(new PrimaryDrawerItem().withName("Settings").withIcon(R.drawable.ic_action_settings).withCheckable(false));
+        drawerItems.add(new PrimaryDrawerItem().withName("Report a Bug").withIcon(R.drawable.ic_action_bug_report).withSelectable(false));
+        drawerItems.add(new PrimaryDrawerItem().withName("About the app").withIcon(R.drawable.ic_action_info).withSelectable(false));
+        drawerItems.add(new PrimaryDrawerItem().withName("Settings").withIcon(R.drawable.ic_action_settings).withSelectable(false));
 
         Drawer result = new DrawerBuilder()
                 .withActivity(this)
                 .withToolbar(toolbar)
                 .withAccountHeader(headerResult)
                 .withDrawerItems(drawerItems)
-                .withOnDrawerItemClickListener((Drawer.OnDrawerItemClickListener) (parent, view, position, id, drawerItem) -> {
+                .withOnDrawerItemClickListener((view, position, item) -> {
                     switch (position) {
                         case 2:
                             Uri uri = Uri.parse("https://github.com/niranjan94/show-java/issues/new");

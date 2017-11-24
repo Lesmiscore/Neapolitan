@@ -1,26 +1,19 @@
 package com.njlabs.showjava.processor;
 
-import com.crashlytics.android.Crashlytics;
-import com.njlabs.showjava.utils.SourceInfo;
-import com.njlabs.showjava.utils.ZipUtils;
-import com.njlabs.showjava.utils.logging.Ln;
+import com.google.firebase.crash.*;
+import com.njlabs.showjava.utils.*;
+import com.njlabs.showjava.utils.logging.*;
 
-import org.benf.cfr.reader.Main;
-import org.benf.cfr.reader.state.ClassFileSourceImpl;
-import org.benf.cfr.reader.state.DCCommonState;
-import org.benf.cfr.reader.util.getopt.GetOptParser;
-import org.benf.cfr.reader.util.getopt.Options;
-import org.benf.cfr.reader.util.getopt.OptionsImpl;
+import org.benf.cfr.reader.*;
+import org.benf.cfr.reader.state.*;
+import org.benf.cfr.reader.util.getopt.*;
 import org.benf.cfr.reader.util.output.*;
-import org.jetbrains.java.decompiler.main.decompiler.ConsoleDecompiler;
-import org.jetbrains.java.decompiler.main.decompiler.PrintStreamLogger;
+import org.jetbrains.java.decompiler.main.decompiler.*;
 
-import java.io.File;
-import java.io.PrintStream;
-import java.util.HashMap;
-import java.util.Map;
+import java.io.*;
+import java.util.*;
 
-import jadx.api.JadxDecompiler;
+import jadx.api.*;
 
 /**
  * Created by Niranjan on 29-05-2015.
@@ -114,7 +107,7 @@ public class JavaExtractor extends ProcessServiceHelper {
             }
 
         } catch (Exception e) {
-            Crashlytics.logException(e);
+            FirebaseCrash.report(e);
             broadcastStatus("exit_process_on_error");
         }
 

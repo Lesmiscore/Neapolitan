@@ -1,40 +1,24 @@
 package com.njlabs.showjava.ui;
 
-import android.annotation.SuppressLint;
-import android.app.ProgressDialog;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.graphics.drawable.Drawable;
-import android.os.AsyncTask;
-import android.os.Bundle;
-import android.os.Environment;
+import android.annotation.*;
+import android.app.*;
+import android.content.*;
+import android.content.pm.*;
+import android.graphics.drawable.*;
+import android.os.*;
 import android.support.v7.app.AlertDialog;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.view.*;
+import android.widget.*;
 
-import com.crashlytics.android.Crashlytics;
+import com.google.firebase.crash.*;
 import com.njlabs.showjava.R;
-import com.njlabs.showjava.utils.Utils;
-import com.njlabs.showjava.utils.logging.Ln;
+import com.njlabs.showjava.utils.*;
+import com.njlabs.showjava.utils.logging.*;
 
-import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.*;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.io.*;
+import java.util.*;
 
 public class AppListing extends BaseActivity {
 
@@ -243,7 +227,7 @@ public class AppListing extends BaseActivity {
             try {
                 FileUtils.deleteDirectory(sourceDir);
             } catch (IOException e) {
-                Crashlytics.logException(e);
+                FirebaseCrash.report(e);
             }
             showDecompilerSelection(holder);
         });

@@ -46,9 +46,7 @@ import org.jf.dexlib2.iface.Method;
 import org.jf.dexlib2.iface.MethodParameter;
 import org.jf.util.AbstractForwardSequentialList;
 
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -181,7 +179,7 @@ public class DexBackedMethod extends BaseMethodReference implements Method {
         if (methodImpl != null) {
             return methodImpl.getParameterNames(null);
         }
-        return Iterators.emptyIterator();
+        return Collections.<String>emptyList().iterator();
     }
 
     @Nonnull

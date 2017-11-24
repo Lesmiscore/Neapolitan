@@ -1,20 +1,15 @@
 package com.njlabs.showjava;
 
-import android.app.Application;
-import android.content.Context;
-import android.support.multidex.MultiDex;
+import android.app.*;
+import android.content.*;
+import android.support.multidex.*;
 
-import com.crashlytics.android.Crashlytics;
-
-import io.fabric.sdk.android.Fabric;
-import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
+import uk.co.chrisjenx.calligraphy.*;
 
 public class MainApplication extends Application {
 
     public void onCreate() {
         super.onCreate();
-        Fabric.with(this, new Crashlytics());
-
         CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
                 .setDefaultFontPath("fonts/lato-light.ttf")
                 .setFontAttrId(R.attr.fontPath)

@@ -1,25 +1,19 @@
 package com.njlabs.showjava.processor;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
+import android.graphics.*;
 
-import com.crashlytics.android.Crashlytics;
-import com.njlabs.showjava.utils.SourceInfo;
+import com.google.firebase.crash.*;
+import com.njlabs.showjava.utils.*;
 
-import net.dongliu.apk.parser.ApkParser;
+import net.dongliu.apk.parser.*;
 
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.io.*;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Enumeration;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipFile;
+import java.io.*;
+import java.util.*;
+import java.util.zip.*;
 
-import jadx.api.JadxDecompiler;
+import jadx.api.*;
 
 /**
  * Created by Niranjan on 30-05-2015.
@@ -129,20 +123,20 @@ public class ResourcesExtractor extends ProcessServiceHelper {
             }
 
         } catch (IOException e) {
-            Crashlytics.logException(e);
+            FirebaseCrash.report(e);
         } finally {
             if (fileStream != null) {
                 try {
                     fileStream.close();
                 } catch (IOException e) {
-                    Crashlytics.logException(e);
+                    FirebaseCrash.report(e);
                 }
             }
             if (outputStream != null) {
                 try {
                     outputStream.close();
                 } catch (IOException e) {
-                    Crashlytics.logException(e);
+                    FirebaseCrash.report(e);
                 }
             }
         }
@@ -158,7 +152,7 @@ public class ResourcesExtractor extends ProcessServiceHelper {
             }
             FileUtils.writeStringToFile(new File(fileFolderPath + FilenameUtils.getName(path)), xml);
         } catch (IOException e) {
-            Crashlytics.logException(e);
+            FirebaseCrash.report(e);
         }
     }
 
@@ -185,18 +179,18 @@ public class ResourcesExtractor extends ProcessServiceHelper {
                 out = new FileOutputStream(sourceOutputDir + "/icon.png");
                 bitmap.compress(Bitmap.CompressFormat.PNG, 100, out);
             } catch (Exception e) {
-                Crashlytics.logException(e);
+                FirebaseCrash.report(e);
             } finally {
                 try {
                     if (out != null) {
                         out.close();
                     }
                 } catch (IOException e) {
-                    Crashlytics.logException(e);
+                    FirebaseCrash.report(e);
                 }
             }
         } catch (IOException e) {
-            Crashlytics.logException(e);
+            FirebaseCrash.report(e);
         }
     }
 }

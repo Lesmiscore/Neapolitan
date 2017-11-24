@@ -1,40 +1,26 @@
 package com.njlabs.showjava.ui;
 
-import android.app.ProgressDialog;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.net.Uri;
-import android.os.AsyncTask;
-import android.os.Bundle;
-import android.os.Environment;
+import android.app.*;
+import android.content.*;
+import android.net.*;
+import android.os.*;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ListView;
-import android.widget.Toast;
+import android.view.*;
+import android.widget.*;
 
-import com.crashlytics.android.Crashlytics;
+import com.google.firebase.crash.*;
 import com.njlabs.showjava.R;
-import com.njlabs.showjava.modals.Item;
-import com.njlabs.showjava.utils.FileArrayAdapter;
-import com.njlabs.showjava.utils.StringUtils;
-import com.njlabs.showjava.utils.ZipUtils;
-import com.njlabs.showjava.utils.logging.Ln;
+import com.njlabs.showjava.modals.*;
+import com.njlabs.showjava.utils.*;
+import com.njlabs.showjava.utils.logging.*;
 
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.io.*;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.sql.Date;
-import java.text.DateFormat;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.text.*;
+import java.util.*;
 
 public class JavaExplorer extends BaseActivity {
 
@@ -249,7 +235,7 @@ public class JavaExplorer extends BaseActivity {
                 FileUtils.deleteDirectory(sourceDir);
             }
         } catch (IOException e) {
-            Crashlytics.logException(e);
+            FirebaseCrash.report(e);
         }
         Toast.makeText(baseContext, "The source code has been deleted from sdcard", Toast.LENGTH_SHORT).show();
         finish();

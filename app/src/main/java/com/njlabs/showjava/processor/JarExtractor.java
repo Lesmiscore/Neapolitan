@@ -1,29 +1,22 @@
 package com.njlabs.showjava.processor;
 
-import android.util.Log;
+import android.util.*;
 
-import com.crashlytics.android.Crashlytics;
+import com.google.firebase.crash.*;
 import com.googlecode.dex2jar.Method;
-import com.googlecode.dex2jar.ir.IrMethod;
-import com.googlecode.dex2jar.reader.DexFileReader;
-import com.googlecode.dex2jar.v3.Dex2jar;
-import com.googlecode.dex2jar.v3.DexExceptionHandler;
-import com.njlabs.showjava.utils.StringUtils;
-import com.njlabs.showjava.utils.logging.Ln;
+import com.googlecode.dex2jar.ir.*;
+import com.googlecode.dex2jar.reader.*;
+import com.googlecode.dex2jar.v3.*;
+import com.njlabs.showjava.utils.*;
+import com.njlabs.showjava.utils.logging.*;
 
-import org.jf.dexlib2.DexFileFactory;
-import org.jf.dexlib2.iface.ClassDef;
-import org.jf.dexlib2.iface.DexFile;
-import org.jf.dexlib2.immutable.ImmutableDexFile;
-import org.objectweb.asm.tree.MethodNode;
+import org.jf.dexlib2.*;
+import org.jf.dexlib2.iface.*;
+import org.jf.dexlib2.immutable.*;
+import org.objectweb.asm.tree.*;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintStream;
-import java.util.ArrayList;
-import java.util.List;
+import java.io.*;
+import java.util.*;
 
 /**
  * Created by Niranjan on 29-05-2015.
@@ -165,13 +158,13 @@ public class JarExtractor extends ProcessServiceHelper {
                 mLine = reader.readLine();
             }
         } catch (IOException e) {
-            Crashlytics.logException(e);
+            FirebaseCrash.report(e);
         } finally {
             if (reader != null) {
                 try {
                     reader.close();
                 } catch (IOException e) {
-                    Crashlytics.logException(e);
+                    FirebaseCrash.report(e);
                 }
             }
         }

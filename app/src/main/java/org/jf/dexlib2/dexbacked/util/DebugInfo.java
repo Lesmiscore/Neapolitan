@@ -51,8 +51,7 @@ import org.jf.dexlib2.immutable.debug.ImmutableRestartLocal;
 import org.jf.dexlib2.immutable.debug.ImmutableSetSourceFile;
 import org.jf.dexlib2.immutable.debug.ImmutableStartLocal;
 
-import java.util.Arrays;
-import java.util.Iterator;
+import java.util.*;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -85,13 +84,13 @@ public abstract class DebugInfo implements Iterable<DebugItem> {
         @Nonnull
         @Override
         public Iterator<DebugItem> iterator() {
-            return Iterators.emptyIterator();
+            return Collections.<DebugItem>emptyList().iterator();
         }
 
         @Nonnull
         @Override
         public Iterator<String> getParameterNames(@Nullable DexReader reader) {
-            return Iterators.emptyIterator();
+            return Collections.<String>emptyList().iterator();
         }
     }
 

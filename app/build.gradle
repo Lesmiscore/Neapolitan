@@ -1,15 +1,15 @@
 buildscript {
     repositories {
-        maven { url 'https://maven.fabric.io/public' }
+        google()
+        jcenter()
     }
 
     dependencies {
-        classpath 'io.fabric.tools:gradle:1.+'
+        classpath 'com.google.gms:google-services:3.1.0'
     }
 }
 
 apply plugin: 'com.android.application'
-apply plugin: 'io.fabric'
 if(new File('app/extra.gradle').exists()){
     apply from: 'extra.gradle'
 }
@@ -38,7 +38,7 @@ android {
     buildToolsVersion '26.0.2'
 
     defaultConfig {
-        applicationId "com.njlabs.showjava"
+        applicationId "com.nao20010128nao.Neapolitan"
         minSdkVersion 14
         versionCode versionMajor * 10000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
         targetSdkVersion 26
@@ -96,41 +96,48 @@ android {
     }
 }
 
+def supportLib="26.1.0"
+def dex2jar="2.1-nightly-26"
+def firebase="11.6.0"
+
 dependencies {
     // MULTI-DEX SUPPORT FOR PRE LOLLIPOP
     compile 'com.android.support:multidex:1.0.2'
 
     // ANDROID SUPPORT LIBRARIES
-    compile 'com.android.support:appcompat-v7:26.1.0'
-    compile 'com.android.support:cardview-v7:26.1.0'
+    compile "com.android.support:appcompat-v7:$supportLib"
+    compile "com.android.support:cardview-v7:$supportLib"
 
     // APACHE COMMONS LIBRARIES
     compile 'commons-cli:commons-cli:1.3.1'
     compile 'commons-io:commons-io:2.5'
 
     // DEX2JAR AND IT's DEPENDENCIES
-    compile 'com.google.guava:guava:18.0'
-    compile 'asm:asm-all:3.3.1'
-    compile files('libs/antlr-3.1.1.jar')
-    compile files('libs/dex-ir-1.12.jar')
-    compile files('libs/dex-reader-1.15.jar')
-    compile files('libs/dex-tools-0.0.9.15.jar')
-    compile files('libs/dex-translator-0.0.9.15.jar')
-    compile files('libs/jsr305-1.3.9.jar')
+    if(1){
+        compile 'asm:asm-all:3.3.1'
+        compile files('libs/antlr-3.1.1.jar')
+        compile files('libs/dex-ir-1.12.jar')
+        compile files('libs/dex-reader-1.15.jar')
+        compile files('libs/dex-tools-0.0.9.15.jar')
+        compile files('libs/dex-translator-0.0.9.15.jar')
+        compile files('libs/jsr305-1.3.9.jar')
+    }else{
+        compile "com.github.pxb1988.dex2jar:dex-ir:$dex2jar"
+        compile "com.github.pxb1988.dex2jar:dex-reader:$dex2jar"
+        compile "com.github.pxb1988.dex2jar:dex-tools:$dex2jar"
+        compile "com.github.pxb1988.dex2jar:dex-translator:$dex2jar"
+    }
+    compile 'com.google.guava:guava:23.0'
 
     // CLASS FILE READER - JAVA DECOMPILER
     compile files('libs/cfr_0_117.jar')
 
     // APK PARSER AND BINARY XML DECODER
-    compile 'net.dongliu:apk-parser:2.1.3'
+    compile 'net.dongliu:apk-parser:2.4.1'
 
-    // GOOGLE PLAY SERVICES ADS SDK
-    compile 'com.google.android.gms:play-services-ads:11.6.0'
-
-    // CRASHLYTICS BUG REPORTING SDK
-    compile('com.crashlytics.sdk.android:crashlytics:2.4.0@aar') {
-        transitive = true;
-    }
+    // FIREBASE
+    compile "com.google.firebase:firebase-crash:$firebase"
+    compile "com.google.firebase:firebase-ads:$firebase"
 
     // FLOATING ACTION BUTTON SUPPORT LIBRARY
     compile 'com.github.clans:fab:1.6.4'
@@ -164,3 +171,4 @@ dependencies {
     //travisCompile project(':apl_clone')
     //standardCompile project(':apl')
 }
+apply plugin: 'com.google.gms.google-services'
