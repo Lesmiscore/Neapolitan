@@ -8,7 +8,7 @@
         <attr name="minTextSize" format="integer" />
     </declare-styleable>
     <declare-styleable name="TextViewWithFont">
-        <attr name="font" format="string" />
+        <attr name="font" />
     </declare-styleable>
 
 </resources>

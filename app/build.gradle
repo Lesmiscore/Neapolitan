@@ -10,18 +10,22 @@ buildscript {
 
 apply plugin: 'com.android.application'
 apply plugin: 'io.fabric'
-apply from: 'extra.gradle'
+if(new File('app/extra.gradle').exists()){
+    apply from: 'extra.gradle'
+}
 
 repositories {
     maven { url 'https://maven.fabric.io/public' }
     maven { url "https://jitpack.io" }
 }
 
-def props = new Properties()
-props.load(new FileInputStream('app/keys.properties'))
+if(new File('app/keys.properties').exists()){
+    def props = new Properties()
+    props.load(new FileInputStream('app/keys.properties'))
 
-props.each { key, val ->
-    project.set(key, val)
+    props.each { key, val ->
+        project.set(key, val)
+    }
 }
 
 def versionMajor = 2
@@ -30,8 +34,8 @@ def versionPatch = 1
 def versionBuild = 2
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.2"
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
 
     defaultConfig {
         applicationId "com.njlabs.showjava"
@@ -41,11 +45,7 @@ android {
         versionName "${versionMajor}.${versionMinor}.${versionPatch}"
         resConfigs "en"
         multiDexEnabled true
-        resValue "string", "app_name", "Show Java"
-        buildConfigField "String", "GOOGLE_PLAY_LICENSE_KEY", GooglePlayLicenseKey
-        buildConfigField "String", "IAP_PRODUCT_ID", IapProductKey
-        resValue "string", "cc", cc
-        resValue "string", "ii", ii
+        resValue "string", "app_name", "Neapolitan"
         proguardFiles 'proguard-rules.pro'
     }
 
@@ -65,13 +65,16 @@ android {
     lintOptions {
         abortOnError false
     }
+    flavorDimensions "buildPlace"
     productFlavors {
         standard {
             buildConfigField "boolean", "is_travis", "false"
+            dimension "buildPlace"
         }
 
         travis {
             buildConfigField "boolean", "is_travis", "true"
+            dimension "buildPlace"
         }
     }
 
@@ -88,11 +91,11 @@ android {
 
 dependencies {
     // MULTI-DEX SUPPORT FOR PRE LOLLIPOP
-    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support:multidex:1.0.2'
 
     // ANDROID SUPPORT LIBRARIES
-    compile 'com.android.support:appcompat-v7:24.2.0'
-    compile 'com.android.support:cardview-v7:24.2.0'
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support:cardview-v7:26.1.0'
 
     // APACHE COMMONS LIBRARIES
     compile 'commons-cli:commons-cli:1.3.1'
@@ -115,7 +118,7 @@ dependencies {
     compile 'net.dongliu:apk-parser:2.1.3'
 
     // GOOGLE PLAY SERVICES ADS SDK
-    compile 'com.google.android.gms:play-services-ads:9.4.0'
+    compile 'com.google.android.gms:play-services-ads:11.6.0'
 
     // CRASHLYTICS BUG REPORTING SDK
     compile('com.crashlytics.sdk.android:crashlytics:2.4.0@aar') {
@@ -151,6 +154,6 @@ dependencies {
 
     compile 'com.loopj.android:android-async-http:1.4.9'
 
-    travisCompile project(':apl_clone')
-    standardCompile project(':apl')
+    //travisCompile project(':apl_clone')
+    //standardCompile project(':apl')
 }
