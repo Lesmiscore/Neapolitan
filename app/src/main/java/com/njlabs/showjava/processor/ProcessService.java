@@ -123,51 +123,42 @@ public class ProcessService extends Service {
             }
 
             packageFilePath = extras.getString("package_file_path");
-            (new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        PackageInfo packageInfo = getPackageManager().getPackageArchiveInfo(packageFilePath, 0);
-                        apkParser = new ApkParser(new File(packageFilePath));
+            (new Thread(() -> {
+                try {
+                    PackageInfo packageInfo = getPackageManager().getPackageArchiveInfo(packageFilePath, 0);
+                    apkParser = new ApkParser(new File(packageFilePath));
 
-                        packageLabel = apkParser.getApkMeta().getLabel();
-                        packageName = packageInfo.packageName;
+                    packageLabel = apkParser.getApkMeta().getLabel();
+                    packageName = packageInfo.packageName;
 
-                    } catch (Exception e) {
-                        Ln.e(e);
-                        broadcastStatus("exit_process_on_error");
-                    }
-                    UIHandler.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            Intent resultIntent = new Intent(getApplicationContext(), AppProcessActivity.class);
-                            resultIntent.putExtra("from_notification", true);
-                            resultIntent.putExtra("package_name", packageName);
-                            resultIntent.putExtra("package_label", packageLabel);
-                            resultIntent.putExtra("package_file_path", packageFilePath);
-                            resultIntent.putExtra("decompiler", decompilerToUse);
-
-                            PendingIntent resultPendingIntent =
-                                    PendingIntent.getActivity(ProcessService.this, 0, resultIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-                            processNotify.updateIntent(resultPendingIntent);
-                        }
-                    });
-                    sourceOutputDir = Environment.getExternalStorageDirectory() + "/ShowJava/sources/" + packageName;
-                    javaSourceOutputDir = sourceOutputDir + "/java";
-
-                    Ln.d(sourceOutputDir);
-
-                    SourceInfo.initialise(ProcessService.this);
-
-                    UIHandler.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            exceptionHandler = new ExceptionHandler(getApplicationContext(), javaSourceOutputDir, packageName);
-                            Thread.setDefaultUncaughtExceptionHandler(exceptionHandler);
-                            Processor.extract(ProcessService.this);
-                        }
-                    });
+                } catch (Exception e) {
+                    Ln.e(e);
+                    broadcastStatus("exit_process_on_error");
                 }
+                UIHandler.post(() -> {
+                    Intent resultIntent = new Intent(getApplicationContext(), AppProcessActivity.class);
+                    resultIntent.putExtra("from_notification", true);
+                    resultIntent.putExtra("package_name", packageName);
+                    resultIntent.putExtra("package_label", packageLabel);
+                    resultIntent.putExtra("package_file_path", packageFilePath);
+                    resultIntent.putExtra("decompiler", decompilerToUse);
+
+                    PendingIntent resultPendingIntent =
+                            PendingIntent.getActivity(ProcessService.this, 0, resultIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+                    processNotify.updateIntent(resultPendingIntent);
+                });
+                sourceOutputDir = Environment.getExternalStorageDirectory() + "/ShowJava/sources/" + packageName;
+                javaSourceOutputDir = sourceOutputDir + "/java";
+
+                Ln.d(sourceOutputDir);
+
+                SourceInfo.initialise(ProcessService.this);
+
+                UIHandler.post(() -> {
+                    exceptionHandler = new ExceptionHandler(getApplicationContext(), javaSourceOutputDir, packageName);
+                    Thread.setDefaultUncaughtExceptionHandler(exceptionHandler);
+                    Processor.extract(ProcessService.this);
+                });
             })).start();
         } else {
             killSelf(true, startID);

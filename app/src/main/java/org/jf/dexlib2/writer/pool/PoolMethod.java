@@ -47,12 +47,7 @@ import javax.annotation.Nullable;
 
 
 class PoolMethod extends BaseMethodReference implements Method {
-    public static final Function<Method, PoolMethod> TRANSFORM = new Function<Method, PoolMethod>() {
-        @Override
-        public PoolMethod apply(Method method) {
-            return new PoolMethod(method);
-        }
-    };
+    public static final Function<Method, PoolMethod> TRANSFORM = method -> new PoolMethod(method);
     @Nonnull
     private final Method method;
     protected int annotationSetRefListOffset = DexPool.NO_OFFSET;

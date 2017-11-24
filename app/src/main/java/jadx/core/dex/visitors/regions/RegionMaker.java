@@ -861,20 +861,17 @@ public class RegionMaker {
 			final Map<BlockNode, BlockNode> fallThroughCases) {
 		List<BlockNode> list = new ArrayList<BlockNode>(blocksMap.size());
 		list.addAll(blocksMap.keySet());
-		Collections.sort(list, new Comparator<BlockNode>() {
-			@Override
-			public int compare(BlockNode a, BlockNode b) {
-				BlockNode nextA = fallThroughCases.get(a);
-				if (nextA != null) {
-					if (b.equals(nextA)) {
-						return -1;
-					}
-				} else if (a.equals(fallThroughCases.get(b))) {
-					return 1;
-				}
-				return 0;
-			}
-		});
+		Collections.sort(list, (a, b) -> {
+            BlockNode nextA = fallThroughCases.get(a);
+            if (nextA != null) {
+                if (b.equals(nextA)) {
+                    return -1;
+                }
+            } else if (a.equals(fallThroughCases.get(b))) {
+                return 1;
+            }
+            return 0;
+        });
 
 		Map<BlockNode, List<Object>> newBlocksMap = new LinkedHashMap<BlockNode, List<Object>>(blocksMap.size());
 		for (BlockNode key : list) {

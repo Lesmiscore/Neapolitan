@@ -11,6 +11,7 @@ import org.benf.cfr.reader.state.DCCommonState;
 import org.benf.cfr.reader.util.getopt.GetOptParser;
 import org.benf.cfr.reader.util.getopt.Options;
 import org.benf.cfr.reader.util.getopt.OptionsImpl;
+import org.benf.cfr.reader.util.output.*;
 import org.jetbrains.java.decompiler.main.decompiler.ConsoleDecompiler;
 import org.jetbrains.java.decompiler.main.decompiler.PrintStreamLogger;
 
@@ -90,20 +91,18 @@ public class JavaExtractor extends ProcessServiceHelper {
                 ClassFileSourceImpl classFileSource = new ClassFileSourceImpl(options);
                 final DCCommonState dcCommonState = new DCCommonState(options, classFileSource);
                 final String path = options.getOption(OptionsImpl.FILENAME);
+                final DumperFactory dumperFactory = new DumperFactoryImpl();
 
                 ThreadGroup group = new ThreadGroup("Jar 2 Java Group");
-                Thread javaExtractionThread = new Thread(group, new Runnable() {
-                    @Override
-                    public void run() {
-                        boolean javaError = false;
-                        try {
-                            Main.doJar(dcCommonState, path);
-                        } catch (Exception | StackOverflowError e) {
-                            Ln.e(e);
-                            javaError = true;
-                        }
-                        startXMLExtractor(!javaError);
+                Thread javaExtractionThread = new Thread(group, () -> {
+                    boolean javaError = false;
+                    try {
+                        Main.doJar(dcCommonState, path, dumperFactory);
+                    } catch (Exception | StackOverflowError e) {
+                        Ln.e(e);
+                        javaError = true;
                     }
+                    startXMLExtractor(!javaError);
                 }, "Jar to Java Thread", processService.STACK_SIZE);
 
                 javaExtractionThread.setPriority(Thread.MAX_PRIORITY);
@@ -124,24 +123,21 @@ public class JavaExtractor extends ProcessServiceHelper {
     private void decompileWithJaDX(final File dexInputFile, final File javaOutputDir){
 
         ThreadGroup group = new ThreadGroup("Jar 2 Java Group");
-        Thread javaExtractionThread = new Thread(group, new Runnable() {
-            @Override
-            public void run() {
-                boolean javaError = false;
-                try {
-                    JadxDecompiler jadx = new JadxDecompiler();
-                    jadx.setOutputDir(javaOutputDir);
-                    jadx.loadFile(dexInputFile);
-                    jadx.saveSources();
-                } catch (Exception | StackOverflowError e) {
-                    Ln.e(e);
-                    javaError = true;
-                }
-                if(dexInputFile.exists() && dexInputFile.isFile()){
-                    dexInputFile.delete();
-                }
-                startXMLExtractor(!javaError);
+        Thread javaExtractionThread = new Thread(group, () -> {
+            boolean javaError = false;
+            try {
+                JadxDecompiler jadx = new JadxDecompiler();
+                jadx.setOutputDir(javaOutputDir);
+                jadx.loadFile(dexInputFile);
+                jadx.saveSources();
+            } catch (Exception | StackOverflowError e) {
+                Ln.e(e);
+                javaError = true;
             }
+            if(dexInputFile.exists() && dexInputFile.isFile()){
+                dexInputFile.delete();
+            }
+            startXMLExtractor(!javaError);
         }, "Jar to Java Thread", processService.STACK_SIZE);
 
         javaExtractionThread.setPriority(Thread.MAX_PRIORITY);
@@ -152,33 +148,30 @@ public class JavaExtractor extends ProcessServiceHelper {
     private void decompileWithFernFlower(final File jarInputFile, final File javaOutputDir){
 
         ThreadGroup group = new ThreadGroup("Jar 2 Java Group");
-        Thread javaExtractionThread = new Thread(group, new Runnable() {
-            @Override
-            public void run() {
-                boolean javaError = false;
-                try {
+        Thread javaExtractionThread = new Thread(group, () -> {
+            boolean javaError = false;
+            try {
 
-                    final Map<String, Object> mapOptions = new HashMap<>();
-                    PrintStreamLogger logger = new PrintStreamLogger(printStream);
-                    ConsoleDecompiler decompiler = new ConsoleDecompiler(javaOutputDir, mapOptions, logger);
-                    decompiler.addSpace(jarInputFile, true);
-                    decompiler.decompileContext();
+                final Map<String, Object> mapOptions = new HashMap<>();
+                PrintStreamLogger logger = new PrintStreamLogger(printStream);
+                ConsoleDecompiler decompiler = new ConsoleDecompiler(javaOutputDir, mapOptions, logger);
+                decompiler.addSpace(jarInputFile, true);
+                decompiler.decompileContext();
 
-                    File decompiledJarFile = new File(javaOutputDir + "/" + packageName +".jar");
+                File decompiledJarFile = new File(javaOutputDir + "/" + packageName +".jar");
 
-                    if(decompiledJarFile.exists()) {
-                        ZipUtils.unzip(decompiledJarFile, javaOutputDir, printStream);
-                        decompiledJarFile.delete();
-                    } else {
-                        javaError = true;
-                    }
-
-                } catch (Exception | StackOverflowError e) {
-                    Ln.e(e);
+                if(decompiledJarFile.exists()) {
+                    ZipUtils.unzip(decompiledJarFile, javaOutputDir, printStream);
+                    decompiledJarFile.delete();
+                } else {
                     javaError = true;
                 }
-                startXMLExtractor(!javaError);
+
+            } catch (Exception | StackOverflowError e) {
+                Ln.e(e);
+                javaError = true;
             }
+            startXMLExtractor(!javaError);
         }, "Jar to Java Thread", processService.STACK_SIZE);
 
         javaExtractionThread.setPriority(Thread.MAX_PRIORITY);

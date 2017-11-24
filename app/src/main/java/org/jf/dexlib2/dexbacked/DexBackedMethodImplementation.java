@@ -77,18 +77,13 @@ public class DexBackedMethodImplementation implements MethodImplementation {
 
         final int instructionsStartOffset = codeOffset + CodeItem.INSTRUCTION_START_OFFSET;
         final int endOffset = instructionsStartOffset + (instructionsSize * 2);
-        return new Iterable<Instruction>() {
+        return (Iterable<Instruction>) () -> new VariableSizeLookaheadIterator<Instruction>(dexFile, instructionsStartOffset) {
             @Override
-            public Iterator<Instruction> iterator() {
-                return new VariableSizeLookaheadIterator<Instruction>(dexFile, instructionsStartOffset) {
-                    @Override
-                    protected Instruction readNextItem(@Nonnull DexReader reader) {
-                        if (reader.getOffset() >= endOffset) {
-                            return null;
-                        }
-                        return DexBackedInstruction.readFrom(reader);
-                    }
-                };
+            protected Instruction readNextItem(@Nonnull DexReader reader) {
+                if (reader.getOffset() >= endOffset) {
+                    return null;
+                }
+                return DexBackedInstruction.readFrom(reader);
             }
         };
     }

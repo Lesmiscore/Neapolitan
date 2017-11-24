@@ -107,12 +107,7 @@ public final class JavaClass implements JavaNode {
 					rootDecompiler.getMethodsMap().put(m, javaMethod);
 				}
 			}
-			Collections.sort(mths, new Comparator<JavaMethod>() {
-				@Override
-				public int compare(JavaMethod o1, JavaMethod o2) {
-					return o1.getName().compareTo(o2.getName());
-				}
-			});
+			Collections.sort(mths, (o1, o2) -> o1.getName().compareTo(o2.getName()));
 			this.methods = Collections.unmodifiableList(mths);
 		}
 	}

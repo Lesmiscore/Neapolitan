@@ -44,10 +44,10 @@ public class AppProcessActivity extends BaseActivity {
 
         setupLayoutNoActionBar(R.layout.activity_progress);
 
-        CurrentStatus = (TextView) findViewById(R.id.current_status);
-        CurrentLine = (TextView) findViewById(R.id.current_line);
+        CurrentStatus = findViewById(R.id.current_status);
+        CurrentLine = findViewById(R.id.current_line);
 
-        TextView appNameView = (TextView) findViewById(R.id.current_package_name);
+        TextView appNameView = findViewById(R.id.current_package_name);
 
         CurrentStatus.setText(R.string.status_starting_decompiler);
 
@@ -69,6 +69,8 @@ public class AppProcessActivity extends BaseActivity {
 
                 if (extras.containsKey("decompiler")) {
                     decompilerToUse = extras.getString("decompiler");
+                }else if(prefs.contains("decompiler")){
+                    decompilerToUse = prefs.getString("decompiler",decompilerToUse);
                 }
             } else {
                 finish();
@@ -105,30 +107,27 @@ public class AppProcessActivity extends BaseActivity {
 
         registerBroadcastReceiver();
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                if (!fromNotification()) {
-                    if (!processStarted || Utils.isProcessorServiceRunning(baseContext)) {
-                        try {
-                            unregisterReceiver(processStatusReceiver);
-                        } catch (Exception ignored) {
+        new Handler().postDelayed(() -> {
+            if (!fromNotification()) {
+                if (!processStarted || Utils.isProcessorServiceRunning(baseContext)) {
+                    try {
+                        unregisterReceiver(processStatusReceiver);
+                    } catch (Exception ignored) {
 
-                        }
-                        Utils.forceKillAllProcessorServices(baseContext);
-                        final Intent mainIntent = new Intent(baseContext, ErrorActivity.class);
-                        mainIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        startActivity(mainIntent);
-                        finish();
                     }
+                    Utils.forceKillAllProcessorServices(baseContext);
+                    final Intent mainIntent = new Intent(baseContext, ErrorActivity.class);
+                    mainIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(mainIntent);
+                    finish();
                 }
             }
         }, 5000);
     }
 
     private void setupGears() {
-        final ImageView GearProgressLeft = (ImageView) findViewById(R.id.gear_progress_left);
-        final ImageView GearProgressRight = (ImageView) findViewById(R.id.gear_progress_right);
+        final ImageView GearProgressLeft = findViewById(R.id.gear_progress_left);
+        final ImageView GearProgressRight = findViewById(R.id.gear_progress_right);
 
         final RotateAnimation GearProgressLeftAnim = new RotateAnimation(0.0f, 360.0f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
         GearProgressLeftAnim.setRepeatCount(Animation.INFINITE);
@@ -140,18 +139,8 @@ public class AppProcessActivity extends BaseActivity {
         GearProgressRightAnim.setDuration((long) 1500);
         GearProgressRightAnim.setInterpolator(new LinearInterpolator());
 
-        GearProgressLeft.post(new Runnable() {
-            @Override
-            public void run() {
-                GearProgressLeft.setAnimation(GearProgressLeftAnim);
-            }
-        });
-        GearProgressLeft.post(new Runnable() {
-            @Override
-            public void run() {
-                GearProgressRight.setAnimation(GearProgressRightAnim);
-            }
-        });
+        GearProgressLeft.post(() -> GearProgressLeft.setAnimation(GearProgressLeftAnim));
+        GearProgressLeft.post(() -> GearProgressRight.setAnimation(GearProgressRightAnim));
     }
 
     private void startProcessorService() {

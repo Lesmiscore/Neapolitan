@@ -166,14 +166,11 @@ public final class JadxDecompiler {
 		ExecutorService executor = Executors.newFixedThreadPool(threadsCount);
 		if (saveSources) {
 			for (final JavaClass cls : getClasses()) {
-				executor.execute(new Runnable() {
-					@Override
-					public void run() {
-                        LOG.info("Processing "+cls.getFullName());
-						cls.decompile();
-						SaveCode.save(outDir, args, cls.getClassNode());
-					}
-				});
+				executor.execute(() -> {
+LOG.info("Processing "+cls.getFullName());
+                    cls.decompile();
+                    SaveCode.save(outDir, args, cls.getClassNode());
+                });
 			}
 		}
 		if (saveResources) {
@@ -233,12 +230,7 @@ public final class JadxDecompiler {
 		}
 		Collections.sort(packages);
 		for (JavaPackage pkg : packages) {
-			Collections.sort(pkg.getClasses(), new Comparator<JavaClass>() {
-				@Override
-				public int compare(JavaClass o1, JavaClass o2) {
-					return o1.getName().compareTo(o2.getName());
-				}
-			});
+			Collections.sort(pkg.getClasses(), (o1, o2) -> o1.getName().compareTo(o2.getName()));
 		}
 		return Collections.unmodifiableList(packages);
 	}

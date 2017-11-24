@@ -73,13 +73,10 @@ public class RootNode {
 		}
 		final ResTableParser parser = new ResTableParser();
 		try {
-			ResourcesLoader.decodeStream(arsc, new ResourcesLoader.ResourceDecoder() {
-				@Override
-				public ResContainer decode(long size, InputStream is) throws IOException {
-					parser.decode(is);
-					return null;
-				}
-			});
+			ResourcesLoader.decodeStream(arsc, (size, is) -> {
+                parser.decode(is);
+                return null;
+            });
 		} catch (JadxException e) {
 			LOG.error("Failed to parse '.arsc' file", e);
 			return;

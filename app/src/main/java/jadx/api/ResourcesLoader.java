@@ -82,17 +82,14 @@ public final class ResourcesLoader {
 
 	static ResContainer loadContent(final JadxDecompiler jadxRef, final ResourceFile rf) {
 		try {
-			return decodeStream(rf, new ResourceDecoder() {
-				@Override
-				public ResContainer decode(long size, InputStream is) throws IOException {
-					if (size > LOAD_SIZE_LIMIT) {
-						return ResContainer.singleFile(rf.getName(),
-								new CodeWriter().add("File too big, size: "
-										+ String.format("%.2f KB", size / 1024.)));
-					}
-					return loadContent(jadxRef, rf, is);
-				}
-			});
+			return decodeStream(rf, (size, is) -> {
+                if (size > LOAD_SIZE_LIMIT) {
+                    return ResContainer.singleFile(rf.getName(),
+                            new CodeWriter().add("File too big, size: "
+                                    + String.format("%.2f KB", size / 1024.)));
+                }
+                return loadContent(jadxRef, rf, is);
+            });
 		} catch (JadxException e) {
 			LOG.error("Decode error", e);
 			CodeWriter cw = new CodeWriter();

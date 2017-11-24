@@ -75,12 +75,7 @@ public class ErrorsCounter {
 		if (getErrorCount() > 0) {
 			LOG.error("{} errors occurred in following nodes:", getErrorCount());
 			List<Object> nodes = new ArrayList<Object>(errorNodes);
-			Collections.sort(nodes, new Comparator<Object>() {
-				@Override
-				public int compare(Object o1, Object o2) {
-					return String.valueOf(o1).compareTo(String.valueOf(o2));
-				}
-			});
+			Collections.sort(nodes, (o1, o2) -> String.valueOf(o1).compareTo(String.valueOf(o2)));
 			for (Object node : nodes) {
 				String nodeName = node.getClass().getSimpleName().replace("Node", "");
 				LOG.error("  {}: {}", nodeName, node);

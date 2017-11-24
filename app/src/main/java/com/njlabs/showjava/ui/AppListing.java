@@ -45,9 +45,9 @@ public class AppListing extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setupLayout(R.layout.activity_app_listing, "Show Java"+(isPro()?" Pro":""));
+        setupLayout(R.layout.activity_app_listing, "Show Java");
 
-        listView = (ListView) findViewById(R.id.list);
+        listView = findViewById(R.id.list);
 
         ApplicationLoader runner = new ApplicationLoader();
         runner.execute();
@@ -85,11 +85,11 @@ public class AppListing extends BaseActivity {
 
                 ViewHolder holder = new ViewHolder();
 
-                holder.packageLabel = (TextView) convertView.findViewById(R.id.pkg_name);
-                holder.packageName = (TextView) convertView.findViewById(R.id.pkg_id);
-                holder.packageVersion = (TextView) convertView.findViewById(R.id.pkg_version);
-                holder.packageFilePath = (TextView) convertView.findViewById(R.id.pkg_dir);
-                holder.packageIcon = (ImageView) convertView.findViewById(R.id.pkg_img);
+                holder.packageLabel = convertView.findViewById(R.id.pkg_name);
+                holder.packageName = convertView.findViewById(R.id.pkg_id);
+                holder.packageVersion = convertView.findViewById(R.id.pkg_version);
+                holder.packageFilePath = convertView.findViewById(R.id.pkg_dir);
+                holder.packageIcon = convertView.findViewById(R.id.pkg_img);
                 holder.position = position;
 
                 convertView.setTag(holder);
@@ -106,23 +106,21 @@ public class AppListing extends BaseActivity {
         };
         listView.setAdapter(aa);
         listView.setTextFilterEnabled(true);
-        listView.setOnItemClickListener(new OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        listView.setOnItemClickListener((parent, view, position, id) -> {
 
-                final ViewHolder holder = (ViewHolder) view.getTag();
+            final ViewHolder holder = (ViewHolder) view.getTag();
 
-                String myApp = "com.njlabs.tester";
-                if (holder.packageName.getText().toString().toLowerCase().contains(myApp.toLowerCase())) {
-                    Toast.makeText(getApplicationContext(), "The application " + holder.packageName.getText().toString() + " cannot be decompiled !", Toast.LENGTH_SHORT).show();
+            String myApp = "com.njlabs.tester";
+            if (holder.packageName.getText().toString().toLowerCase().contains(myApp.toLowerCase())) {
+                Toast.makeText(getApplicationContext(), "The application " + holder.packageName.getText().toString() + " cannot be decompiled !", Toast.LENGTH_SHORT).show();
+            } else {
+
+                final File sourceDir = new File(Environment.getExternalStorageDirectory() + "/ShowJava/sources/" + holder.packageName.getText().toString() + "");
+
+                if (Utils.sourceExists(sourceDir)) {
+                    showAlreadyExistsDialog(holder, sourceDir);
                 } else {
-
-                    final File sourceDir = new File(Environment.getExternalStorageDirectory() + "/ShowJava/sources/" + holder.packageName.getText().toString() + "");
-
-                    if (Utils.sourceExists(sourceDir)) {
-                        showAlreadyExistsDialog(holder, sourceDir);
-                    } else {
-                        showDecompilerSelection(holder);
-                    }
+                    showDecompilerSelection(holder);
                 }
             }
         });
@@ -162,11 +160,7 @@ public class AppListing extends BaseActivity {
                 res.add(newInfo);
             }
         }
-        Comparator<PackageInfoHolder> AppNameComparator = new Comparator<PackageInfoHolder>() {
-            public int compare(PackageInfoHolder o1, PackageInfoHolder o2) {
-                return o1.getPackageLabel().toLowerCase().compareTo(o2.getPackageLabel().toLowerCase());
-            }
-        };
+        Comparator<PackageInfoHolder> AppNameComparator = (o1, o2) -> o1.getPackageLabel().toLowerCase().compareTo(o2.getPackageLabel().toLowerCase());
         Collections.sort(res, AppNameComparator);
         return res;
     }
@@ -238,24 +232,20 @@ public class AppListing extends BaseActivity {
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(AppListing.this, R.style.AlertDialog);
         alertDialog.setTitle("This Package has already been decompiled");
         alertDialog.setMessage("This application has already been decompiled once and the source exists on your sdcard. What would you like to do ?");
-        alertDialog.setPositiveButton("View Source", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                Intent i = new Intent(getApplicationContext(), JavaExplorer.class);
-                i.putExtra("java_source_dir", sourceDir + "/");
-                i.putExtra("package_id", holder.packageName.getText().toString());
-                startActivity(i);
-            }
+        alertDialog.setPositiveButton("View Source", (dialog, which) -> {
+            Intent i = new Intent(getApplicationContext(), JavaExplorer.class);
+            i.putExtra("java_source_dir", sourceDir + "/");
+            i.putExtra("package_id", holder.packageName.getText().toString());
+            startActivity(i);
         });
 
-        alertDialog.setNegativeButton("Decompile", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                try {
-                    FileUtils.deleteDirectory(sourceDir);
-                } catch (IOException e) {
-                    Crashlytics.logException(e);
-                }
-                showDecompilerSelection(holder);
+        alertDialog.setNegativeButton("Decompile", (dialog, which) -> {
+            try {
+                FileUtils.deleteDirectory(sourceDir);
+            } catch (IOException e) {
+                Crashlytics.logException(e);
             }
+            showDecompilerSelection(holder);
         });
         alertDialog.show();
     }
@@ -275,11 +265,7 @@ public class AppListing extends BaseActivity {
 
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle("Pick a decompiler");
-            builder.setItems(items, new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int item) {
-                    openProcessActivity(holder, itemsVals[item].toString());
-                }
-            });
+            builder.setItems(items, (dialog, item) -> openProcessActivity(holder, itemsVals[item].toString()));
             AlertDialog alert = builder.create();
             alert.show();
         } else {

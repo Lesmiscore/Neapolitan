@@ -44,7 +44,7 @@ public class ImageResourceViewer extends BaseActivity {
             }
         }
 
-        TouchImageView touchImageView = (TouchImageView) findViewById(R.id.image_view);
+        TouchImageView touchImageView = findViewById(R.id.image_view);
         touchImageView.setImageDrawable(Drawable.createFromPath(sourceFilePath));
 
         touchImageView.setZoom(0.3f);

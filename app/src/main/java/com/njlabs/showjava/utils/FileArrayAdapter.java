@@ -45,10 +45,10 @@ public class FileArrayAdapter extends ArrayAdapter<Item> {
         final Item o = items.get(position);
         if (o != null) {
 
-            TextView filenameView = (TextView) v.findViewById(R.id.file_name);
-            TextView fileSizeView = (TextView) v.findViewById(R.id.file_size);
+            TextView filenameView = v.findViewById(R.id.file_name);
+            TextView fileSizeView = v.findViewById(R.id.file_size);
 
-            ImageView fileIconView = (ImageView) v.findViewById(R.id.file_icon);
+            ImageView fileIconView = v.findViewById(R.id.file_icon);
 
             Drawable image = context.getResources().getDrawable(o.getImage());
 

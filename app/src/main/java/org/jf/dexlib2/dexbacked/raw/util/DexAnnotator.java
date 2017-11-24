@@ -175,12 +175,7 @@ public class DexAnnotator extends AnnotatedBytes {
     public void writeAnnotations(Writer out) throws IOException {
         List<MapItem> mapItems = dexFile.getMapItems();
         // sort the map items based on the order defined by sectionAnnotationOrder
-        Ordering<MapItem> ordering = Ordering.from(new Comparator<MapItem>() {
-            @Override
-            public int compare(MapItem o1, MapItem o2) {
-                return Ints.compare(sectionAnnotationOrder.get(o1.getType()), sectionAnnotationOrder.get(o2.getType()));
-            }
-        });
+        Ordering<MapItem> ordering = Ordering.from((o1, o2) -> Ints.compare(sectionAnnotationOrder.get(o1.getType()), sectionAnnotationOrder.get(o2.getType())));
 
         mapItems = ordering.immutableSortedCopy(mapItems);
 

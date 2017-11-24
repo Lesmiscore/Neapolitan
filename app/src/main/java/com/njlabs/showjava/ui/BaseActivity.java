@@ -73,7 +73,7 @@ public class BaseActivity extends AppCompatActivity {
 
     @SuppressWarnings("ConstantConditions")
     private void setupToolbar(String title) {
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         if (title != null) {
             getSupportActionBar().setTitle(title);
@@ -163,7 +163,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     public boolean isPro(){
-        return isPro;
+        return false;
     }
     
     public boolean isLollipop() {
@@ -175,7 +175,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     private void setupGoogleAds() {
-        mAdView = (AdView) findViewById(R.id.adView);
+        mAdView = findViewById(R.id.adView);
         if (mAdView != null) {
             mAdView.setVisibility(View.GONE);
             if (!isPro()) {

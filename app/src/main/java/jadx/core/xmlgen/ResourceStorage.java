@@ -13,12 +13,7 @@ import java.util.Map;
 
 public class ResourceStorage {
 
-	private static final Comparator<ResourceEntry> COMPARATOR = new Comparator<ResourceEntry>() {
-		@Override
-		public int compare(ResourceEntry a, ResourceEntry b) {
-			return Utils.compare(a.getId(), b.getId());
-		}
-	};
+	private static final Comparator<ResourceEntry> COMPARATOR = (a, b) -> Utils.compare(a.getId(), b.getId());
 
 	private final List<ResourceEntry> list = new ArrayList<ResourceEntry>();
 	private String appPackage;

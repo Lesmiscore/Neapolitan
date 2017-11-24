@@ -41,12 +41,7 @@ import com.android.dx.rop.code.AccessFlags;
 public class ClassGen {
 	private static final Logger LOG = LoggerFactory.getLogger(ClassGen.class);
 
-	public static final Comparator<MethodNode> METHOD_LINE_COMPARATOR = new Comparator<MethodNode>() {
-		@Override
-		public int compare(MethodNode a, MethodNode b) {
-			return Utils.compare(a.getSourceLine(), b.getSourceLine());
-		}
-	};
+	public static final Comparator<MethodNode> METHOD_LINE_COMPARATOR = (a, b) -> Utils.compare(a.getSourceLine(), b.getSourceLine());
 
 	private final ClassNode cls;
 	private final ClassGen parentGen;

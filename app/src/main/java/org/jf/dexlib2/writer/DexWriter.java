@@ -133,12 +133,7 @@ public abstract class DexWriter<
     public static final int NO_INDEX = -1;
     public static final int NO_OFFSET = 0;
     private static Comparator<Map.Entry> toStringKeyComparator =
-            new Comparator<Map.Entry>() {
-                @Override
-                public int compare(Entry o1, Entry o2) {
-                    return o1.getKey().toString().compareTo(o2.getKey().toString());
-                }
-            };
+        (o1, o2) -> o1.getKey().toString().compareTo(o2.getKey().toString());
     protected final int api;
     protected final StringSection<StringKey, StringRef> stringSection;
     protected final TypeSection<StringKey, TypeKey, TypeRef> typeSection;
@@ -199,12 +194,7 @@ public abstract class DexWriter<
     }
 
     private static <T extends Comparable<? super T>> Comparator<Map.Entry<? extends T, ?>> comparableKeyComparator() {
-        return new Comparator<Entry<? extends T, ?>>() {
-            @Override
-            public int compare(Entry<? extends T, ?> o1, Entry<? extends T, ?> o2) {
-                return o1.getKey().compareTo(o2.getKey());
-            }
-        };
+        return (o1, o2) -> o1.getKey().compareTo(o2.getKey());
     }
 
     private static DexDataWriter outputAt(DexDataStore dataStore, int filePosition) throws IOException {

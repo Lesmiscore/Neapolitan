@@ -38,12 +38,7 @@ import java.util.Comparator;
 import javax.annotation.Nonnull;
 
 public abstract class BaseAnnotationElement implements AnnotationElement {
-    public static final Comparator<AnnotationElement> BY_NAME = new Comparator<AnnotationElement>() {
-        @Override
-        public int compare(@Nonnull AnnotationElement element1, @Nonnull AnnotationElement element2) {
-            return element1.getName().compareTo(element2.getName());
-        }
-    };
+    public static final Comparator<AnnotationElement> BY_NAME = (element1, element2) -> element1.getName().compareTo(element2.getName());
 
     @Override
     public int hashCode() {

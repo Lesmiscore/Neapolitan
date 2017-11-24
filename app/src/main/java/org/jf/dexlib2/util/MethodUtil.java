@@ -46,19 +46,9 @@ public final class MethodUtil {
     private static int directMask = AccessFlags.STATIC.getValue() | AccessFlags.PRIVATE.getValue() |
             AccessFlags.CONSTRUCTOR.getValue();
 
-    public static Predicate<Method> METHOD_IS_DIRECT = new Predicate<Method>() {
-        @Override
-        public boolean apply(@Nullable Method input) {
-            return input != null && isDirect(input);
-        }
-    };
+    public static Predicate<Method> METHOD_IS_DIRECT = input -> input != null && isDirect(input);
 
-    public static Predicate<Method> METHOD_IS_VIRTUAL = new Predicate<Method>() {
-        @Override
-        public boolean apply(@Nullable Method input) {
-            return input != null && !isDirect(input);
-        }
-    };
+    public static Predicate<Method> METHOD_IS_VIRTUAL = input -> input != null && !isDirect(input);
 
     private MethodUtil() {
     }

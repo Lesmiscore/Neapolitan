@@ -53,16 +53,13 @@ public class JarExtractor extends ProcessServiceHelper {
     public void extract() {
         ThreadGroup group = new ThreadGroup("DEX TO JAR EXTRACTION");
         broadcastStatus("optimise_dex_start");
-        Runnable runProcess = new Runnable() {
-            @Override
-            public void run() {
-                loadIgnoredLibs();
-                apkToDex();
-                if(!processService.decompilerToUse.equals("jadx")){
-                    dexToJar();
-                }
-                startJavaExtractor();
+        Runnable runProcess = () -> {
+            loadIgnoredLibs();
+            apkToDex();
+            if(!processService.decompilerToUse.equals("jadx")){
+                dexToJar();
             }
+            startJavaExtractor();
         };
         Thread extractionThread = new Thread(group, runProcess, "DEX TO JAR EXTRACTION", processService.STACK_SIZE);
         extractionThread.setPriority(Thread.MAX_PRIORITY);

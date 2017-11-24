@@ -59,7 +59,7 @@ public class FilePickerFragment extends com.nononsenseapps.filepicker.FilePicker
         mCurrentPath = getParent(mCurrentPath);
         mCheckedItems.clear();
         mCheckedVisibleViewHolders.clear();
-        refresh();
+        refresh(mCurrentPath);
     }
 
 

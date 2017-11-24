@@ -60,7 +60,7 @@ public class JavaExplorer extends BaseActivity {
             packageID = extras.getString("package_id");
 
             if (sourceDir != null) {
-                lv = (ListView) findViewById(R.id.list);
+                lv = findViewById(R.id.list);
                 currentDir = new File(sourceDir);
                 fill(currentDir);
             } else {
@@ -124,15 +124,13 @@ public class JavaExplorer extends BaseActivity {
 
         adapter = new FileArrayAdapter(JavaExplorer.this, R.layout.java_explorer_list_item, dir);
         lv.setAdapter(adapter);
-        lv.setOnItemClickListener(new OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Item o = adapter.getItem(position);
-                if (o.getImage() == R.drawable.viewer_folder || o.getImage() == R.drawable.directory_up) {
-                    currentDir = new File(o.getPath());
-                    fill(currentDir);
-                } else {
-                    onFileClick(o);
-                }
+        lv.setOnItemClickListener((parent, view, position, id) -> {
+            Item o = adapter.getItem(position);
+            if (o.getImage() == R.drawable.viewer_folder || o.getImage() == R.drawable.directory_up) {
+                currentDir = new File(o.getPath());
+                fill(currentDir);
+            } else {
+                onFileClick(o);
             }
         });
     }
@@ -230,10 +228,7 @@ public class JavaExplorer extends BaseActivity {
                 new AlertDialog.Builder(this)
                         .setMessage("Are you sure want to delete ?")
                         .setIcon(android.R.drawable.ic_dialog_alert)
-                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int whichButton) {
-                                deleteSource();
-                            }})
+                        .setPositiveButton(android.R.string.yes, (dialog, whichButton) -> deleteSource())
                         .setNegativeButton(android.R.string.no, null).show();
 
                 return true;

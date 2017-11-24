@@ -70,13 +70,13 @@ public class SourceViewer extends BaseActivity {
 
         sourceCodeText = HtmlEscapers.htmlEscaper().escape(sourceCodeText);
 
-        WebView webView = (WebView) findViewById(R.id.source_view);
+        WebView webView = findViewById(R.id.source_view);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setDefaultTextEncodingName("utf-8");
         webView.setWebViewClient(new WebViewClient() {
             @Override
             public void onPageFinished(WebView view, String url) {
-                ProgressBar progress = (ProgressBar) findViewById(R.id.progress);
+                ProgressBar progress = findViewById(R.id.progress);
                 progress.setVisibility(View.GONE);
             }
 

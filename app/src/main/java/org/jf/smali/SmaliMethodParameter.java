@@ -44,12 +44,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 public class SmaliMethodParameter extends BaseMethodParameter implements WithRegister {
-    public static final Comparator<WithRegister> COMPARATOR = new Comparator<WithRegister>() {
-        @Override
-        public int compare(WithRegister o1, WithRegister o2) {
-            return Ints.compare(o1.getRegister(), o2.getRegister());
-        }
-    };
+    public static final Comparator<WithRegister> COMPARATOR = (o1, o2) -> Ints.compare(o1.getRegister(), o2.getRegister());
     public final int register;
     @Nonnull
     public final String type;

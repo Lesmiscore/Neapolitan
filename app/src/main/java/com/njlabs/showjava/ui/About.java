@@ -14,9 +14,6 @@ public class About extends BaseActivity {
         super.onCreate(savedInstanceState);
         setupLayout(R.layout.activity_about);
         ((TextView) findViewById(R.id.AppVersion)).setText("Version " + BuildConfig.VERSION_NAME);
-        if(isPro()) {
-            ((TextView) findViewById(R.id.AppName)).setText("Show Java Pro");
-        }
     }
 
     @Override

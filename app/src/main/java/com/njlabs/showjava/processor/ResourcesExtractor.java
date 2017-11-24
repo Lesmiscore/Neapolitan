@@ -50,33 +50,30 @@ public class ResourcesExtractor extends ProcessServiceHelper {
 
     private void extractResourcesWithJadx(){
         ThreadGroup group = new ThreadGroup("XML Extraction Group");
-        Thread xmlExtractionThread = new Thread(group, new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    File resDir = new File(sourceOutputDir);
+        Thread xmlExtractionThread = new Thread(group, () -> {
+            try {
+                File resDir = new File(sourceOutputDir);
 
-                    JadxDecompiler jadx = new JadxDecompiler();
-                    jadx.setOutputDir(resDir);
-                    jadx.loadFile(new File(packageFilePath));
-                    jadx.saveResources();
+                JadxDecompiler jadx = new JadxDecompiler();
+                jadx.setOutputDir(resDir);
+                jadx.loadFile(new File(packageFilePath));
+                jadx.saveResources();
 
-                    ZipFile zipFile = new ZipFile(packageFilePath);
-                    Enumeration<? extends ZipEntry> entries = zipFile.entries();
-                    while (entries.hasMoreElements()) {
-                        ZipEntry zipEntry = entries.nextElement();
-                        if (!zipEntry.isDirectory() && (FilenameUtils.getExtension(zipEntry.getName()).equals("png") || FilenameUtils.getExtension(zipEntry.getName()).equals("jpg"))) {
-                            broadcastStatus("progress_stream", zipEntry.getName());
-                            writeFile(zipFile.getInputStream(zipEntry), zipEntry.getName());
-                        }
+                ZipFile zipFile = new ZipFile(packageFilePath);
+                Enumeration<? extends ZipEntry> entries = zipFile.entries();
+                while (entries.hasMoreElements()) {
+                    ZipEntry zipEntry = entries.nextElement();
+                    if (!zipEntry.isDirectory() && (FilenameUtils.getExtension(zipEntry.getName()).equals("png") || FilenameUtils.getExtension(zipEntry.getName()).equals("jpg"))) {
+                        broadcastStatus("progress_stream", zipEntry.getName());
+                        writeFile(zipFile.getInputStream(zipEntry), zipEntry.getName());
                     }
-                    zipFile.close();
-                    saveIcon();
-                    allDone();
-
-                } catch (Exception | StackOverflowError e) {
-                    processService.publishProgress("start_activity_with_error");
                 }
+                zipFile.close();
+                saveIcon();
+                allDone();
+
+            } catch (Exception | StackOverflowError e) {
+                processService.publishProgress("start_activity_with_error");
             }
         }, "XML Extraction Thread", processService.STACK_SIZE);
         xmlExtractionThread.setPriority(Thread.MAX_PRIORITY);
@@ -86,29 +83,26 @@ public class ResourcesExtractor extends ProcessServiceHelper {
 
     private void extractResourcesWithParser(){
         ThreadGroup group = new ThreadGroup("XML Extraction Group");
-        Thread xmlExtractionThread = new Thread(group, new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    ZipFile zipFile = new ZipFile(packageFilePath);
-                    Enumeration<? extends ZipEntry> entries = zipFile.entries();
-                    while (entries.hasMoreElements()) {
-                        ZipEntry zipEntry = entries.nextElement();
-                        if (!zipEntry.isDirectory() && !zipEntry.getName().equals("AndroidManifest.xml") && FilenameUtils.getExtension(zipEntry.getName()).equals("xml")) {
-                            broadcastStatus("progress_stream", zipEntry.getName());
-                            writeXML(zipEntry.getName());
-                        } else if (!zipEntry.isDirectory() && (FilenameUtils.getExtension(zipEntry.getName()).equals("png") || FilenameUtils.getExtension(zipEntry.getName()).equals("jpg"))) {
-                            broadcastStatus("progress_stream", zipEntry.getName());
-                            writeFile(zipFile.getInputStream(zipEntry), zipEntry.getName());
-                        }
+        Thread xmlExtractionThread = new Thread(group, () -> {
+            try {
+                ZipFile zipFile = new ZipFile(packageFilePath);
+                Enumeration<? extends ZipEntry> entries = zipFile.entries();
+                while (entries.hasMoreElements()) {
+                    ZipEntry zipEntry = entries.nextElement();
+                    if (!zipEntry.isDirectory() && !zipEntry.getName().equals("AndroidManifest.xml") && FilenameUtils.getExtension(zipEntry.getName()).equals("xml")) {
+                        broadcastStatus("progress_stream", zipEntry.getName());
+                        writeXML(zipEntry.getName());
+                    } else if (!zipEntry.isDirectory() && (FilenameUtils.getExtension(zipEntry.getName()).equals("png") || FilenameUtils.getExtension(zipEntry.getName()).equals("jpg"))) {
+                        broadcastStatus("progress_stream", zipEntry.getName());
+                        writeFile(zipFile.getInputStream(zipEntry), zipEntry.getName());
                     }
-                    zipFile.close();
-                    writeManifest();
-                    saveIcon();
-                    allDone();
-                } catch (Exception | StackOverflowError e) {
-                    processService.publishProgress("start_activity_with_error");
                 }
+                zipFile.close();
+                writeManifest();
+                saveIcon();
+                allDone();
+            } catch (Exception | StackOverflowError e) {
+                processService.publishProgress("start_activity_with_error");
             }
         }, "XML Extraction Thread", processService.STACK_SIZE);
         xmlExtractionThread.setPriority(Thread.MAX_PRIORITY);
